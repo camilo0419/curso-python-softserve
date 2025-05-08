@@ -18,12 +18,17 @@ def crear_correo():
         else:
             print("Correo inválido. Debe ingresar un correo de la universidad.")       
 
+import re
+
 def buscar(diccionario, busqueda):
     busqueda = busqueda.strip().lower()
     encontrados = []
 
+    # Compilamos el patrón con el texto ingresado
+    patron = re.compile(busqueda)
+
     for correo, tipo in diccionario.items():
-        if busqueda in correo:
+        if patron.search(correo):
             encontrados.append((correo, tipo))
 
     if encontrados:
