@@ -14,7 +14,6 @@ while True:
         correo, tipo = funciones.crear_correo()
         if correo:
             Personal[correo] = tipo
-            print("Correo registrado correctamente.")
     #Guarda en Personal el correo y el tipo.        
     elif opcion == "2":
         if Personal:
@@ -29,7 +28,9 @@ while True:
 
     elif opcion == "3":
         busqueda = input("Ingrese palabra clave que desea buscar: ")
+        # Recogemos los caracteres que se quieren buscar.
         funciones.buscar(Personal, busqueda)
+        
 
     elif opcion == "4":
         print("Gracias por usar nuestro sistema. ¡Hasta pronto!")
