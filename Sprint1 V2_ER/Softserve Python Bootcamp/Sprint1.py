@@ -14,7 +14,7 @@ while True:
         correo, tipo = funciones.crear_correo()
         if correo:
             Personal[correo] = tipo
-    #Guarda en Personal el correo y el tipo.        
+    #Guarda en Personal el correo y el tipo.  Test    
     elif opcion == "2":
         if Personal:
         #Verifica si existen registros
