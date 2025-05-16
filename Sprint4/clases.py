@@ -1,5 +1,6 @@
 
 class Mascota:
+    '''La clase mascota continene'''
     def __init__(self, nombre_paciente, especie, raza, dueno):
         self.nombre_paciente = nombre_paciente
         self.especie = especie
