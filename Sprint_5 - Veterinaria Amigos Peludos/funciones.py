@@ -1,4 +1,5 @@
 from clases import Mascota, Dueno, Consulta
+from logger import logger
 
 pacientes = []
 tutores = []
@@ -48,11 +49,18 @@ def registrar_mascota():
         tutores.append(dueno)
         pacientes.append(mascota)
 
+        logger.info(f"\nMascota '{nombre}' registrada con éxito.")
+        #Registra en .log el registro exitoso
         print(f"\nMascota '{nombre}' registrada con éxito.")
 
     except ValueError as ve:
+        logger.warning(f"Error al registrar mascota: {ve}")
+        #Registra en .log si alguno de los datos estan incompletos.
         print(f" Error: {ve}")
+
     except Exception as e:
+        logger.error(f"Error inesperado al registrar mascota: {e}")
+        #Registra en .log si hay algun error inesperado.
         print(" Ocurrió un error inesperado.")
 
 def registrar_consulta():
@@ -84,12 +92,23 @@ def registrar_consulta():
         nueva_consulta = Consulta(fecha, motivo, diagnostico)
         mascota.consultas.append(nueva_consulta)
 
+        logger.info(f"Consulta registrada para '{mascota.nombre_paciente}' el {fecha}.")
+        #Log exitoso de la consulta con detalles
         print(f"\n Consulta registrada para {mascota.nombre_paciente}.")
+
     except LookupError as le:
+        logger.warning(le)
+        #Log de advartencia si la mascota no esta registrada.
         print(f"{le}")
+
     except ValueError as ve:
+        logger.warning(f"Datos invalidos en la consulta: {ve}")
+        #Log de advertencia para datos incompletos.
         print(f"Error: {ve}")
+
     except Exception as e:
+        logger.error(f"Error inesperado al registrar consulta: {e}")
+        #Log de error no previsto.
         print("Ocurrió un error inesperado.")
 
 def listar_mascotas():

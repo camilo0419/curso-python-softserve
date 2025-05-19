@@ -1,0 +1,15 @@
+2025-05-18 22:31:59,783 - INFO - Inicio de la Aplicaci�n
+2025-05-18 22:34:46,125 - INFO - Inicio de la Aplicación
+2025-05-18 23:02:47,780 - INFO - Inicio de la Aplicación
+2025-05-18 23:02:58,314 - INFO - 
+Mascota '1' registrada con éxito.
+2025-05-18 23:03:13,319 - WARNING - Mascota '2' no encontrada.
+2025-05-18 23:03:16,542 - WARNING - Mascota '2' no encontrada.
+2025-05-18 23:03:25,023 - INFO - 
+Mascota '2' registrada con éxito.
+2025-05-18 23:03:41,364 - INFO - 
+Mascota '3' registrada con éxito.
+2025-05-18 23:03:44,784 - WARNING - Error al registrar mascota: El nombre de la mascota no puede estar vacío
+2025-05-18 23:03:53,406 - WARNING - Error al registrar mascota: La especie no puede estar vacía
+2025-05-18 23:04:12,338 - INFO - Consulta registrada para '1' el 1.
+2025-05-18 23:04:55,927 - INFO - Cierre de la aplicación
