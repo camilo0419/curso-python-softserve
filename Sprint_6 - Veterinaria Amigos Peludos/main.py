@@ -3,21 +3,23 @@ from funciones import (
     registrar_consulta,
     listar_mascotas,
     ver_historial,
-    guardar_datos
+    guardar_datos,
+    cargar_datos
 )
 from logger import logger
 
 def menu():
     logger.info("Inicio de la Aplicación")
     #Registra el inicio de la aplicaión en clinica_veterinaria.log
-
+    cargar_datos("Mascotas_dueños.csv", "consultas.json" )
     while True:
         print("\n--- Clínica Veterinaria Amigos Peludos ---")
         print("1. Registrar Mascota")
         print("2. Registrar Consulta")
         print("3. Listar Mascotas")
         print("4. Ver Historial de Consultas")
-        print("5. Salir")
+        print("5. Guardar")
+        print("6. Salir y guardar")
 
         opcion = input("Seleccione una opción: ")
 
@@ -32,6 +34,8 @@ def menu():
             elif opcion == "4":
                 ver_historial()
             elif opcion == "5":
+                guardar_datos()
+            elif opcion == "6":
                 guardar_datos()
                 print("¡Hasta luego!")
                 logger.info("Cierre de la aplicación")
