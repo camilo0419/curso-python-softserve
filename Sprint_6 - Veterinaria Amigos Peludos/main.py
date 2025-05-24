@@ -4,7 +4,7 @@ from funciones import (
     listar_mascotas,
     ver_historial,
     guardar_datos,
-    cargar_datos,
+    cargar_mascotas_duenos,
     cargar_consultas
 )
 from logger import logger
@@ -12,8 +12,8 @@ from logger import logger
 def menu():
     logger.info("Inicio de la Aplicación")
     #Registra el inicio de la aplicaión en clinica_veterinaria.log
-    cargar_datos("Mascotas_dueños.csv")
-    cargar_consultas("consultas.json")
+    cargar_mascotas_duenos()
+    cargar_consultas()
     while True:
         print("\n--- Clínica Veterinaria Amigos Peludos ---")
         print("1. Registrar Mascota")

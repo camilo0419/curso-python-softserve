@@ -56,58 +56,60 @@ def guardar_datos():
         logger.error(f"Error al guardar datos: {e}")
         print("Ocurrió un error al guardar los datos.")
 
-def cargar_datos(Mascotas_dueños):
+def cargar_mascotas_duenos():
     global pacientes, tutores
     #Con global indicamos que los cambios realizados en esta funcion se aplicaran al ambito global de la app
     try:
-        if not os.path.exists(Mascotas_dueños):
-            logger.info(f"El archivo '{Mascotas_dueños}' no existe. No se realiza ninguna carga")
+        if not os.path.exists("Mascotas_dueños.csv"):
+            logger.info(f"El archivo '{"Mascotas_dueños.csv"}' no existe. No se realiza ninguna carga")
             print(f"El archivo que intentas cargar no existe.")
             return
-        with open(Mascotas_dueños, "r", newline='', encoding='utf-8') as file:
+        
+        with open("Mascotas_dueños.csv", "r", newline='', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             
-        for fila_datos in reader:
-            nombre_tutor = fila_datos["nombre_tutor"]
-            telefono = fila_datos["telefono"]
-            direccion = fila_datos["direccion"]
-            dueno_existente = None
-            for d in tutores:
-                if d.nombre_tutor == nombre_tutor and d.telefono == telefono:
-                    dueno_existente = d
-                    break
-            if dueno_existente:
-                dueno = dueno_existente
-            else:
-                dueno = Dueno(nombre_tutor, telefono, direccion)
-                tutores.append(dueno)
-            
-            nombre_mascota = fila_datos["nombre_mascota"]
-            especie = fila_datos["especie"]
-            raza = fila_datos["raza"]
-            
-            mascota = Mascota(nombre_mascota, especie, raza)
+            for fila_datos in reader:
+                nombre_tutor = fila_datos["nombre_tutor"]
+                telefono = fila_datos["telefono"]
+                direccion = fila_datos["direccion"]
+                dueno_existente = None
+                for d in tutores:
+                    if d.nombre_tutor == nombre_tutor and d.telefono == telefono:
+                        dueno_existente = d
+                        break
+                if dueno_existente:
+                    dueno = dueno_existente
+                else:
+                    dueno = Dueno(nombre_tutor, telefono, direccion)
+                    tutores.append(dueno)
+                
+                nombre_mascota = fila_datos["nombre_mascota"]
+                especie = fila_datos["especie"]
+                raza = fila_datos["raza"]
+                
+                mascota = Mascota(nombre_mascota, especie, raza, dueno)
 
-            pacientes.append(mascota)
+                pacientes.append(mascota)
 
-        logger.info(f"Datos de mascotas y dueños cargados desde {Mascotas_dueños}.")        
-        print(f"Datos de mascotas y dueños cargados desde {Mascotas_dueños}.")
+        logger.info(f"Datos de mascotas y dueños cargados desde {"Mascotas_dueños.csv"}.")        
+        print(f"Datos de mascotas y dueños cargados desde {"Mascotas_dueños.csv"}.")
 
     except FileNotFoundError:
         logger.error(f"error archivo no encontrado")
-        print(f"Error: el archivo '{Mascotas_dueños}' no fue encontrado")
+        print(f"Error: el archivo '{"Mascotas_dueños.csv"}' no fue encontrado")
     except Exception as e:
         logger.error(f"Error al cargar los datos: {e}")
         print("Ocurrió un error inesperado al cargar los datos.")
 
-def cargar_consultas(consultas):
+def cargar_consultas():
+    global pacientes
     try:
-        if not os.path.exists(consultas):
-            logger.info(f"El archivo '{consultas}' no existe. No se realiza ninguna carga")
-            print(f"El archivo '{consultas}' no fue encontrado. No se cargaron datos de consultas")
+        if not os.path.exists("consultas.json"):
+            logger.info(f"El archivo '{"consultas.json"}' no existe. No se realiza ninguna carga")
+            print(f"El archivo '{"consultas.json"}' no fue encontrado. No se cargaron datos de consultas")
             return
         
-        with open(consultas, "r", newline='', encoding='utf-8') as file:
+        with open("consultas.json", "r", encoding='utf-8') as file:
             json_reader = json.load(file)
         
         for mascota_json, dict_json in json_reader.items():
@@ -128,16 +130,16 @@ def cargar_consultas(consultas):
             else:
                 logger.warning(f"Mascota '{mascota_json}' de JSON no encontrada en datos cargados. No se cargaron consultas")
                 print(f"Advertencia, Mascota {mascota_json} no encontrada para cargar sus consultas")
-        logger.info(f"Datos de consultas cargados exitosamente desde '{consultas}'.")
-        print(f"Datos de consultas cargados exitosamente desde '{consultas}'.")
+        logger.info(f"Datos de consultas cargados exitosamente desde '{"consultas.json"}'.")
+        print(f"Datos de consultas cargados exitosamente desde '{"consultas.json"}'.")
     except json.JSONDecodeError as jde:
-        logger.error(f"Error al decodificar JSON desde '{consultas}': {jde}.")
-        print(f"Error: El archivo '{consultas}' tiene un formato JSON invalido. No se cargaron las consultas")
+        logger.error(f"Error al decodificar JSON desde '{"consultas.json"}': {jde}.")
+        print(f"Error: El archivo '{"consultas.json"}' tiene un formato JSON invalido. No se cargaron las consultas")
     except FileNotFoundError:
-        logger.error(f"Error: El archivo '{consultas}' no fue encontrado durante la carga de JSON")
-        print(f"Error: El archivo '{consultas}' no fue encontrado")
+        logger.error(f"Error: El archivo '{"consultas.json"}' no fue encontrado durante la carga de JSON")
+        print(f"Error: El archivo '{"consultas.json"}' no fue encontrado")
     except Exception as e:
-        logger.error(f"Error inesperado al cargar datos JSON desde '{consultas}': {e}.")
+        logger.error(f"Error inesperado al cargar datos JSON desde '{"consultas.json"}': {e}.")
         print(f"Ocurrio un error inesperado al cargar los datosde consultas")
 
 
