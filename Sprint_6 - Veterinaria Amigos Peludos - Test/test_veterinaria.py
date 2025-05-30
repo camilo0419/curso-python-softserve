@@ -1,5 +1,4 @@
 import unittest
-import tempfile
 import os
 import json
 import csv
@@ -16,19 +15,15 @@ class TestVeterinaria(unittest.TestCase):
         self.mascota = Mascota("Firulais", "Perro", "Labrador", self.dueno)
         self.consulta = Consulta("20/05/2025", "Chequeo", "Saludable")
 
-        # Crear archivos temporales para CSV y JSON
-        self.temp_csv = tempfile.NamedTemporaryFile(delete=False, suffix=".csv")
-        self.temp_json = tempfile.NamedTemporaryFile(delete=False, suffix=".json")
-        # Cerrar los archivos para poder abrirlos más tarde
-        self.temp_csv.close()
-        self.temp_json.close()
+        self.csv_path = "test_mascotas.csv"
+        self.json_path = "test_consultas.json"
 
-    def tearDown(self):
-        # Eliminar archivos temporales al terminar cada test
-        if os.path.exists(self.temp_csv.name):
-            os.remove(self.temp_csv.name)
-        if os.path.exists(self.temp_json.name):
-            os.remove(self.temp_json.name)
+    #def tearDown(self):
+        # Elimina archivos de prueba si existen
+        #if os.path.exists(self.csv_path):
+            #os.remove(self.csv_path)
+        #if os.path.exists(self.json_path):
+            #os.remove(self.json_path)
 
     def test_creacion_mascota(self):
         self.assertEqual(self.mascota.nombre_paciente, "Firulais")
@@ -57,24 +52,24 @@ class TestVeterinaria(unittest.TestCase):
     def test_serializacion_csv(self):
         pacientes.append(self.mascota)
         tutores.append(self.dueno)
-        # Guardar datos en archivos temporales
-        guardar_datos(csv_path=self.temp_csv.name, json_path=self.temp_json.name)
+        guardar_datos(csv_path=self.csv_path, json_path=self.json_path)
 
-        self.assertTrue(os.path.exists(self.temp_csv.name))
+        self.assertTrue(os.path.exists(self.csv_path))
 
-        with open(self.temp_csv.name, "r", encoding='utf-8') as f:
+        with open(self.csv_path, "r", encoding='utf-8') as f:
             reader = csv.DictReader(f)
             rows = list(reader)
+            self.assertGreater(len(rows), 0)
             self.assertEqual(rows[0]["nombre_mascota"], "Firulais")
 
     def test_serializacion_json(self):
         self.mascota.consultas.append(self.consulta)
         pacientes.append(self.mascota)
-        guardar_datos(csv_path=self.temp_csv.name, json_path=self.temp_json.name)
+        guardar_datos(csv_path=self.csv_path, json_path=self.json_path)
 
-        self.assertTrue(os.path.exists(self.temp_json.name))
+        self.assertTrue(os.path.exists(self.json_path))
 
-        with open(self.temp_json.name, "r", encoding='utf-8') as f:
+        with open(self.json_path, "r", encoding='utf-8') as f:
             data = json.load(f)
             self.assertIn("Firulais", data)
             self.assertEqual(data["Firulais"][0]["motivo"], "Chequeo")
