@@ -4,7 +4,7 @@ import json
 import csv
 
 from clases import Mascota, Dueno, Consulta
-from funciones import registrar_mascota, registrar_consulta, guardar_datos, cargar_mascotas_duenos, cargar_consultas, pacientes, tutores
+from funciones import guardar_datos, pacientes, tutores
 
 class TestVeterinaria(unittest.TestCase):
 
@@ -18,12 +18,12 @@ class TestVeterinaria(unittest.TestCase):
         self.csv_path = "test_mascotas.csv"
         self.json_path = "test_consultas.json"
 
-    #def tearDown(self):
-        # Elimina archivos de prueba si existen
-        #if os.path.exists(self.csv_path):
-            #os.remove(self.csv_path)
-        #if os.path.exists(self.json_path):
-            #os.remove(self.json_path)
+    def tearDown(self):
+        #Elimina archivos de prueba si existen
+        if os.path.exists(self.csv_path):
+            os.remove(self.csv_path)
+        if os.path.exists(self.json_path):
+            os.remove(self.json_path)
 
     def test_creacion_mascota(self):
         self.assertEqual(self.mascota.nombre_paciente, "Firulais")
