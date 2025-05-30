@@ -151,3 +151,7 @@ Mascota 'Mia' registrada con éxito.
 2025-05-30 17:56:50,388 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
 2025-05-30 17:56:50,391 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
 2025-05-30 17:56:50,394 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 18:08:36,872 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 18:08:36,873 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 18:08:36,876 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 18:08:36,877 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
