@@ -1,4 +1,5 @@
 from conexion import crear_tablas
+from logger import logger
 from persistencia import (
     registrar_dueno_sqlite,
     obtener_duenos_sqlite,
@@ -21,134 +22,244 @@ def menu():
         print("6. Ver historial de consultas de una mascota")
         print("7. Salir")
 
-        opcion = input("Seleccione una opción: ")
+        opcion = input("\nSeleccione una opción: ")
 
         if opcion == "1":
-            nombre = input("Nombre del dueño: ")
-            telefono = input("Teléfono: ")
-            direccion = input("Dirección: ")
-            registrar_dueno_sqlite(nombre, telefono, direccion)
-            print("Dueño registrado exitosamente.")
+            try:
+                nombre = input("\nNombre del dueño: ").strip()
+                if not nombre.isalpha():
+                    raise ValueError("\nError! El nombre del dueño no puede estar vacio y solo debe contener solo letras")
+                telefono = input("Teléfono: ").strip()
+                if not telefono.isdigit():
+                    raise ValueError("\nError! El telefono del dueño no puede estar vacio y solo debe contener numeros")
+                direccion = input("Dirección: ").strip()
+                if not direccion:
+                    raise ValueError("\nError! La direccion del dueño no puede estar vacia")
+                registrar_dueno_sqlite(nombre, telefono, direccion)
+                logger.info(f"Dueño: {nombre}, Telefono: {telefono}, Direccion: {direccion}, registrados satisfactoriamente")
+                print("\nDueño registrado exitosamente.")                
+            except ValueError as CharError:
+                logger.info("Proceso de registro de Dueño no se pudo completar debido a un error en los parametros requeridos")
+                print(f"{CharError}")
 
         elif opcion == "2":
             duenos = obtener_duenos_sqlite()
             if not duenos:
-                print("No hay dueños registrados. Primero registre un dueño.")
+                logger.info("Proceso de obtencion de Dueño en base de datos no se pudo completar, no existen registros asociados")
+                print("\nNo hay dueños registrados. Primero registre un dueño.")
                 continue
 
-            print("Dueños registrados:")
+            print("\nDueños registrados:")
             for id_dueno, nombre_dueno in duenos:
+                logger.info("Proceso obtencion de Dueños alojados en la base de datos, completado con exito")
                 print(f"{id_dueno}: {nombre_dueno}")
 
             try:
-                dueno_id = int(input("Ingrese el ID del dueño para la mascota: "))
+                dueno_id = int(input("\nIngrese el ID del dueño para la mascota: "))
                 if dueno_id not in [d[0] for d in duenos]:
-                    print("ID de dueño no válido.")
+                    print("\nID de dueño no válido.")
                     continue
             except ValueError:
-                print("ID inválido.")
+                logger.info(f"El ID: {dueno_id} no se encuentra asociado a ningun registro en la base de datos ")
+                print("\nID inválido.")
                 continue
 
-            nombre_mascota = input("Nombre de la mascota: ")
-            especie = input("Especie: ")
-            raza = input("Raza: ")
+            try:
+                nombre_mascota = input("\nNombre de la mascota: ").strip()
+                if not nombre_mascota.isalpha():
+                    raise ValueError("\nError! El nombre no puede estar vacio y solo debe contener solo letras")
+                especie = input("Especie: ").strip()
+                if not especie.isalpha():
+                    raise ValueError("\nError! La especie no puede estar vacio y solo debe contener solo letras")
+                raza = input("Raza: ").strip()
+                if not raza.isalpha():
+                    raise ValueError("\nError! La raza no puede estar vacio y solo debe contener solo letras")
+            except ValueError as CharError:
+                logger.info("Proceso de registro de Mascota no se pudo completar debido a un error en los parametros requeridos")
+                print(f"\n{CharError}")
+                continue
+            
             try:
                 edad = int(input("Edad: "))
             except ValueError:
-                print("Edad inválida, debe ser un número.")
+                logger.info("Proceso de registro de Mascota no se pudo completar debido a un error en los parametros requeridos")
+                print("\nEdad inválida, debe ser un número.")
                 continue
 
             registrar_mascota_sqlite(nombre_mascota, especie, raza, edad, dueno_id)
-            print("Mascota registrada exitosamente.")
+            logger.info("Proceso de registro de Mascota completado satisfactoriamente")
+            print("\nMascota registrada exitosamente.")
 
         elif opcion == "3":
             duenos = obtener_duenos_sqlite()
             if not duenos:
-                print("No hay dueños registrados.")
+                logger.info("Proceso de obtencion de Dueño en base de datos no se pudo completar, no existen registros asociados")
+                print("\nNo hay dueños registrados.")
             else:
-                print("Dueños registrados:")
+                print("\nDueños registrados:")
                 for id_dueno, nombre_dueno in duenos:
+                    logger.info("Proceso de Listar Dueños existentes en base de datos completado con exito")
                     print(f"{id_dueno}: {nombre_dueno}")
 
         elif opcion == "4":
-            try:
-                dueno_id = int(input("Ingrese el ID del dueño: "))
-            except ValueError:
-                print("ID inválido.")
+
+            duenos = obtener_duenos_sqlite()
+            if not duenos:
+                logger.info("Proceso de obtencion de Dueño en base de datos no se pudo completar, no existen registros asociados")
+                print("\nNo hay dueños registrados.")
+            print("\nDueños registrados:")
+            for id_dueno, nombre_dueno in duenos:
+                logger.info("Proceso de Listar Dueños existentes en base de datos completado con exito")
+                print(f"{id_dueno}: {nombre_dueno}")
+
+            try:                
+                dueno_id = int(input("\nIngrese el ID del dueño: ")).strip()
+                if not dueno_id.isdigit():
+                    raise ValueError("\nError! Este campo no puede estar vacio y debe ser un numero")
+            except ValueError as ID_Selection_Error:
+                logger.info("Proceso de listar Mascotas por ID no se pudo completar debido a un error en los parametros requeridos")
+                print(f"\n{ID_Selection_Error}")
                 continue
 
             mascotas = obtener_mascotas_por_dueno_sqlite(dueno_id)
             if not mascotas:
-                print("No se encontraron mascotas para ese dueño.")
+                logger.info("Proceso de obtencion de Mascotas asociadas a ID dueño existentes en base de datos no se pudo completar, no existen registros asociados")
+                print("\nNo se encontraron mascotas para ese dueño.")
             else:
-                print("Mascotas registradas:")
+                print("\nMascotas registradas:")
                 for id_mascota, nombre_mascota in mascotas:
+                    logger.info("Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito")
                     print(f"{id_mascota}: {nombre_mascota}")
 
         elif opcion == "5":
             # Obtener todas las mascotas
             duenos = obtener_duenos_sqlite()
             if not duenos:
-                print("No hay dueños ni mascotas registrados.")
+                logger.info("Proceso de obtencion de Dueño en base de datos no se pudo completar, no existen registros asociados")
+                print("\nNo hay dueños ni mascotas registrados.")
                 continue
 
-            print("Dueños registrados:")
+            print("\nDueños registrados:")
             for id_dueno, nombre_dueno in duenos:
+                logger.info("Proceso de Listar Dueños existentes en base de datos completado con exito")
                 print(f"{id_dueno}: {nombre_dueno}")
-
+            
             try:
-                dueno_id = int(input("Ingrese el ID del dueño para ver sus mascotas: "))
-            except ValueError:
-                print("ID inválido.")
+                dueno_id = input("\nIngrese el ID del dueño para ver sus mascotas: ")
+                if not dueno_id.strip():
+                    raise ValueError("Error! Este campo no puede estar vacio")
+                else:
+                    int(dueno_id)
+            except ValueError as EmptyFieldError:
+                logger.info("Proceso de listar Dueños por ID no se pudo completar debido a un error en los parametros requeridos")
+                print(f"\n{EmptyFieldError}")
                 continue
 
             mascotas = obtener_mascotas_por_dueno_sqlite(dueno_id)
             if not mascotas:
-                print("Este dueño no tiene mascotas registradas.")
+                logger.info(f"Proceso de Obtener Mascotas asociadas a ID Dueño no se pudo completar, no hay registros asociados a {dueno_id}")
+                print("\nEste dueño no tiene mascotas registradas.")
                 continue
 
-            print("Mascotas del dueño:")
+            print("\nMascotas del dueño:")
             for id_mascota, nombre_mascota in mascotas:
+                logger.info("Proceso de Listar Mascotas existentes en base de datos completado con exito")
                 print(f"{id_mascota}: {nombre_mascota}")
-
+            
             try:
-                mascota_id = int(input("Ingrese el ID de la mascota para registrar la consulta: "))
+                mascota_id = int(input("\nIngrese el ID de la mascota para registrar la consulta: "))
                 if mascota_id not in [m[0] for m in mascotas]:
-                    print("ID de mascota no válido.")
+                    logger.info(f"El ID: {mascota_id} no se encuentra asociado a ningun registro en la base de datos ")
+                    print("\nID de mascota no válido.")
                     continue
             except ValueError:
-                print("ID inválido.")
+                logger.info(f"Proceso de listar Mascotas asociadas a ID Dueño no se pudo completar no hay registros asociados a {mascota_id}")
+                print("\nID inválido.")
                 continue
 
-            fecha = input("Fecha (YYYY-MM-DD): ")
-            motivo = input("Motivo de la consulta: ")
-            diagnostico = input("Diagnóstico: ")
+            try:
+
+                fecha = input("\nFecha (YYYY-MM-DD): ").strip()
+                if not fecha:
+                    raise ValueError("Error! La fecha no puede estar vacia")
+                motivo = input("Motivo de la consulta: ").strip()
+                if not motivo:
+                    raise ValueError("Error! Este campo no debe estar vacio")
+                diagnostico = input("Diagnóstico: ").strip()
+                if not diagnostico:
+                    raise ValueError("Error! Este campo no debe estar vacio")
+            except ValueError as TypingError:
+                logger.info("Proceso de Registrar Consulta de una Mascota por ID, no se pudo completar debido a un error en los parametros requeridos")
+                print(f"{TypingError}")
+                continue
 
             registrar_consulta_sqlite(fecha, motivo, diagnostico, mascota_id)
-            print("Consulta registrada exitosamente.")
+            logger.info("Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente")
+            print("\nConsulta registrada exitosamente.")
 
 
         elif opcion == "6":
+            
+            duenos = obtener_duenos_sqlite()
+            if not duenos:
+                logger.info("Proceso de obtencion de Dueño en base de datos no se pudo completar, no existen registros asociados")
+                print("\nNo hay dueños ni mascotas registrados.")
+                continue
+
+            print("\nDueños registrados:")
+            for id_dueno, nombre_dueno in duenos:
+                logger.info("Proceso de Listar Dueños existentes en base de datos completado con exito")
+                print(f"{id_dueno}: {nombre_dueno}")
+
             try:
-                mascota_id = int(input("ID de la mascota: "))
-            except ValueError:
-                print("ID inválido.")
+                dueno_id = input("\nIngrese el ID del dueño para ver sus mascotas: ")
+                if not dueno_id.strip():
+                    raise ValueError("Error! Este campo no puede estar vacio")
+                else:
+                    int(dueno_id)
+            except ValueError as EmptyFieldError:
+                logger.info("Proceso de listar Dueños por ID no se pudo completar debido a un error en los parametros requeridos")
+                print(f"\n{EmptyFieldError}")
+                continue
+
+            mascotas = obtener_mascotas_por_dueno_sqlite(dueno_id)
+            if not mascotas:
+                logger.info(f"Proceso de Obtener Mascotas asociadas a ID Dueño no se pudo completar, no hay registros asociados a {dueno_id}")
+                print("\nEste dueño no tiene mascotas registradas.")
+                continue
+
+            print("\nMascotas del dueño:")
+            for id_mascota, nombre_mascota in mascotas:
+                logger.info("Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito")
+                print(f"{id_mascota}: {nombre_mascota}")
+
+            try:
+                mascota_id = input("\nID de la mascota: ")
+                if not mascota_id.strip():
+                    raise ValueError("Error! Este campo no puede estar vacio")
+            except ValueError as EmptyFieldError:
+                logger.info(f"Proceso de listar Mascotas asociadas a ID Dueño no se pudo completar no hay registros asociados a {mascota_id}")
+                print(f"\n{EmptyFieldError}")
                 continue
 
             historial = ver_historial_consultas_sqlite(mascota_id)
             if not historial:
-                print("No se encontró historial para esa mascota.")
+                logger.info("Proceso de Ver Historia Consultas asociadas a mascotas existentes en base de datos no se pudo completar, no existen registros asociados")
+                print("\nNo se encontró historial para esa mascota.")
             else:
-                print("Historial de consultas:")
+                print("\nHistorial de consultas:")
                 for fecha, motivo, diagnostico in historial:
+                    logger.info("Proceso de Mostrar Historial de Consultas de Mascotas asociadas a Dueños existentes en base de datos completado con exito")
                     print(f"{fecha} - {motivo}: {diagnostico}")
 
         elif opcion == "7":
-            print("¡Hasta luego!")
+            logger.info("Proceso de cierre de app completado con exito")
+            print("\n¡Hasta luego!")
             break
 
         else:
-            print("Opción no válida. Intente nuevamente.")
+            logger.info("Proceso de seleccion de opcion en el menu no se pudo completar debido a un error en los parametros requeridos")
+            print("\nOpción no válida. Intente nuevamente.")
 
 if __name__ == "__main__":
     menu()

@@ -170,3 +170,5 @@ Mascota 'Mia' registrada con éxito.
 2025-06-02 14:28:21,966 - INFO - Datos de mascotas y dueños cargados desde Mascotas_dueños.csv.
 2025-06-02 14:28:21,967 - ERROR - Error inesperado al cargar datos JSON desde consultas.json: 'Mascota' object has no attribute 'nombre_paciente'.
 2025-06-02 15:25:49,317 - WARNING - Opción inválida seleccionada: & C:/Users/camil/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/camil/OneDrive/Escritorio/Python Scripts/curso-python-softserve/Sprint_7 - Veterinaria Amigos Peludos - Test/main.py"
+2025-06-03 20:16:34,112 - INFO - Datos del dueño John 3013020202 Av 6registrados satisfactoriamente
+2025-06-03 20:20:26,559 - INFO - Proceso de registro de Dueño no se pudo completar debido a un error en los parametros requeridos
