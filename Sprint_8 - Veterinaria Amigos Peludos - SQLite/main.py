@@ -113,8 +113,8 @@ def menu():
                 print(f"{id_dueno}: {nombre_dueno}")
 
             try:                
-                dueno_id = int(input("\nIngrese el ID del dueño: ")).strip()
-                if not dueno_id.isdigit():
+                dueno_id = int(input("\nIngrese el ID del dueño: ").strip())
+                if not dueno_id:
                     raise ValueError("\nError! Este campo no puede estar vacio y debe ser un numero")
             except ValueError as ID_Selection_Error:
                 logger.info("Proceso de listar Mascotas por ID no se pudo completar debido a un error en los parametros requeridos")
