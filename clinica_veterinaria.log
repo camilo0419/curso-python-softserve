@@ -1,0 +1,365 @@
+2025-05-18 22:31:59,783 - INFO - Inicio de la Aplicaci�n
+2025-05-18 22:34:46,125 - INFO - Inicio de la Aplicación
+2025-05-18 23:02:47,780 - INFO - Inicio de la Aplicación
+2025-05-18 23:02:58,314 - INFO - 
+Mascota '1' registrada con éxito.
+2025-05-18 23:03:13,319 - WARNING - Mascota '2' no encontrada.
+2025-05-18 23:03:16,542 - WARNING - Mascota '2' no encontrada.
+2025-05-18 23:03:25,023 - INFO - 
+Mascota '2' registrada con éxito.
+2025-05-18 23:03:41,364 - INFO - 
+Mascota '3' registrada con éxito.
+2025-05-18 23:03:44,784 - WARNING - Error al registrar mascota: El nombre de la mascota no puede estar vacío
+2025-05-18 23:03:53,406 - WARNING - Error al registrar mascota: La especie no puede estar vacía
+2025-05-18 23:04:12,338 - INFO - Consulta registrada para '1' el 1.
+2025-05-18 23:04:55,927 - INFO - Cierre de la aplicación
+2025-05-19 23:29:39,507 - INFO - Inicio de la Aplicación
+2025-05-19 23:30:36,080 - INFO - 
+Mascota 'Luna' registrada con éxito.
+2025-05-19 23:31:09,803 - INFO - 
+Mascota 'Mia' registrada con éxito.
+2025-05-19 23:31:53,471 - INFO - Consulta registrada para 'Mia' el 19/05/2025.
+2025-05-19 23:32:35,457 - INFO - Consulta registrada para 'Mia' el 22/05/2025.
+2025-05-19 23:33:27,417 - INFO - Consulta registrada para 'Luna' el 26/05/2025.
+2025-05-19 23:33:37,302 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-19 23:33:37,309 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-19 23:33:37,309 - INFO - Cierre de la aplicación
+2025-05-28 19:38:58,161 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-28 19:38:58,162 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-28 19:38:58,165 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-28 19:38:58,166 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-28 19:47:31,290 - INFO - Inicio de la Aplicación
+2025-05-28 19:47:31,291 - INFO - El archivo 'Mascotas_dueños.csv' no existe. No se realiza ninguna carga
+2025-05-28 19:47:31,291 - INFO - El archivo 'consultas.json' no existe. No se realiza ninguna carga
+2025-05-28 19:48:32,383 - INFO - Inicio de la Aplicación
+2025-05-28 19:48:32,384 - INFO - Datos de mascotas y dueños cargados desde Mascotas_dueños.csv.
+2025-05-28 19:48:32,384 - INFO - Datos de consultas cargados exitosamente desde 'consultas.json'.
+2025-05-28 19:48:41,522 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-28 19:48:41,524 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-28 19:48:41,525 - INFO - Cierre de la aplicación
+2025-05-28 19:48:47,064 - INFO - Inicio de la Aplicación
+2025-05-28 19:48:47,065 - INFO - Datos de mascotas y dueños cargados desde Mascotas_dueños.csv.
+2025-05-28 19:48:47,067 - INFO - Datos de consultas cargados exitosamente desde 'consultas.json'.
+2025-05-28 19:49:16,321 - INFO - 
+Mascota 'Misifu' registrada con éxito.
+2025-05-28 19:49:24,137 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-28 19:49:24,138 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-28 19:49:30,181 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-28 19:49:30,183 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-28 19:49:30,184 - INFO - Cierre de la aplicación
+2025-05-28 19:49:52,597 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-28 19:49:52,598 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-28 19:49:52,601 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-28 19:49:52,602 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-28 19:51:07,359 - INFO - Inicio de la Aplicación
+2025-05-28 19:51:07,360 - INFO - Datos de mascotas y dueños cargados desde Mascotas_dueños.csv.
+2025-05-28 19:51:07,360 - INFO - Datos de consultas cargados exitosamente desde 'consultas.json'.
+2025-05-28 19:52:33,227 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-28 19:52:33,228 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-28 19:52:33,231 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-28 19:52:33,232 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-28 19:55:29,263 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-28 19:55:29,264 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-28 19:55:29,267 - INFO - Datos de mascotas y dueños guardados en archivo CSV.
+2025-05-28 19:55:29,268 - INFO - Datos de consultas guardados en archivo JSON.
+2025-05-28 20:10:30,102 - INFO - Inicio de la Aplicación
+2025-05-28 20:10:30,103 - INFO - Datos de mascotas y dueños cargados desde Mascotas_dueños.csv.
+2025-05-28 20:10:30,104 - INFO - Datos de consultas cargados exitosamente desde 'consultas.json'.
+2025-05-28 20:11:06,259 - WARNING - Mascota 'a' no encontrada.
+2025-05-28 20:11:19,862 - WARNING - Error al registrar mascota: El teléfono debe tener exactamente 10 dígitos numéricos.
+2025-05-28 20:11:30,844 - INFO - 
+Mascota 'a' registrada con éxito.
+2025-05-28 20:48:16,401 - INFO - Inicio de la Aplicación
+2025-05-28 20:48:16,409 - INFO - Datos de mascotas y dueños cargados desde Mascotas_dueños.csv.
+2025-05-28 20:48:16,416 - INFO - Datos de consultas cargados exitosamente desde consultas.json.
+2025-05-28 20:48:47,532 - INFO - 
+Mascota 'Luna' registrada con éxito.
+2025-05-28 20:48:49,783 - INFO - Datos de mascotas y dueños guardados en archivo CSV: Mascotas_dueños.csv.
+2025-05-28 20:48:49,785 - INFO - Datos de consultas guardados en archivo JSON: consultas.json.
+2025-05-28 20:49:29,159 - INFO - 
+Mascota 'Mia' registrada con éxito.
+2025-05-28 20:49:59,171 - INFO - Consulta registrada para 'Mia' el 19/05/2025.
+2025-05-28 20:50:14,800 - INFO - Datos de mascotas y dueños guardados en archivo CSV: Mascotas_dueños.csv.
+2025-05-28 20:50:14,801 - INFO - Datos de consultas guardados en archivo JSON: consultas.json.
+2025-05-28 20:50:48,670 - INFO - Consulta registrada para 'Luna' el 20/05/2025.
+2025-05-28 20:50:51,264 - INFO - Datos de mascotas y dueños guardados en archivo CSV: Mascotas_dueños.csv.
+2025-05-28 20:50:51,266 - INFO - Datos de consultas guardados en archivo JSON: consultas.json.
+2025-05-28 20:51:26,650 - INFO - Datos de mascotas y dueños guardados en archivo CSV: Mascotas_dueños.csv.
+2025-05-28 20:51:26,651 - INFO - Datos de consultas guardados en archivo JSON: consultas.json.
+2025-05-28 20:51:26,652 - INFO - Cierre de la aplicación
+2025-05-28 21:00:48,897 - INFO - Datos de mascotas y dueños guardados en archivo CSV: Mascotas_dueños.csv.
+2025-05-28 21:00:48,899 - INFO - Datos de consultas guardados en archivo JSON: consultas.json.
+2025-05-28 21:00:48,901 - INFO - Datos de mascotas y dueños guardados en archivo CSV: Mascotas_dueños.csv.
+2025-05-28 21:00:48,902 - INFO - Datos de consultas guardados en archivo JSON: consultas.json.
+2025-05-28 21:03:09,251 - INFO - Datos de mascotas y dueños guardados en archivo CSV: C:\Users\camil\AppData\Local\Temp\tmp8v24uzhk.csv.
+2025-05-28 21:03:09,252 - INFO - Datos de consultas guardados en archivo JSON: C:\Users\camil\AppData\Local\Temp\tmpw0dxbbr0.json.
+2025-05-28 21:03:09,255 - INFO - Datos de mascotas y dueños guardados en archivo CSV: C:\Users\camil\AppData\Local\Temp\tmprf0qixzx.csv.
+2025-05-28 21:03:09,256 - INFO - Datos de consultas guardados en archivo JSON: C:\Users\camil\AppData\Local\Temp\tmpn2ymw1i9.json.
+2025-05-30 16:43:04,843 - INFO - Datos de mascotas y dueños guardados en archivo CSV: C:\Users\camil\AppData\Local\Temp\tmpq_yk96us.csv.
+2025-05-30 16:43:04,844 - INFO - Datos de consultas guardados en archivo JSON: C:\Users\camil\AppData\Local\Temp\tmpy7l8hx9u.json.
+2025-05-30 16:43:04,855 - INFO - Datos de mascotas y dueños guardados en archivo CSV: C:\Users\camil\AppData\Local\Temp\tmpvb955q9c.csv.
+2025-05-30 16:43:04,856 - INFO - Datos de consultas guardados en archivo JSON: C:\Users\camil\AppData\Local\Temp\tmpb0wuq8sr.json.
+2025-05-30 16:45:54,502 - INFO - Datos de mascotas y dueños guardados en archivo CSV: C:\Users\camil\AppData\Local\Temp\tmp4g6d_4z8.csv.
+2025-05-30 16:45:54,504 - INFO - Datos de consultas guardados en archivo JSON: C:\Users\camil\AppData\Local\Temp\tmpcow0gdcu.json.
+2025-05-30 16:45:54,507 - INFO - Datos de mascotas y dueños guardados en archivo CSV: C:\Users\camil\AppData\Local\Temp\tmpduw07faf.csv.
+2025-05-30 16:45:54,507 - INFO - Datos de consultas guardados en archivo JSON: C:\Users\camil\AppData\Local\Temp\tmpd5gpgjfo.json.
+2025-05-30 16:59:08,115 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 16:59:08,117 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 16:59:08,120 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 16:59:08,121 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:01:28,750 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:01:28,751 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:01:28,755 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:01:28,755 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:04:45,487 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:04:45,489 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:04:45,491 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:04:45,492 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:06:02,410 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:06:02,412 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:06:02,419 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:06:02,420 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:07:10,265 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:07:10,266 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:07:10,270 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:07:10,271 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:07:23,810 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:07:23,811 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:07:23,814 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:07:23,816 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:07:45,926 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:07:45,927 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:07:45,930 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:07:45,931 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:46:42,338 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:46:42,339 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:46:42,349 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:46:42,350 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:49:16,283 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:49:16,285 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:49:16,287 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:49:16,289 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:53:40,389 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:53:40,393 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:53:40,398 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:53:40,399 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:54:30,836 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:54:30,837 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:54:30,841 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:54:30,842 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:56:50,387 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:56:50,388 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 17:56:50,391 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 17:56:50,394 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 18:08:36,872 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 18:08:36,873 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-05-30 18:08:36,876 - INFO - Datos de mascotas y dueños guardados en archivo CSV: test_mascotas.csv.
+2025-05-30 18:08:36,877 - INFO - Datos de consultas guardados en archivo JSON: test_consultas.json.
+2025-06-02 14:11:08,319 - INFO - Inicio de la Aplicación
+2025-06-02 14:11:08,320 - INFO - Datos de mascotas y dueños cargados desde Mascotas_dueños.csv.
+2025-06-02 14:11:08,321 - INFO - Datos de consultas cargados exitosamente desde consultas.json.
+2025-06-02 14:22:14,251 - WARNING - Opción inválida seleccionada: & C:/Users/camil/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/camil/OneDrive/Escritorio/Python Scripts/curso-python-softserve/Sprint_7 - Veterinaria Amigos Peludos - Test/main.py"
+2025-06-02 14:22:31,755 - INFO - Inicio de la Aplicación
+2025-06-02 14:22:31,756 - INFO - Datos de mascotas y dueños cargados desde Mascotas_dueños.csv.
+2025-06-02 14:22:31,756 - INFO - Datos de consultas cargados exitosamente desde consultas.json.
+2025-06-02 14:25:56,588 - WARNING - Opción inválida seleccionada: & C:/Users/camil/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/camil/OneDrive/Escritorio/Python Scripts/curso-python-softserve/Sprint_7 - Veterinaria Amigos Peludos - Test/main.py"
+2025-06-02 14:26:06,508 - INFO - Inicio de la Aplicación
+2025-06-02 14:26:06,509 - INFO - Datos de mascotas y dueños cargados desde Mascotas_dueños.csv.
+2025-06-02 14:26:06,510 - ERROR - Error inesperado al cargar datos JSON desde consultas.json: 'Mascota' object has no attribute 'nombre_paciente'.
+2025-06-02 14:28:21,965 - INFO - Inicio de la Aplicación
+2025-06-02 14:28:21,966 - INFO - Datos de mascotas y dueños cargados desde Mascotas_dueños.csv.
+2025-06-02 14:28:21,967 - ERROR - Error inesperado al cargar datos JSON desde consultas.json: 'Mascota' object has no attribute 'nombre_paciente'.
+2025-06-02 15:25:49,317 - WARNING - Opción inválida seleccionada: & C:/Users/camil/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/camil/OneDrive/Escritorio/Python Scripts/curso-python-softserve/Sprint_7 - Veterinaria Amigos Peludos - Test/main.py"
+2025-06-03 20:16:34,112 - INFO - Datos del dueño John 3013020202 Av 6registrados satisfactoriamente
+2025-06-03 20:20:26,559 - INFO - Proceso de registro de Dueño no se pudo completar debido a un error en los parametros requeridos
+2025-06-04 07:30:05,233 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:05,233 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:05,234 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:05,234 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:07,488 - INFO - Proceso de Obtener Mascotas asociadas a ID Dueño no se pudo completar, no hay registros asociados a 4
+2025-06-04 07:30:11,507 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:11,508 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:11,508 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:11,510 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:13,623 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-04 07:30:13,623 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-04 07:30:21,934 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
+2025-06-04 07:32:57,769 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:32:57,769 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:32:57,769 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:32:57,769 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:26,305 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:26,305 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:26,305 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:26,306 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,208 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,208 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,208 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,208 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,935 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,936 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:06,584 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:06,584 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:06,584 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:06,585 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:07,384 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:07,385 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:43,737 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:43,737 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:43,737 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:43,737 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:45,056 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:45,056 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-09 22:05:12,347 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:05:12,349 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:05:12,349 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:05:12,350 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:05:19,282 - INFO - El usuario selecciono la opcion 'Actualizar datos de un dueño'
+2025-06-09 22:05:50,994 - INFO - Datos del deuno 3 actualizados con exito
+2025-06-09 22:06:03,747 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:06:03,747 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:06:03,748 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:06:03,748 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:09:51,170 - INFO - El usuario selecciono la opcion 'Actualizar datos de un dueño'
+2025-06-09 22:09:51,171 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:09:51,172 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:09:51,172 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:09:51,172 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:10:14,867 - INFO - Datos del dueño 3 actualizados con exito
+2025-06-09 22:10:20,665 - INFO - El usuario selecciono la opcion 'Actualizar datos de un dueño'
+2025-06-09 22:10:20,667 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:10:20,667 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:10:20,667 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:10:20,668 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:12:51,426 - INFO - El usuario selecciono la opcion 'Actualizar datos de un dueño'
+2025-06-09 22:12:51,428 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:12:51,428 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:12:51,428 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:12:51,428 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:13:17,073 - INFO - Datos del dueño 3 actualizados con exito
+2025-06-09 22:13:21,867 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:13:21,867 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:13:21,867 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:13:21,867 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 06:05:19,344 - INFO - Dueño: John, Telefono: 3216549870, Direccion: Kr 1, registrados satisfactoriamente
+2025-06-10 06:05:22,153 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-10 06:05:41,679 - INFO - Proceso de registro de Mascota completado satisfactoriamente
+2025-06-10 06:05:47,229 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 06:05:48,768 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-10 06:06:19,647 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
+2025-06-10 06:06:23,585 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 06:06:24,704 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 06:06:25,464 - INFO - Proceso de Mostrar Historial de Consultas de Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 06:06:34,496 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 06:06:37,375 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 06:06:38,088 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 06:06:45,286 - INFO - El usuario selecciono la opcion 'Actualizar datos de un dueño'
+2025-06-10 06:06:45,288 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 06:08:32,143 - INFO - Datos del dueño 1 actualizados con exito
+2025-06-10 06:08:40,209 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 06:08:45,919 - INFO - Proceso de registro de Dueño no se pudo completar debido a un error en los parametros requeridos
+2025-06-10 06:09:08,223 - INFO - Dueño: Jose, Telefono: 3156987412, Direccion: Kr 2, registrados satisfactoriamente
+2025-06-10 06:09:11,457 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 06:09:11,458 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 06:09:15,334 - INFO - El usuario selecciono la opcion 'Eliminar dueño (lógicamente)'
+2025-06-10 06:09:21,273 - INFO - Dueño con ID 2 eliminado lógicamente con éxito.
+2025-06-10 16:37:05,787 - INFO - Proceso de obtencion de Dueño en base de datos no se pudo completar, no existen registros asociados
+2025-06-10 16:37:09,057 - INFO - Proceso de obtencion de Dueño en base de datos no se pudo completar, no existen registros asociados
+2025-06-10 16:37:30,649 - INFO - Dueño: John, Telefono: 3124567890, Direccion: Kr 1, registrados satisfactoriamente
+2025-06-10 16:37:34,064 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-10 16:37:50,194 - INFO - Proceso de registro de Mascota completado satisfactoriamente
+2025-06-10 16:37:53,994 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:37:57,545 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:37:58,409 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:38:03,849 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:38:05,313 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-10 16:38:23,560 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
+2025-06-10 16:38:28,027 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:38:28,896 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:38:29,832 - INFO - Proceso de Mostrar Historial de Consultas de Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:38:35,880 - INFO - El usuario selecciono la opcion 'Actualizar datos'
+2025-06-10 16:38:46,496 - INFO - Dueño listado: ID 1, Nombre: John
+2025-06-10 16:38:55,449 - INFO - Datos del dueño con ID 1 actualizados con éxito.
+2025-06-10 16:38:59,855 - INFO - El usuario regresó del sub-menú de actualización.
+2025-06-10 16:39:03,348 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:39:30,168 - INFO - Dueño: KL, Telefono: 3156478952, Direccion: Calle 3, registrados satisfactoriamente
+2025-06-10 16:39:33,387 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:39:33,387 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:39:37,952 - INFO - El usuario selecciono la opcion 'Eliminar registros (lógicamente)'
+2025-06-10 16:39:42,048 - INFO - El usuario regresó del sub-menú de eliminación lógica.
+2025-06-10 16:39:45,920 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-10 16:39:45,921 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-10 16:40:05,534 - INFO - Proceso de registro de Mascota completado satisfactoriamente
+2025-06-10 16:40:11,563 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:40:11,563 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:40:13,457 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-10 16:40:34,679 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
+2025-06-10 16:40:39,411 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:40:39,411 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:40:40,985 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:40:42,353 - INFO - Proceso de Mostrar Historial de Consultas de Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:40:50,904 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-10 16:40:50,905 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-10 16:41:10,447 - INFO - Proceso de registro de Mascota completado satisfactoriamente
+2025-06-10 16:41:12,779 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:12,780 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:13,544 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-10 16:41:13,545 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-10 16:41:35,929 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
+2025-06-10 16:41:41,227 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:41,227 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:42,513 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:42,513 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:44,233 - INFO - Proceso de Mostrar Historial de Consultas de Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:48,273 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:48,273 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:50,809 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:50,810 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:53,129 - INFO - Proceso de Mostrar Historial de Consultas de Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:41:56,808 - INFO - El usuario selecciono la opcion 'Eliminar registros (lógicamente)'
+2025-06-10 16:42:16,529 - INFO - Consulta con ID 2 eliminada lógicamente con éxito.
+2025-06-10 16:42:20,288 - INFO - El usuario regresó del sub-menú de eliminación lógica.
+2025-06-10 16:42:24,755 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:42:24,755 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:42:26,617 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:42:26,617 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:42:27,761 - INFO - Proceso de Ver Historia Consultas asociadas a mascotas existentes en base de datos no se pudo completar, no existen registros asociados
+2025-06-10 16:42:33,880 - INFO - El usuario selecciono la opcion 'Eliminar registros (lógicamente)'
+2025-06-10 16:42:43,489 - INFO - Mascota con ID 2 eliminada lógicamente con éxito.
+2025-06-10 16:42:46,824 - INFO - El usuario regresó del sub-menú de eliminación lógica.
+2025-06-10 16:42:50,641 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:42:50,641 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 16:42:51,864 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 16:42:57,424 - INFO - El usuario selecciono la opcion 'Eliminar registros (lógicamente)'
+2025-06-10 16:43:07,263 - INFO - Dueño con ID 2 eliminado lógicamente con éxito.
+2025-06-10 16:43:09,776 - INFO - El usuario regresó del sub-menú de eliminación lógica.
+2025-06-10 16:43:12,043 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 17:21:49,346 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 17:22:12,520 - INFO - Dueño: John, Telefono: 3025698747, Direccion: Diag 4, registrados satisfactoriamente
+2025-06-10 17:22:15,575 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-10 17:22:15,576 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-10 17:22:34,936 - INFO - Proceso de registro de Mascota completado satisfactoriamente
+2025-06-10 17:22:38,418 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 17:22:38,419 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 17:22:39,714 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-10 17:23:08,607 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
+2025-06-10 17:23:11,468 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 17:23:11,468 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 17:23:16,201 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 17:23:16,201 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 17:23:17,234 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 17:23:20,666 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 17:23:20,666 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-10 17:23:22,282 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 17:23:24,050 - INFO - Proceso de Mostrar Historial de Consultas de Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-10 17:24:28,856 - INFO - El usuario selecciono la opcion 'Actualizar datos'
+2025-06-10 17:24:44,153 - WARNING - No se pudo actualizar la mascota con ID 4.
+2025-06-10 17:26:12,185 - INFO - El usuario selecciono la opcion 'Actualizar datos'
+2025-06-10 17:26:28,056 - WARNING - No se pudo actualizar la mascota con ID 4.
+2025-06-10 17:30:22,881 - INFO - El usuario selecciono la opcion 'Actualizar datos'
+2025-06-10 17:30:39,879 - WARNING - No se pudo actualizar la mascota con ID 4.
+2025-06-10 17:31:16,376 - INFO - El usuario selecciono la opcion 'Actualizar datos'
+2025-06-10 17:31:39,009 - WARNING - No se pudo actualizar la mascota con ID 4.
+2025-06-10 17:37:16,753 - INFO - El usuario selecciono la opcion 'Actualizar datos'
+2025-06-10 17:37:35,727 - INFO - Datos de la mascota con ID 4 actualizados con éxito.
+2025-06-10 17:38:11,168 - INFO - Datos de la consulta con ID 4 actualizados con éxito.
