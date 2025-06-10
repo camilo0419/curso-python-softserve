@@ -172,3 +172,72 @@ Mascota 'Mia' registrada con éxito.
 2025-06-02 15:25:49,317 - WARNING - Opción inválida seleccionada: & C:/Users/camil/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/camil/OneDrive/Escritorio/Python Scripts/curso-python-softserve/Sprint_7 - Veterinaria Amigos Peludos - Test/main.py"
 2025-06-03 20:16:34,112 - INFO - Datos del dueño John 3013020202 Av 6registrados satisfactoriamente
 2025-06-03 20:20:26,559 - INFO - Proceso de registro de Dueño no se pudo completar debido a un error en los parametros requeridos
+2025-06-04 07:30:05,233 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:05,233 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:05,234 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:05,234 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:07,488 - INFO - Proceso de Obtener Mascotas asociadas a ID Dueño no se pudo completar, no hay registros asociados a 4
+2025-06-04 07:30:11,507 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:11,508 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:11,508 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:11,510 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:30:13,623 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-04 07:30:13,623 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-04 07:30:21,934 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
+2025-06-04 07:32:57,769 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:32:57,769 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:32:57,769 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:32:57,769 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:26,305 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:26,305 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:26,305 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:26,306 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,208 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,208 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,208 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,208 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,935 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-04 07:33:50,936 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:06,584 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:06,584 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:06,584 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:06,585 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:07,384 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-04 07:35:07,385 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:43,737 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:43,737 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:43,737 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:43,737 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:45,056 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-04 07:36:45,056 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-09 22:05:12,347 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:05:12,349 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:05:12,349 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:05:12,350 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:05:19,282 - INFO - El usuario selecciono la opcion 'Actualizar datos de un dueño'
+2025-06-09 22:05:50,994 - INFO - Datos del deuno 3 actualizados con exito
+2025-06-09 22:06:03,747 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:06:03,747 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:06:03,748 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:06:03,748 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:09:51,170 - INFO - El usuario selecciono la opcion 'Actualizar datos de un dueño'
+2025-06-09 22:09:51,171 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:09:51,172 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:09:51,172 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:09:51,172 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:10:14,867 - INFO - Datos del dueño 3 actualizados con exito
+2025-06-09 22:10:20,665 - INFO - El usuario selecciono la opcion 'Actualizar datos de un dueño'
+2025-06-09 22:10:20,667 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:10:20,667 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:10:20,667 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:10:20,668 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:12:51,426 - INFO - El usuario selecciono la opcion 'Actualizar datos de un dueño'
+2025-06-09 22:12:51,428 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:12:51,428 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:12:51,428 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:12:51,428 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:13:17,073 - INFO - Datos del dueño 3 actualizados con exito
+2025-06-09 22:13:21,867 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:13:21,867 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:13:21,867 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-09 22:13:21,867 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito

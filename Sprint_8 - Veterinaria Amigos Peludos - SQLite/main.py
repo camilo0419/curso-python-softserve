@@ -6,7 +6,8 @@ from persistencia import (
     registrar_mascota_sqlite,
     obtener_mascotas_por_dueno_sqlite,
     registrar_consulta_sqlite,
-    ver_historial_consultas_sqlite
+    ver_historial_consultas_sqlite,
+    actualizar_dueno_sqlite
 )
 
 def menu():
@@ -20,7 +21,8 @@ def menu():
         print("4. Listar mascotas de un dueño")
         print("5. Registrar consulta")
         print("6. Ver historial de consultas de una mascota")
-        print("7. Salir")
+        print("7. Actualizar datos dueno")
+        print("8. Salir")
 
         opcion = input("\nSeleccione una opción: ")
 
@@ -253,6 +255,69 @@ def menu():
                     print(f"{fecha} - {motivo}: {diagnostico}")
 
         elif opcion == "7":
+            logger.info("El usuario selecciono la opcion 'Actualizar datos de un dueño'")
+            print("\n--- Actualizar Datos de Dueño ---")
+            try:
+                duenos = obtener_duenos_sqlite()
+                if not duenos:
+                    logger.info("Proceso de obtencion de Dueño en base de datos no se pudo completar, no existen registros asociados")
+                    print("\nNo hay dueños registrados.")
+                    print("\nDueños registrados:")
+                for id_dueno, nombre_dueno in duenos:
+                    logger.info("Proceso de Listar Dueños existentes en base de datos completado con exito")
+                    print(f"{id_dueno}: {nombre_dueno}")
+
+                dueno_id_str = input("Ingrese el ID del dueño a actualizar: ").strip()
+                if not dueno_id_str.isdigit():
+                    raise ValueError("Error! El ID debe ser un numero.")
+                dueno_id = int(dueno_id_str)
+
+                #Intentamos obtener el dueño para verificar si exise
+                dueno_existente = obtener_duenos_sqlite()
+                dueno_encontrado = False
+                for d_id, d_nombre in dueno_existente:
+                    if d_id == dueno_id:
+                        print(f"Dueño actual : ID {d_id}, Nombre: {d_nombre}")
+                        dueno_encontrado = True
+                        break
+                if not dueno_encontrado:
+                    print(f"No se encontro un dueño con ID {dueno_id}.")
+                    logger.warning(f"Intento de actualizar dueño con ID inexistente: {dueno_id}")
+                    continue #Esto nos lleva al menu principal
+                print("\nPor favor solo rellene los campos que desea actualizar:")
+                nuevo_nombre = input("Nuevo nombre (actual...): ").strip()
+                nuevo_telefono = input("Nuevo telefono (actual...): ").strip()
+                nueva_direccion = input("Nuevo direccion (actual...): ").strip()
+
+                # Convertimos cadenas vacías a None para la función de persistencia
+                if not nuevo_nombre:
+                    nuevo_nombre = None
+                if not nuevo_telefono:
+                    nuevo_telefono = None
+                if not nueva_direccion:
+                    nueva_direccion = None
+
+                #Verificamos si al menos un campo tiene un nuevo valor
+                if nuevo_nombre is None and nuevo_telefono is None and nueva_direccion is None:
+                    print("No se ingresaron nuevos datos para actualizar")
+                    logger.info(f"Actualizacion de dueño {dueno_id} no pudo ser completada por falta de datos")
+                else:
+                    #Llamamos a la funcion de persistencia
+                    if actualizar_dueno_sqlite(dueno_id, nuevo_nombre, nuevo_telefono, nueva_direccion):
+                        logger.info(f"Datos del dueño {dueno_id} actualizados con exito")
+                        print(f"Datos del dueño {dueno_id} actualizados con exito")
+                    else:
+                        logger.warning(f"No se pudo actualizar el dueño con ID {dueno_id}.")
+                        print(f"No se pudo actualizar el dueño con ID {dueno_id}. Verifique el ID.")
+
+            except ValueError as ve:
+                logger.error(f"Error de validación al actualizar dueño: {ve}")
+                print(f"\nError: {ve}")
+            except Exception as e:
+                logger.critical(f"Error inesperado al actualizar dueño: {e}")
+                print(f"\nOcurrió un error inesperado: {e}")
+
+        elif opcion == "8":
             logger.info("Proceso de cierre de app completado con exito")
             print("\n¡Hasta luego!")
             break

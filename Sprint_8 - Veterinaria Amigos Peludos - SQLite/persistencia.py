@@ -1,3 +1,4 @@
+import sqlite3
 from conexion import crear_conexion
 
 # --- Dueños ---
@@ -9,6 +10,56 @@ def registrar_dueno_sqlite(nombre, telefono, direccion):
                    (nombre, telefono, direccion))
     conexion.commit()
     conexion.close()
+
+def actualizar_dueno_sqlite(dueno_id, nuevo_nombre = None, nuevo_telefono = None, nueva_direccion = None):
+    """
+    Actualiza los datos de un dueño existente en la base de datos SQLite.
+    Permite actualizar uno o varios campos.
+
+    Args:
+        dueno_id (int): El ID del dueño a actualizar.
+        nuevo_nombre (str, optional): El nuevo nombre del dueño. Si es None, no se actualiza.
+        nuevo_telefono (str, optional): El nuevo teléfono del dueño. Si es None, no se actualiza.
+        nueva_direccion (str, optional): La nueva dirección del dueño. Si es None, no se actualiza.
+    """
+    conexion = crear_conexion()
+    cursor = conexion.cursor()
+
+    # Construimos la consulta SQL dinámicamente
+    # Esto es clave para actualizar solo los campos que se especifican
+    updates = [] # Lista para guardar las partes 'campo = ?' de la consulta
+    valores = [] # Lista para guardar los valores correspondientes a los campos
+
+    if nuevo_nombre is not None:
+        updates.append("nombre_dueno = ?")
+        valores.append(nuevo_nombre)
+    if nuevo_telefono is not None:
+        updates.append("telefono = ?")
+        valores.append(nuevo_telefono)
+    if nueva_direccion is not None:
+        updates.append("direccion = ?")
+        valores.append(nueva_direccion)
+
+    # Si no hay nada que actualizar (todos los campos son None), salimos
+    if not updates:
+        conexion.close()
+        return False # Indicamos que no se realizó ninguna actualización
+
+    # Unimos las partes de 'updates' con comas para formar el SET de la consulta
+    query = f"UPDATE duenos SET {', '.join(updates)} WHERE id = ?"
+    valores.append(dueno_id) # El ID siempre es el último valor para el WHERE
+
+    try:
+        cursor.execute(query, tuple(valores)) # Ejecutamos la consulta
+        conexion.commit() # Guardamos los cambios
+        filas_afectadas = cursor.rowcount # Esto nos dice cuántas filas se modificaron
+        conexion.close()
+        return filas_afectadas > 0 # Devolvemos True si se actualizó al menos una fila
+    except sqlite3.Error as e:
+        print(f"Error al actualizar dueño: {e}")
+        conexion.rollback() # Deshacemos los cambios si hay un error
+        conexion.close()
+        return False
 
 def obtener_duenos_sqlite():
     conexion = crear_conexion()
@@ -47,7 +98,7 @@ def listar_mascotas():
         print("ID inválido.")
         return
     
-    mascotas = obtener_mascotas_por_dueno(dueno_id)
+    mascotas = obtener_mascotas_por_dueno_sqlite(dueno_id)
     if not mascotas:
         print("No se encontraron mascotas para ese dueño.")
         return
