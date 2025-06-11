@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Veterinaria Amigos Peludos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 30px;
+        }
+        .container {
+            padding: 20px;
+        }
+        img.banner {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .btn {
+            display: inline-block;
+            margin: 20px 10px;
+            padding: 15px 25px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #388e3c;
+        }
+        footer {
+            margin-top: 50px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clínica Veterinaria Amigos Peludos</h1>
+        <p>Cuidamos a tus mascotas como parte de nuestra familia</p>
+    </header>
+    
+    <img src="{% static 'principal/img/main.jpg' %}" alt="Mascotas felices"
+     style="max-width: 400px; height: auto;">
+
+
+
+    <div class="container">
+        <a href="{% url 'clientes' %}" class="btn">Clientes</a>
+        <a href="{% url 'mascotas' %}" class="btn">Mascotas</a>
+    </div>
+
+    <footer>
+        <p>© 2025 Veterinaria Amigos Peludos</p>
+    </footer>
+</body>
+</html>
+

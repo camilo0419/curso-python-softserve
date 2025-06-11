@@ -1,11 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
 def inicio(request):
-    return render(request, 'inicio.html')
+    return render(request, 'principal/inicio.html')
 
-def servicios(request):
-    return render(request, 'servicios.html')
+def clientes(request):
+    return render(request, 'principal/clientes.html')
 
-def placeholder(request):
-    return render(request, 'placeholder.html')
+def mascotas(request):
+    return render(request, 'principal/mascotas.html')
