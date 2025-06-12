@@ -21,7 +21,7 @@ def menu():
         print("4. Listar mascotas de un dueño")
         print("5. Registrar consulta")
         print("6. Ver historial de consultas de una mascota")
-        print("7. Actualizar datos dueno")
+        print("7. Actualizar datos dueño")
         print("8. Salir")
 
         opcion = input("\nSeleccione una opción: ")
