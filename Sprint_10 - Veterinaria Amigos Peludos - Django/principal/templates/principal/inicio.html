@@ -7,23 +7,33 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             background-color: #f9f9f9;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
         header {
             background-color: #4CAF50;
             color: white;
             padding: 30px;
         }
-        .container {
+        .main-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
             padding: 20px;
         }
-        img.banner {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
+        .main-section img {
+            max-width: 400px;
+            height: auto;
+        }
+        .calendar-box {
+            margin-left: 30px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .btn {
             display: inline-block;
@@ -34,10 +44,18 @@
             text-decoration: none;
             border-radius: 8px;
             font-size: 18px;
-            transition: background-color 0.3s;
         }
         .btn:hover {
             background-color: #388e3c;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ccc;
         }
         footer {
             margin-top: 50px;
@@ -46,24 +64,45 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Clínica Veterinaria Amigos Peludos</h1>
-        <p>Cuidamos a tus mascotas como parte de nuestra familia</p>
-    </header>
-    
-    <img src="{% static 'principal/img/main.png' %}" alt="Mascotas felices"
-     style="max-width: 400px; height: auto;">
+<header>
+    <h1>Clínica Veterinaria Amigos Peludos</h1>
+    <p>Cuidamos a tus mascotas como parte de nuestra familia</p>
+</header>
 
+<div class="main-section">
+    <img src="{% static 'principal/img/main.png' %}" alt="Mascotas felices">
 
+    <div class="calendar-box">
+        <form method="get">
+            <label for="fecha">Selecciona una fecha:</label><br>
+            <input type="date" name="fecha" value="{{ fecha }}" onchange="this.form.submit()">
+        </form>
 
-    <div class="container">
-        <a href="{% url 'clientes' %}" class="btn">Clientes</a>
-        <a href="{% url 'mascotas' %}" class="btn">Mascotas</a>
+        {% if consultas %}
+            <h3>Consultas realizadas el: {{ fecha }}</h3>
+            <table>
+                <tr><th>Mascota</th><th>Motivo</th><th>Diagnóstico</th></tr>
+                {% for c in consultas %}
+                    <tr>
+                        <td>{{ c.3 }}</td>
+                        <td>{{ c.1 }}</td>
+                        <td>{{ c.2 }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No hay consultas registradas para esta fecha.</p>
+        {% endif %}
     </div>
+</div>
 
-    <footer>
-        <p>© 2025 Veterinaria Amigos Peludos</p>
-    </footer>
+<div class="container">
+    <a href="{% url 'clientes' %}" class="btn">Clientes</a>
+    <a href="{% url 'mascotas' %}" class="btn">Mascotas</a>
+</div>
+
+<footer>
+    <p>© 2025 Veterinaria Amigos Peludos</p>
+</footer>
 </body>
 </html>
-
