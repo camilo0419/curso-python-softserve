@@ -5,53 +5,94 @@
     <meta charset="UTF-8">
     <title>Lista de Clientes</title>
     <link rel="icon" type="image/png" href="{% static 'principal/img/favicon.png' %}">
+
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
-            margin: 0;
             padding: 0;
+            margin: 0;
             text-align: center;
         }
+
         header {
             background-color: #4CAF50;
             color: white;
-            padding: 30px;
+            padding: 30px 20px;
         }
-        .btn {
-            display: inline-block;
-            margin: 20px 10px;
-            padding: 12px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px; /* espacio entre emoji y texto */
+        margin: 20px 10px;
+        padding: 14px 24px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #388e3c;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+        background-color: #388e3c;
+        transform: scale(1.03);
+}
+
+
+        .search-box {
+            margin: 20px auto;
+        }
+
+        .search-box input {
+            padding: 10px;
+            width: 300px;
             font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
         }
-        .btn:hover {
-            background-color: #388e3c;
-        }
+
         table {
             margin: 20px auto;
             border-collapse: collapse;
             width: 90%;
             max-width: 1000px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
+
         th, td {
             padding: 10px;
             border: 1px solid #ccc;
+            text-align: left;
         }
+
         th {
-            background-color: #e0f2f1;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
         }
+
         tr:nth-child(even) {
-            background-color: #f1f8e9;
+            background-color: #f2f2f2;
         }
+
+        td a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        td a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             margin-top: 40px;
-            padding: 20px;
             color: #888;
         }
     </style>
@@ -59,18 +100,21 @@
 <body>
 
 <header>
-    <h1>Clientes Registrados</h1>
+    <h1>Lista de Clientes</h1>
+    <a href="{% url 'crear_cliente' %}" class="btn">➕ Nuevo Cliente</a>
+    <a href="{% url 'inicio' %}" class="btn">🏠 Volver al inicio</a>
 </header>
 
-<a href="{% url 'crear_cliente' %}" class="btn">➕ Nuevo Cliente</a>
+<div class="search-box">
+    <input type="text" id="buscar" placeholder="🔍 Buscar por nombre o cédula...">
+</div>
 
-<table>
+<table id="tabla-clientes">
     <thead>
         <tr>
             <th>Nombre</th>
             <th>Cédula</th>
             <th>Teléfono</th>
-            <th>Email</th>
             <th>Dirección</th>
             <th>Acciones</th>
         </tr>
@@ -81,7 +125,6 @@
             <td>{{ cliente.nombre }}</td>
             <td>{{ cliente.cedula }}</td>
             <td>{{ cliente.telefono }}</td>
-            <td>{{ cliente.email }}</td>
             <td>{{ cliente.direccion }}</td>
             <td>
                 <a href="{% url 'editar_cliente' cliente.cedula %}">✏️ Editar</a> |
@@ -89,17 +132,34 @@
             </td>
         </tr>
         {% empty %}
-        <tr>
-            <td colspan="6">No hay clientes registrados.</td>
-        </tr>
+        <tr><td colspan="5">No hay clientes registrados.</td></tr>
         {% endfor %}
     </tbody>
 </table>
 
-<a href="{% url 'inicio' %}" class="btn">🏠 Volver al inicio</a>
-
 <footer>
     <p>© 2025 Veterinaria Amigos Peludos</p>
 </footer>
+
+<script>
+    const buscador = document.getElementById('buscar');
+    const filas = document.querySelectorAll('#tabla-clientes tbody tr');
+
+    buscador.addEventListener('keyup', function () {
+        const texto = this.value.toLowerCase();
+
+        filas.forEach(fila => {
+            const nombre = fila.cells[0].textContent.toLowerCase();
+            const cedula = fila.cells[1].textContent.toLowerCase();
+
+            if (nombre.includes(texto) || cedula.includes(texto)) {
+                fila.style.display = '';
+            } else {
+                fila.style.display = 'none';
+            }
+        });
+    });
+</script>
+
 </body>
 </html>

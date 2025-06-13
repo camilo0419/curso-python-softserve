@@ -54,7 +54,7 @@ def editar_cliente(request, cedula):
             return redirect('lista_clientes')
     else:
         form = ClienteForm(instance=cliente)
-    return render(request, 'clientes/formulario.html', {'form': form})
+    return render(request, 'principal/formulario_cliente.html', {'form': form})
 
 def eliminar_cliente(request, cedula):
     cliente = get_object_or_404(Cliente, cedula=cedula)
