@@ -287,3 +287,49 @@ Mascota 'Mia' registrada con éxito.
 2025-06-11 22:10:22,768 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
 2025-06-11 22:10:24,762 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
 2025-06-11 22:10:53,013 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
+2025-06-12 14:35:38,806 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-12 14:35:38,818 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-12 14:35:38,818 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-12 14:35:38,818 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-12 14:35:38,818 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-12 14:36:33,099 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:36:33,100 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:36:33,109 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:36:33,118 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:36:33,118 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:36:35,410 - INFO - Proceso de obtencion de Mascotas asociadas a ID dueño existentes en base de datos no se pudo completar, no existen registros asociados
+2025-06-12 14:36:39,892 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-12 14:36:39,892 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-12 14:36:39,897 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-12 14:36:39,900 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-12 14:36:39,902 - INFO - Proceso obtencion de Dueños alojados en la base de datos, completado con exito
+2025-06-12 14:37:08,539 - INFO - Proceso de registro de Mascota completado satisfactoriamente
+2025-06-12 14:37:27,752 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:37:27,752 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:37:27,759 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:37:27,761 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:37:27,766 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:37:31,112 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-12 14:38:06,059 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
+2025-06-12 14:38:11,576 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:38:11,576 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:38:11,583 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:38:11,584 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:38:11,584 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 14:38:13,226 - INFO - Proceso de Listar Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-12 14:38:15,559 - INFO - Proceso de Mostrar Historial de Consultas de Mascotas asociadas a Dueños existentes en base de datos completado con exito
+2025-06-12 19:22:32,406 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 19:22:32,407 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 19:22:32,407 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 19:22:32,408 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 19:22:32,408 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 19:22:34,177 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-12 19:22:34,178 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-12 19:23:18,908 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
+2025-06-12 19:23:43,388 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 19:23:43,388 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 19:23:43,389 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 19:23:43,389 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 19:23:43,389 - INFO - Proceso de Listar Dueños existentes en base de datos completado con exito
+2025-06-12 19:23:45,994 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
+2025-06-12 19:23:56,732 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
