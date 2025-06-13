@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'veterinaria_web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.new_clinica_veterinaria',
+        'NAME': BASE_DIR / 'new_clinica_veterinaria.db',
     }
 }
 

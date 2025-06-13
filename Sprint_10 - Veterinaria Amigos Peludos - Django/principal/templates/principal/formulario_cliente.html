@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if form.instance.id %}Editar Cliente{% else %}Nuevo Cliente{% endif %}</title>
+</head>
+<body>
+    <h1>{% if form.instance.id %}Editar Cliente{% else %}Nuevo Cliente{% endif %}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <p>
+            {{ form.nombre.label_tag }}<br>
+            {{ form.nombre }}<br>
+            {{ form.nombre.errors }}
+        </p>
+
+        <p>
+            {{ form.cedula.label_tag }}<br>
+            {{ form.cedula }}<br>
+            {{ form.cedula.errors }}
+        </p>
+
+        <p>
+            {{ form.telefono.label_tag }}<br>
+            {{ form.telefono }}<br>
+            {{ form.telefono.errors }}
+        </p>
+
+        <p>
+            {{ form.direccion.label_tag }}<br>
+            {{ form.direccion }}<br>
+            {{ form.direccion.errors }}
+        </p>
+
+        <button type="submit">Guardar</button>
+        <a href="{% url 'lista_clientes' %}">🔙 Volver</a>
+    </form>
+</body>
+</html>
