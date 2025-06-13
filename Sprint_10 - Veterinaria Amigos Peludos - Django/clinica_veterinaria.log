@@ -334,3 +334,4 @@ Mascota 'Mia' registrada con éxito.
 2025-06-12 19:23:45,994 - INFO - Proceso de Listar Mascotas existentes en base de datos completado con exito
 2025-06-12 19:23:56,732 - INFO - Proceso de Registrar Consulta de una Mascota por ID, completado satisfactoriamente
 2025-06-12 19:35:01,468 - INFO - Dueño: Ejemplo, Telefono: 333, Direccion: 3, registrados satisfactoriamente
+2025-06-12 20:11:15,493 - INFO - Dueño: Karen, Telefono: 369, Direccion: Kr 5, registrados satisfactoriamente
