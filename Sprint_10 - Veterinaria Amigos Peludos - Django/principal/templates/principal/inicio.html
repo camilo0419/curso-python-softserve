@@ -6,7 +6,6 @@
     <title>Veterinaria Amigos Peludos</title>
     <link rel="icon" type="image/png" href="{% static 'principal/img/favicon.png' %}">
 
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,6 +18,13 @@
             background-color: #4CAF50;
             color: white;
             padding: 30px;
+        }
+        .bienvenida {
+            background-color: #f9f9f9;
+            padding: 30px 10%;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
         }
         .main-section {
             display: flex;
@@ -71,6 +77,17 @@
     <h1>Clínica Veterinaria Amigos Peludos</h1>
     <p>Cuidamos a tus mascotas como parte de nuestra familia</p>
 </header>
+
+<div class="bienvenida">
+    <p>
+        En <strong>Amigos Peludos</strong> entendemos que tu mascota es un miembro más de tu familia.  
+        Nuestro equipo de profesionales está comprometido con brindar atención veterinaria de calidad,  
+        cariño y respeto a cada uno de nuestros pacientes.  
+        Ya sea una consulta de rutina o una emergencia, estamos aquí para ayudarte a garantizar la salud  
+        y el bienestar de tu compañero peludo.  
+    </p>
+    
+</div>
 
 <div class="main-section">
     <img src="{% static 'principal/img/main.png' %}" alt="Mascotas felices">
