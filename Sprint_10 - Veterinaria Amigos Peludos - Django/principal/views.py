@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.shortcuts import render
 from conexion import crear_conexion  
 from datetime import date
-from .models import Cliente, Mascota
+from .models import Cliente, Mascota, Consulta
 from .forms import ClienteForm, MascotaForm
 
 def inicio(request):
@@ -76,7 +75,7 @@ def crear_mascota(request):
             return redirect('lista_mascotas')
     else:
         form = MascotaForm()
-    return render(request, 'mascotas/formulario.html', {'form': form})
+    return render(request, 'mascotas/formulario_mascota.html', {'form': form})
 
 def editar_mascota(request, pk):
     mascota = get_object_or_404(Mascota, pk=pk)
@@ -87,7 +86,7 @@ def editar_mascota(request, pk):
             return redirect('lista_mascotas')
     else:
         form = MascotaForm(instance=mascota)
-    return render(request, 'mascotas/formulario.html', {'form': form})
+    return render(request, 'mascotas/formulario_mascota.html', {'form': form})
 
 def eliminar_mascota(request, pk):
     mascota = get_object_or_404(Mascota, pk=pk)
