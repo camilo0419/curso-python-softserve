@@ -29,7 +29,7 @@ def clientes(request):
 def mascotas(request):
     return render(request, 'principal/mascotas.html')
 
-#ORM
+#ORM Clientes
 
 def lista_clientes(request):
     clientes = Cliente.objects.filter(activo=True)
@@ -76,7 +76,8 @@ def crear_mascota(request):
             return redirect('lista_mascotas')
     else:
         form = MascotaForm()
-    return render(request, 'mascotas/formulario.html', {'form': form})
+    return render(request, 'principal/formulario_mascota.html', {'form': form, 'modo': 'Crear'})
+
 
 def editar_mascota(request, pk):
     mascota = get_object_or_404(Mascota, pk=pk)
@@ -87,7 +88,8 @@ def editar_mascota(request, pk):
             return redirect('lista_mascotas')
     else:
         form = MascotaForm(instance=mascota)
-    return render(request, 'mascotas/formulario.html', {'form': form})
+    return render(request, 'principal/formulario_mascota.html', {'form': form, 'modo': 'Editar'})
+
 
 def eliminar_mascota(request, pk):
     mascota = get_object_or_404(Mascota, pk=pk)

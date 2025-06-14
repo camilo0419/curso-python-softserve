@@ -24,3 +24,10 @@ class MascotaForm(forms.ModelForm):
     class Meta:
         model = Mascota
         fields = ['nombre_mascota', 'especie', 'raza', 'edad', 'cliente']
+        widgets = {
+            'nombre_mascota': forms.TextInput(attrs={'placeholder': 'Nombre de la mascota'}),
+            'especie': forms.TextInput(attrs={'placeholder': 'Especie'}),
+            'raza': forms.TextInput(attrs={'placeholder': 'Raza'}),
+            'edad': forms.NumberInput(attrs={'placeholder': 'Edad (en años)'}),
+            'cliente': forms.Select(),
+        }

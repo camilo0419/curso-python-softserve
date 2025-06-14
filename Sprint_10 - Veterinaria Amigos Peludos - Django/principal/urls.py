@@ -13,8 +13,8 @@ urlpatterns = [
     path('clientes/eliminar/<str:cedula>/', views.eliminar_cliente, name='eliminar_cliente'),
 
     # CRUD de mascotas
-    path('principal/', views.lista_mascotas, name='lista_mascotas'),
-    path('principal/nueva/', views.crear_mascota, name='crear_mascota'),
-    path('principal/editar/<int:pk>/', views.editar_mascota, name='editar_mascota'),
-    path('principal/eliminar/<int:pk>/', views.eliminar_mascota, name='eliminar_mascota'),
+    path('mascotas/lista/', views.lista_mascotas, name='lista_mascotas'),
+    path('mascotas/nueva/', views.crear_mascota, name='crear_mascota'),
+    path('mascotas/editar/<int:pk>/', views.editar_mascota, name='editar_mascota'),
+    path('mascotas/eliminar/<int:pk>/', views.eliminar_mascota, name='eliminar_mascota'),
 ]
