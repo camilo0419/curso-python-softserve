@@ -1,6 +1,5 @@
 from django import forms
-from .models import Cliente
-from .models import Mascota
+from .models import Cliente, Mascota, Consulta
 
 class ClienteForm(forms.ModelForm):
     class Meta:
@@ -30,4 +29,15 @@ class MascotaForm(forms.ModelForm):
             'raza': forms.TextInput(attrs={'placeholder': 'Raza'}),
             'edad': forms.NumberInput(attrs={'placeholder': 'Edad (en años)'}),
             'cliente': forms.Select(),
+        }
+
+class ConsultaForm(forms.ModelForm):
+    class Meta:
+        model = Consulta
+        fields = ['fecha', 'motivo', 'diagnostico', 'mascota']
+        widgets = {
+            'fecha': forms.DateInput(attrs={'type': 'date'}),
+            'motivo': forms.Textarea(attrs={'placeholder': 'Motivo de la consulta'}),
+            'diagnostico': forms.Textarea(attrs={'placeholder': 'Diagnóstico'}),
+            'mascota': forms.Select(),
         }

@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.shortcuts import render
+from django.http import JsonResponse
+from django.db import models
 from conexion import crear_conexion  
 from datetime import date
-from .models import Cliente, Mascota
-from .forms import ClienteForm, MascotaForm
+from .models import Cliente, Mascota, Consulta
+from .forms import ClienteForm, MascotaForm, ConsultaForm
 
 def inicio(request):
     fecha = request.GET.get('fecha', date.today().isoformat())
@@ -65,7 +67,7 @@ def eliminar_cliente(request, cedula):
 #ORM Mascotas
 
 def lista_mascotas(request):
-    mascotas = Mascota.objects.all()
+    mascotas = Mascota.objects.filter(activo=True)
     return render(request, 'principal/lista_mascotas.html', {'mascotas': mascotas})
 
 def crear_mascota(request):
@@ -93,5 +95,56 @@ def editar_mascota(request, pk):
 
 def eliminar_mascota(request, pk):
     mascota = get_object_or_404(Mascota, pk=pk)
-    mascota.delete()
+    mascota.activo = False
+    mascota.save()
     return redirect('lista_mascotas')
+
+def buscar_clientes(request):
+    q = request.GET.get('q', '').strip().lower()
+    coincidencias = Cliente.objects.filter(
+        activo=True
+    ).filter(
+        models.Q(nombre__icontains=q) | models.Q(cedula__icontains=q)
+    ).values('id', 'nombre', 'cedula')[:10]
+
+    return JsonResponse(list(coincidencias), safe=False)
+
+def mascotas_por_cliente(request, cedula):
+    cliente = get_object_or_404(Cliente, cedula=cedula, activo=True)
+    mascotas = Mascota.objects.filter(cliente=cliente, activo=True)  # eliminación lógica
+    return render(request, 'principal/mascotas_por_cliente.html', {
+        'cliente': cliente,
+        'mascotas': mascotas
+    })
+
+
+#ORM Consultas
+def lista_consultas(request):
+    consultas = Consulta.objects.select_related('mascota').order_by('-fecha')
+    return render(request, 'principal/lista_consultas.html', {'consultas': consultas})
+
+def crear_consulta(request):
+    if request.method == 'POST':
+        form = ConsultaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_consultas')
+    else:
+        form = ConsultaForm()
+    return render(request, 'principal/formulario_consulta.html', {'form': form})
+
+def editar_consulta(request, pk):
+    consulta = get_object_or_404(Consulta, pk=pk)
+    if request.method == 'POST':
+        form = ConsultaForm(request.POST, instance=consulta)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_consultas')
+    else:
+        form = ConsultaForm(instance=consulta)
+    return render(request, 'principal/formulario_consulta.html', {'form': form})
+
+def eliminar_consulta(request, pk):
+    consulta = get_object_or_404(Consulta, pk=pk)
+    consulta.delete()
+    return redirect('lista_consultas')
