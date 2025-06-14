@@ -11,4 +11,10 @@ urlpatterns = [
     path('clientes/crear/', views.crear_cliente, name='crear_cliente'),
     path('clientes/editar/<str:cedula>/', views.editar_cliente, name='editar_cliente'),
     path('clientes/eliminar/<str:cedula>/', views.eliminar_cliente, name='eliminar_cliente'),
+
+    # CRUD de mascotas
+    path('principal/', views.lista_mascotas, name='lista_mascotas'),
+    path('principal/nueva/', views.crear_mascota, name='crear_mascota'),
+    path('principal/editar/<int:pk>/', views.editar_mascota, name='editar_mascota'),
+    path('principal/eliminar/<int:pk>/', views.eliminar_mascota, name='eliminar_mascota'),
 ]

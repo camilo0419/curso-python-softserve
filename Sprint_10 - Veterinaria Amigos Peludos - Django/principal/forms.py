@@ -1,5 +1,6 @@
 from django import forms
 from .models import Cliente
+from .models import Mascota
 
 class ClienteForm(forms.ModelForm):
     class Meta:
@@ -17,3 +18,9 @@ class ClienteForm(forms.ModelForm):
         if Cliente.objects.filter(cedula=cedula, activo=True).exclude(pk=self.instance.pk).exists():
             raise forms.ValidationError("Ya existe un cliente con esta cédula.")
         return cedula
+
+
+class MascotaForm(forms.ModelForm):
+    class Meta:
+        model = Mascota
+        fields = ['nombre_mascota', 'especie', 'raza', 'edad', 'cliente']

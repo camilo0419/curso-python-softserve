@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.shortcuts import render
 from conexion import crear_conexion  
 from datetime import date
-from .models import Cliente
-from .forms import ClienteForm
+from .models import Cliente, Mascota
+from .forms import ClienteForm, MascotaForm
 
 def inicio(request):
     fecha = request.GET.get('fecha', date.today().isoformat())
@@ -62,5 +62,34 @@ def eliminar_cliente(request, cedula):
     cliente.save()
     return redirect('lista_clientes')
 
+#ORM Mascotas
 
+def lista_mascotas(request):
+    mascotas = Mascota.objects.all()
+    return render(request, 'principal/lista_mascotas.html', {'mascotas': mascotas})
 
+def crear_mascota(request):
+    if request.method == 'POST':
+        form = MascotaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_mascotas')
+    else:
+        form = MascotaForm()
+    return render(request, 'mascotas/formulario.html', {'form': form})
+
+def editar_mascota(request, pk):
+    mascota = get_object_or_404(Mascota, pk=pk)
+    if request.method == 'POST':
+        form = MascotaForm(request.POST, instance=mascota)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_mascotas')
+    else:
+        form = MascotaForm(instance=mascota)
+    return render(request, 'mascotas/formulario.html', {'form': form})
+
+def eliminar_mascota(request, pk):
+    mascota = get_object_or_404(Mascota, pk=pk)
+    mascota.delete()
+    return redirect('lista_mascotas')
