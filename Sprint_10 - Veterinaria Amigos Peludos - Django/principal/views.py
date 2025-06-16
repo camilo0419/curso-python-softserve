@@ -1,11 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.shortcuts import render
+from django.template.loader import render_to_string
+from weasyprint import HTML
+from django.http import HttpResponse
 from django.http import JsonResponse
 from django.db import models
 from conexion import crear_conexion  
 from datetime import date
 from .models import Cliente, Mascota, Consulta
 from .forms import ClienteForm, MascotaForm, ConsultaForm
+from django.templatetags.static import static
 
 def inicio(request):
     fecha = request.GET.get('fecha', date.today().isoformat())
@@ -148,3 +152,38 @@ def eliminar_consulta(request, pk):
     consulta = get_object_or_404(Consulta, pk=pk)
     consulta.delete()
     return redirect('lista_consultas')
+
+
+#Historia Clinica
+
+from .models import Mascota, Consulta
+from django.shortcuts import render, get_object_or_404
+
+def historia_clinica(request, mascota_id):
+    mascota = get_object_or_404(Mascota, pk=mascota_id)
+    consultas = mascota.consultas.all().order_by('-fecha')  # related_name='consultas'
+    return render(request, 'principal/historia_clinica.html', {
+        'mascota': mascota,
+        'consultas': consultas
+    })
+
+
+def exportar_historia_pdf(request, mascota_id):
+    mascota = get_object_or_404(Mascota, pk=mascota_id)
+    consultas = mascota.consultas.all().order_by('-fecha')
+
+    # 👉 Obtener URL absoluta del logo estático
+    logo_url = request.build_absolute_uri(static('principal/img/logo.png'))
+
+    html_string = render_to_string('principal/historia_clinica_pdf.html', {
+        'mascota': mascota,
+        'consultas': consultas,
+        'logo_url': logo_url  # 👉 pasamos el logo al template
+    })
+
+    html = HTML(string=html_string, base_url=request.build_absolute_uri())
+    pdf = html.write_pdf()
+
+    response = HttpResponse(pdf, content_type='application/pdf')
+    response['Content-Disposition'] = f'filename="historia_clinica_{mascota.nombre_mascota}.pdf"'
+    return response

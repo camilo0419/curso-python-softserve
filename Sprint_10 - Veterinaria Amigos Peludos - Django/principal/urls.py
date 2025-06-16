@@ -27,5 +27,10 @@ urlpatterns = [
     path('consultas/editar/<int:pk>/', views.editar_consulta, name='editar_consulta'),
     path('consultas/eliminar/<int:pk>/', views.eliminar_consulta, name='eliminar_consulta'),
 
+    path('mascotas/<int:mascota_id>/historia/', views.historia_clinica, name='historia_clinica'),
+    path('mascotas/<int:mascota_id>/historia/pdf/', views.exportar_historia_pdf, name='exportar_historia_pdf'),
+
+
+
 
 ]
