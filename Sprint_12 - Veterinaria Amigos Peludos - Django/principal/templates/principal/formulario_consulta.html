@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Consulta</title>
+    <link rel="icon" type="image/png" href="{% static 'principal/img/favicon.png' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #6D8777;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-top: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        form p {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .btn {
+            background-color: #485935;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: block;
+            margin: 20px auto 0 auto;
+        }
+
+        .btn:hover {
+            background-color: #45624E;
+            transform: scale(1.03);
+        }
+
+        .volver {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #93A267;
+            font-weight: bold;
+            transition: color 0.2s ease;
+        }
+
+        .volver:hover {
+            text-decoration: underline;
+            color: #45624E;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Formulario de Consulta</h1>
+</header>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">💾 Guardar Consulta</button>
+</form>
+
+<a href="{% url 'lista_consultas' %}" class="volver">⬅️ Volver a la lista</a>
+
+</body>
+</html>

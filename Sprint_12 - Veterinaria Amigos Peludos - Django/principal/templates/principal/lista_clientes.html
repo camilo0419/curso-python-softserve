@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo de Clientes</title>
+    <link rel="icon" type="image/png" href="{% static 'principal/img/favicon.png' %}">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #6D8777;
+            color: white;
+            padding: 30px 20px;
+        }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px; /* espacio entre emoji y texto */
+        margin: 20px 10px;
+        padding: 14px 24px;
+        background-color: #45624E;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #6D8777;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+        background-color: #273526;
+        transform: scale(1.03);
+}
+
+
+        .search-box {
+            margin: 20px auto;
+        }
+
+        .search-box input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 1000px;
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #45624E;
+            color: white;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        td a {
+            text-decoration: none;
+            color: #6D8777;
+            font-weight: bold;
+        }
+
+        td a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #888;
+        }
+        td:nth-child(5) {
+            text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Lista de Clientes</h1>
+    <a href="{% url 'crear_cliente' %}" class="btn">➕ Nuevo Cliente</a>
+    <a href="{% url 'inicio' %}" class="btn">🏠 Volver al inicio</a>
+</header>
+
+<div class="search-box">
+    <input type="text" id="buscar" placeholder="🔍 Buscar por nombre o cédula...">
+</div>
+
+<table id="tabla-clientes">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Cédula</th>
+            <th>Teléfono</th>
+            <th>Dirección</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{ cliente.nombre }}</td>
+            <td>{{ cliente.cedula }}</td>
+            <td>{{ cliente.telefono }}</td>
+            <td>{{ cliente.direccion }}</td>
+            <td>
+                <a href="{% url 'editar_cliente' cliente.cedula %}">✏️ Editar</a> |
+                <a href="{% url 'eliminar_cliente' cliente.cedula %}" onclick="return confirm('¿Eliminar este cliente?');">🗑 Eliminar</a> |
+                <a href="{% url 'mascotas_por_cliente' cliente.cedula %}">🐾 Ver Mascotas</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="5">No hay clientes registrados.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<footer>
+    <p>© 2025 Veterinaria Amigos Peludos</p>
+</footer>
+
+<script>
+    const buscador = document.getElementById('buscar');
+    const filas = document.querySelectorAll('#tabla-clientes tbody tr');
+
+    buscador.addEventListener('keyup', function () {
+        const texto = this.value.toLowerCase();
+
+        filas.forEach(fila => {
+            const nombre = fila.cells[0].textContent.toLowerCase();
+            const cedula = fila.cells[1].textContent.toLowerCase();
+
+            if (nombre.includes(texto) || cedula.includes(texto)) {
+                fila.style.display = '';
+            } else {
+                fila.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Clientes</title>
+    <link rel="icon" type="image/png" href="{% static 'principal/img/favicon.png' %}">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .boton {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .boton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gestión de Clientes</h1>
+    <a href="/registrar_dueno/" class="boton">➕ Registrar Cliente</a>
+    <a href="/listar_duenos/" class="boton">📋 Ver Clientes</a>
+    <a href="/editar_dueno/" class="boton">✏️ Editar Cliente</a>
+    <a href="/eliminar_dueno/" class="boton">🗑️ Eliminar Cliente</a>
+    <br><br>
+    <a href="/" class="boton" style="background-color: #777;">⬅️ Volver al Inicio</a>
+</body>
+</html>

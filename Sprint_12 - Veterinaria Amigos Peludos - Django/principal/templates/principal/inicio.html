@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Veterinaria Amigos Peludos</title>
+    <link rel="icon" type="image/png" href="{% static 'principal/img/favicon.png' %}">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #45624E;
+            color: white;
+            padding: 30px;
+        }
+        .bienvenida {
+            background-color: #f9f9f9;
+            padding: 30px 10%;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .main-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .main-section img {
+            max-width: 400px;
+            height: auto;
+        }
+        .calendar-box {
+            margin-left: 30px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .btn {
+            display: inline-block;
+            margin: 20px 10px;
+            padding: 15px 25px;
+            background-color: #45624E;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        .btn:hover {
+            background-color: #45624E;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            margin-top: 50px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Clínica Veterinaria Amigos Peludos</h1>
+    <p>Cuidamos a tus mascotas como parte de nuestra familia</p>
+</header>
+
+<div class="bienvenida">
+    <p>
+        En <strong>Amigos Peludos</strong> entendemos que tu mascota es un miembro más de tu familia.  
+        Nuestro equipo de profesionales está comprometido con brindar atención veterinaria de calidad,  
+        cariño y respeto a cada uno de nuestros pacientes.  
+        Ya sea una consulta de rutina o una emergencia, estamos aquí para ayudarte a garantizar la salud  
+        y el bienestar de tu compañero peludo.  
+    </p>
+    
+</div>
+
+<div class="main-section">
+    <img src="{% static 'principal/img/main.png' %}" alt="Mascotas felices">
+
+    <div class="calendar-box">
+        <form method="get">
+            <label for="fecha">Selecciona una fecha:</label><br>
+            <input type="date" name="fecha" value="{{ fecha }}" onchange="this.form.submit()">
+        </form>
+
+        {% if consultas %}
+            <h3>Consultas realizadas el: {{ fecha }}</h3>
+            <table>
+                <tr><th>Mascota</th><th>Motivo</th><th>Diagnóstico</th></tr>
+                {% for c in consultas %}
+                    <tr>
+                        <td>{{ c.3 }}</td>
+                        <td>{{ c.1 }}</td>
+                        <td>{{ c.2 }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No hay consultas registradas para esta fecha.</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="container">
+    <a href="{% url 'lista_clientes' %}" class="btn">Clientes</a>
+    <a href="{% url 'lista_mascotas' %}" class="btn">Mascotas</a>
+    <a href="{% url 'lista_consultas' %}" class="btn">📋 Consultas</a>
+
+</div>
+
+<footer>
+    <p>© 2025 Veterinaria Amigos Peludos</p>
+</footer>
+</body>
+</html>

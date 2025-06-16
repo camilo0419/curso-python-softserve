@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Historia Clínica - {{ mascota.nombre_mascota }}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 30px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #45624E;
+        }
+
+        .cabecera {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .datos-mascota {
+            background-color: #f2f2f2;
+            padding: 15px;
+            border-radius: 6px;
+            width: 70%;
+        }
+
+        .datos-mascota p {
+            margin: 6px 0;
+        }
+
+        .logo {
+            width: 30%;
+            text-align: right;
+        }
+
+        .logo img {
+            max-width: 150px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #6D8777;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Historia Clínica</h1>
+
+    <div class="cabecera">
+        <div class="datos-mascota">
+            <p><strong>Nombre:</strong> {{ mascota.nombre_mascota }}</p>
+            <p><strong>Especie:</strong> {{ mascota.especie }}</p>
+            <p><strong>Raza:</strong> {{ mascota.raza }}</p>
+            <p><strong>Edad:</strong> {{ mascota.edad }} años</p>
+            <p><strong>Dueño:</strong> {{ mascota.cliente.nombre }}</p>
+        </div>
+        <div class="logo">
+            <img src="{{ logo_url }}" alt="Logo Veterinaria Amigos Peludos">
+        </div>
+    </div>
+
+    <h2>Consultas Realizadas</h2>
+
+    {% if consultas %}
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Motivo</th>
+                <th>Diagnóstico</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for consulta in consultas %}
+            <tr>
+                <td>{{ consulta.fecha }}</td>
+                <td>{{ consulta.motivo|default:"-" }}</td>
+                <td>{{ consulta.diagnostico|default:"-" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No hay consultas registradas para esta mascota.</p>
+    {% endif %}
+
+    <footer>
+        © 2025 Veterinaria Amigos Peludos
+    </footer>
+
+</body>
+</html>
