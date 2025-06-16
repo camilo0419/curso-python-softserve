@@ -104,9 +104,9 @@
                 <tr><th>Mascota</th><th>Motivo</th><th>Diagnóstico</th></tr>
                 {% for c in consultas %}
                     <tr>
-                        <td>{{ c.3 }}</td>
-                        <td>{{ c.1 }}</td>
-                        <td>{{ c.2 }}</td>
+                        <td>{{ c.mascota.nombre_mascota }}</td>
+                        <td>{{ c.motivo|default:"-" }}</td>
+                        <td>{{ c.diagnostico|default:"-" }}</td>
                     </tr>
                 {% endfor %}
             </table>

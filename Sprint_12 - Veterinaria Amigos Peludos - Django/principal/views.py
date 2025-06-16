@@ -12,22 +12,19 @@ from .forms import ClienteForm, MascotaForm, ConsultaForm
 from django.templatetags.static import static
 
 def inicio(request):
-    fecha = request.GET.get('fecha', date.today().isoformat())
-    conexion = crear_conexion()
-    cursor = conexion.cursor()
-    cursor.execute("""
-        SELECT consultas.id, consultas.motivo, consultas.diagnostico, mascotas.nombre_mascota
-        FROM consultas
-        JOIN mascotas ON consultas.mascota_id = mascotas.id
-        WHERE consultas.fecha = ?
-    """, (fecha,))
-    consultas = cursor.fetchall()
-    conexion.close()
+    fecha_str = request.GET.get('fecha')
+    if fecha_str:
+        fecha = date.fromisoformat(fecha_str)
+    else:
+        fecha = date.today()
 
-    return render(request, 'principal/inicio.html', {
+    consultas = Consulta.objects.filter(fecha=fecha).select_related('mascota')
+
+    context = {
+        'fecha': fecha.strftime('%Y-%m-%d'),  # Formato compatible con el input date
         'consultas': consultas,
-        'fecha': fecha
-    })
+    }
+    return render(request, 'principal/inicio.html', context)
 
 def clientes(request):
     return render(request, 'principal/clientes.html')
