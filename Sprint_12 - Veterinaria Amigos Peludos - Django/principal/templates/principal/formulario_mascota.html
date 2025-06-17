@@ -123,13 +123,19 @@
         </p>
 
         <p>
-            <label for="cliente_input">Dueño:</label>
-            <div class="autocomplete-box">
-                <input type="text" id="cliente_input" placeholder="Buscar por nombre o cédula..." autocomplete="off">
-                <div id="cliente_results" class="autocomplete-results"></div>
-                <input type="hidden" name="cliente" id="cliente_hidden" value="{{ form.cliente.value|default:'' }}">
-            </div>
+            <label>Dueño:</label>
+            {% if cliente_bloqueado %}
+                <input type="text" value="{{ cliente.nombre }} ({{ cliente.cedula }})" disabled>
+                <input type="hidden" name="cliente" value="{{ cliente.id }}">
+            {% else %}
+                <div class="autocomplete-box">
+                    <input type="text" id="cliente_input" placeholder="Buscar por nombre o cédula..." autocomplete="off">
+                    <div id="cliente_results" class="autocomplete-results"></div>
+                    <input type="hidden" name="cliente" id="cliente_hidden" value="{{ form.cliente.value|default:'' }}">
+                </div>
+            {% endif %}
         </p>
+
 
         <button type="submit">Guardar</button>
     </form>

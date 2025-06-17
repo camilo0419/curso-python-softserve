@@ -73,14 +73,29 @@ def lista_mascotas(request):
     return render(request, 'principal/lista_mascotas.html', {'mascotas': mascotas})
 
 def crear_mascota(request):
+    cliente_id = request.GET.get('cliente_id')
+    cliente = Cliente.objects.filter(id=cliente_id).first() if cliente_id else None
+
     if request.method == 'POST':
         form = MascotaForm(request.POST)
         if form.is_valid():
-            form.save()
+            mascota = form.save(commit=False)
+            if cliente:
+                mascota.cliente = cliente  # aseguramos que no cambien el cliente
+            mascota.save()
             return redirect('lista_mascotas')
     else:
-        form = MascotaForm()
-    return render(request, 'principal/formulario_mascota.html', {'form': form, 'modo': 'Crear'})
+        initial_data = {'cliente': cliente.id} if cliente else {}
+        form = MascotaForm(initial=initial_data)
+
+    return render(request, 'principal/formulario_mascota.html', {
+        'form': form,
+        'modo': 'Crear',
+        'cliente_bloqueado': cliente is not None,
+        'cliente': cliente  # lo usamos para mostrar el nombre
+    })
+
+
 
 
 def editar_mascota(request, pk):
@@ -111,13 +126,11 @@ def buscar_clientes(request):
 
     return JsonResponse(list(coincidencias), safe=False)
 
-def mascotas_por_cliente(request, cedula):
-    cliente = get_object_or_404(Cliente, cedula=cedula, activo=True)
-    mascotas = Mascota.objects.filter(cliente=cliente, activo=True)  # eliminación lógica
-    return render(request, 'principal/mascotas_por_cliente.html', {
-        'cliente': cliente,
-        'mascotas': mascotas
-    })
+def mascotas_por_cliente(request, cliente_id):
+    cliente = get_object_or_404(Cliente, id=cliente_id)
+    mascotas = Mascota.objects.filter(cliente=cliente)
+    return render(request, 'principal/mascotas_por_cliente.html', {'cliente': cliente, 'mascotas': mascotas})
+
 
 
 #ORM Consultas

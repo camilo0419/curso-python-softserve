@@ -91,7 +91,11 @@
 
 <header>
     <h1>Mascotas de {{ cliente.nombre }}</h1>
-    <a href="{% url 'lista_clientes' %}" class="btn">👤 Volver a clientes</a>
+    <a href="{% url 'crear_mascota' %}?cliente_id={{ cliente.id }}" class="btn">➕ Agregar nueva mascota</a>
+    <a href="#" onclick="history.back(); return false;" class="btn">⬅️ Volver atrás</a>
+
+
+
 </header>
 
 <table>

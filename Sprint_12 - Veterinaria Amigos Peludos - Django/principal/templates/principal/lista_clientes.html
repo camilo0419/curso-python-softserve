@@ -133,7 +133,7 @@
             <td>
                 <a href="{% url 'editar_cliente' cliente.cedula %}">✏️ Editar</a> |
                 <a href="{% url 'eliminar_cliente' cliente.cedula %}" onclick="return confirm('¿Eliminar este cliente?');">🗑 Eliminar</a> |
-                <a href="{% url 'mascotas_por_cliente' cliente.cedula %}">🐾 Ver Mascotas</a>
+                <a href="{% url 'mascotas_por_cliente' cliente.id %}">🐾 Ver Mascotas</a>
             </td>
         </tr>
         {% empty %}

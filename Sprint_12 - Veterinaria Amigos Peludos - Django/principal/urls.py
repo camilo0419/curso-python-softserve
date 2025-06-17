@@ -11,6 +11,7 @@ urlpatterns = [
     path('clientes/crear/', views.crear_cliente, name='crear_cliente'),
     path('clientes/editar/<str:cedula>/', views.editar_cliente, name='editar_cliente'),
     path('clientes/eliminar/<str:cedula>/', views.eliminar_cliente, name='eliminar_cliente'),
+    
 
     # CRUD de mascotas
     path('mascotas/lista/', views.lista_mascotas, name='lista_mascotas'),
@@ -19,7 +20,7 @@ urlpatterns = [
     path('mascotas/eliminar/<int:pk>/', views.eliminar_mascota, name='eliminar_mascota'),
     path('buscar_clientes/', views.buscar_clientes, name='buscar_cliente'),
 
-    path('clientes/<str:cedula>/mascotas/', views.mascotas_por_cliente, name='mascotas_por_cliente'),
+    path('clientes/<int:cliente_id>/mascotas/', views.mascotas_por_cliente, name='mascotas_por_cliente'),
 
     # CRUD de consultas
     path('consultas/lista/', views.lista_consultas, name='lista_consultas'),
@@ -31,6 +32,8 @@ urlpatterns = [
     path('mascotas/<int:mascota_id>/historia/pdf/', views.exportar_historia_pdf, name='exportar_historia_pdf'),
 
     path('buscar_mascotas/', views.buscar_mascotas, name='buscar_mascotas'),
+    
+
 
 
 

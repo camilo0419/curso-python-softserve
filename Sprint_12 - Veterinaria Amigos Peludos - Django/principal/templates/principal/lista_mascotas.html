@@ -94,6 +94,18 @@
             margin-top: 40px;
             color: #888;
         }
+
+        td a {
+            text-decoration: none;
+            color: #485935;
+            font-weight: bold;
+        }
+
+        td a:hover {
+            text-decoration: underline;
+        }   
+
+
     </style>
 </head>
 <body>
@@ -126,7 +138,11 @@
             <td>{{ mascota.especie }}</td>
             <td>{{ mascota.raza }}</td>
             <td>{{ mascota.edad }}</td>
-            <td>{{ mascota.cliente.nombre }}</td>
+            <td>
+                <a href="{% url 'mascotas_por_cliente' mascota.cliente.id %}">
+                    {{ mascota.cliente.nombre }}
+                </a>
+            </td>
             <td style="text-align: center;">
                 <a href="{% url 'editar_mascota' mascota.id %}">✏️ Editar</a> |
                 <a href="{% url 'eliminar_mascota' mascota.id %}" onclick="return confirm('¿Eliminar esta mascota?');">🗑 Eliminar</a> |
