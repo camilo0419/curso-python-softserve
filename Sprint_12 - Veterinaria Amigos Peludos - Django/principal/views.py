@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.db import models
 from conexion import crear_conexion  
+from conexion import crear_conexion
 from datetime import date
 from .models import Cliente, Mascota, Consulta
 from .forms import ClienteForm, MascotaForm, ConsultaForm
