@@ -97,6 +97,10 @@
             <label for="fecha">Selecciona una fecha:</label><br>
             <input type="date" name="fecha" value="{{ fecha }}" onchange="this.form.submit()">
         </form>
+                <a href="{% url 'crear_consulta' %}" 
+                    style="display: inline-block; padding: 5px 10px; background-color: #ccc; color: #333; text-decoration: none; border-radius: 4px; font-size: 12px; cursor: pointer;">
+                    ➕ Agregar Consulta
+                </a>
 
         {% if consultas %}
             <h3>Consultas realizadas el: {{ fecha }}</h3>
@@ -109,6 +113,8 @@
                         <td>{{ c.diagnostico|default:"-" }}</td>
                     </tr>
                 {% endfor %}
+                
+
             </table>
         {% else %}
             <p>No hay consultas registradas para esta fecha.</p>
@@ -117,11 +123,11 @@
 </div>
 
 <div class="container">
-    <a href="{% url 'lista_clientes' %}" class="btn">Clientes</a>
-    <a href="{% url 'lista_mascotas' %}" class="btn">Mascotas</a>
+    <a href="{% url 'lista_clientes' %}" class="btn">👤 Clientes</a>
+    <a href="{% url 'lista_mascotas' %}" class="btn">🐾 Mascotas</a>
     <a href="{% url 'lista_consultas' %}" class="btn">📋 Consultas</a>
-
 </div>
+
 
 <footer>
     <p>© 2025 Veterinaria Amigos Peludos</p>
