@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Formulario Consulta</title>
     <link rel="icon" type="image/png" href="{% static 'principal/img/favicon.png' %}">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -85,6 +86,30 @@
             text-decoration: underline;
             color: #45624E;
         }
+
+        .autocomplete-box {
+            position: relative;
+        }
+
+        .autocomplete-results {
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            width: 100%;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 10;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .autocomplete-results div {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .autocomplete-results div:hover {
+            background-color: #eee;
+        }
     </style>
 </head>
 <body>
@@ -95,11 +120,73 @@
 
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+
+    <p>
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" value="{{ form.fecha.value|default:'' }}" required>
+    </p>
+
+    <p>
+        <label for="motivo">Motivo:</label>
+        <textarea name="motivo" rows="3" required>{{ form.motivo.value|default:'' }}</textarea>
+    </p>
+
+    <p>
+        <label for="diagnostico">Diagnóstico:</label>
+        <textarea name="diagnostico" rows="3">{{ form.diagnostico.value|default:'' }}</textarea>
+    </p>
+
+    <p>
+        <label for="mascota_input">Mascota:</label>
+        <div class="autocomplete-box">
+            <input type="text" id="mascota_input" placeholder="Buscar por nombre o dueño..." autocomplete="off">
+            <div id="mascota_results" class="autocomplete-results"></div>
+            <input type="hidden" name="mascota" id="mascota_hidden" value="{{ form.mascota.value|default:'' }}">
+        </div>
+    </p>
+
     <button type="submit" class="btn">💾 Guardar Consulta</button>
 </form>
 
 <a href="{% url 'lista_consultas' %}" class="volver">⬅️ Volver a la lista</a>
+
+<script>
+    const input = document.getElementById('mascota_input');
+    const results = document.getElementById('mascota_results');
+    const hidden = document.getElementById('mascota_hidden');
+
+    input.addEventListener('input', async () => {
+    const query = input.value.trim();
+    results.innerHTML = '';
+    if (query.length < 1) return;
+
+    try {
+        const response = await fetch(`/buscar_mascotas/?q=${encodeURIComponent(query)}`);
+        const data = await response.json();
+
+        data.forEach(mascota => {
+            const div = document.createElement('div');
+            div.textContent = `${mascota.nombre_mascota} (${mascota.cliente})`;
+            div.dataset.id = mascota.id;
+            div.addEventListener('click', () => {
+                input.value = `${mascota.nombre_mascota} (${mascota.cliente})`;
+                hidden.value = mascota.id;
+                results.innerHTML = '';
+            });
+            results.appendChild(div);
+        });
+    } catch (error) {
+        console.error("Error al buscar mascotas:", error);
+    }
+});
+
+
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.autocomplete-box')) {
+            results.innerHTML = '';
+        }
+    });
+</script>
 
 </body>
 </html>

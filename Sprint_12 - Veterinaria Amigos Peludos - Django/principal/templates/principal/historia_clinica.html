@@ -136,7 +136,7 @@
             <p>No hay consultas registradas para esta mascota.</p>
         {% endif %}
 
-        <a href="{% url 'lista_mascotas' %}" class="btn">⬅️ Volver</a>
+        <a href="#" onclick="history.back(); return false" class="btn">⬅️ Volver</a>
         <a href="{% url 'exportar_historia_pdf' mascota.id %}" class="btn">📄 Exportar a PDF</a>
     </div>
 </body>

@@ -30,6 +30,8 @@ urlpatterns = [
     path('mascotas/<int:mascota_id>/historia/', views.historia_clinica, name='historia_clinica'),
     path('mascotas/<int:mascota_id>/historia/pdf/', views.exportar_historia_pdf, name='exportar_historia_pdf'),
 
+    path('buscar_mascotas/', views.buscar_mascotas, name='buscar_mascotas'),
+
 
 
 

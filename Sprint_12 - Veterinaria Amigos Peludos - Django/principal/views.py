@@ -184,3 +184,15 @@ def exportar_historia_pdf(request, mascota_id):
     response = HttpResponse(pdf, content_type='application/pdf')
     response['Content-Disposition'] = f'filename="historia_clinica_{mascota.nombre_mascota}.pdf"'
     return response
+
+def buscar_mascotas(request):
+    q = request.GET.get('q', '')
+    resultados = Mascota.objects.filter(nombre_mascota__icontains=q)[:10]
+    data = [
+        {
+            'id': m.id,
+            'nombre_mascota': m.nombre_mascota,
+            'cliente': m.cliente.nombre  # Asegúrate de que sea "cliente" en tu modelo
+        } for m in resultados
+    ]
+    return JsonResponse(data, safe=False)
