@@ -4,6 +4,7 @@ from django.template.loader import render_to_string
 from weasyprint import HTML
 from django.http import HttpResponse
 from django.http import JsonResponse
+from django.db.models import Q
 from django.db import models
 from conexion import crear_conexion  
 from datetime import date
@@ -187,12 +188,15 @@ def exportar_historia_pdf(request, mascota_id):
 
 def buscar_mascotas(request):
     q = request.GET.get('q', '')
-    resultados = Mascota.objects.filter(nombre_mascota__icontains=q)[:10]
+    resultados = Mascota.objects.filter(
+        Q(nombre_mascota__icontains=q) | Q(cliente__nombre__icontains=q)
+    )[:10]
+
     data = [
         {
             'id': m.id,
             'nombre_mascota': m.nombre_mascota,
-            'cliente': m.cliente.nombre  # Asegúrate de que sea "cliente" en tu modelo
+            'cliente': m.cliente.nombre
         } for m in resultados
     ]
     return JsonResponse(data, safe=False)
