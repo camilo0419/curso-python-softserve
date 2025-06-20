@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '-r+o1^pglcwi6fu^h5fz@*)x-65oqybv*e992$1mii(w=fsvb#m59654djua'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
@@ -117,7 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
@@ -127,11 +127,6 @@ import os
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'principal/static'),
 ]
-
-STATIC_ROOT = '/home/camilo0419/curso-python-softserve/sprint12_veterinaria/staticfiles'
-
-
-
 
 
 # Default primary key field type
