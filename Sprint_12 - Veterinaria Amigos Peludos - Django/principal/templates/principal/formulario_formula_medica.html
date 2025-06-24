@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fórmula Médica</title>
+    <link rel="stylesheet" href="{% static 'principal/css/estilos.css' %}">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+
+    h2 {
+        color: #485935;
+        margin-top: 20px;
+    }
+
+    form {
+        background: white;
+        padding: 30px;
+        margin: 20px auto;
+        border-radius: 10px;
+        width: 95%;
+        max-width: 1200px; /* Aumentado de 1000px a 1200px */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        text-align: left;
+    }
+
+    .cabecera,
+    .medicamento-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr 0.5fr;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .cabecera {
+        font-weight: bold;
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+    }
+
+    .medicamento-row {
+        margin-bottom: 10px;
+    }
+
+    select, input {
+        padding: 8px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;           /* Asegura que ocupe el espacio del grid */
+        min-width: 0;          /* Evita desbordamiento */
+        box-sizing: border-box;
+    }
+
+    .btn {
+        background-color: #485935;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 10px 5px;
+    }
+
+    .btn:hover {
+        background-color: #45624E;
+    }
+
+    .remove-btn {
+        background: crimson;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .remove-btn:hover {
+        background: darkred;
+    }
+
+    .acciones {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .volver {
+        text-decoration: none;
+        color: #93A267;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    .volver:hover {
+        text-decoration: underline;
+    }
+
+    #agregar-fila {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+</style>
+
+</head>
+<body>
+
+<h2>Fórmula Médica para {{ consulta.mascota.nombre_mascota }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div class="cabecera">
+        <div>Medicamento</div>
+        <div>Dosis</div>
+        <div>Frecuencia</div>
+        <div>Duración</div>
+        <div>Vía</div>
+        <div>Observaciones</div>
+        <div></div>
+    </div>
+
+    <div id="contenedor-filas"></div>
+
+    <div style="text-align: right;">
+        <button type="button" class="btn" id="agregar-fila">➕ Agregar Medicamento</button>
+    </div>
+
+    <div class="acciones">
+        <button type="submit" name="accion" value="guardar" class="btn">💾 Guardar fórmula</button>
+
+        {% if not consulta.med_entregado and guardado %}
+            <button type="submit" name="accion" value="entregar" class="btn">🚚 Entregar medicamentos</button>
+        {% endif %}
+
+        <a href="{% url 'detalle_consulta' consulta.id %}" class="volver">↩ Volver</a>
+    </div>
+
+</form>
+
+<script>
+    let contador = 0;
+
+    function crearFila() {
+        const contenedor = document.getElementById('contenedor-filas');
+
+        const div = document.createElement('div');
+        div.classList.add('medicamento-row');
+        div.innerHTML = `
+            <select name="medicamento_${contador}">
+                <option value="">-- Selecciona --</option>
+                {% for med in medicamentos %}
+                <option value="{{ med.id }}">{{ med.nombre_med }}</option>
+                {% endfor %}
+            </select>
+            <input type="text" name="dosis_${contador}" placeholder="Ej: 1 tableta" />
+            <input type="text" name="frecuencia_${contador}" placeholder="Ej: cada 8h" />
+            <input type="text" name="duracion_${contador}" placeholder="Ej: 5 días" />
+            <input type="text" name="via_administracion_${contador}" placeholder="Ej: Oral" />
+            <input type="text" name="observaciones_${contador}" placeholder="Opcional" />
+            <button type="button" class="remove-btn" onclick="this.parentElement.remove()">✖</button>
+        `;
+        contenedor.appendChild(div);
+        contador++;
+    }
+
+    document.getElementById('agregar-fila').addEventListener('click', crearFila);
+    window.onload = crearFila;
+</script>
+
+</body>
+</html>

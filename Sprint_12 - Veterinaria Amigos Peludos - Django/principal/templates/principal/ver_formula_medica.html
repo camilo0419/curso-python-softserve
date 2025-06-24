@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fórmula Médica</title>
+    <link rel="stylesheet" href="{% static 'principal/css/estilos.css' %}">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eaeff1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .contenedor {
+            background-color: white;
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .encabezado {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .encabezado h2 {
+            color: #2f4f4f;
+            margin: 10px 0;
+        }
+
+        .encabezado small {
+            color: #888;
+        }
+
+        .datos-paciente {
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .datos-paciente strong {
+            color: #485935;
+            display: inline-block;
+            width: 160px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #6D8777;
+            color: white;
+        }
+
+        .acciones {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #485935;
+            color: white;
+            padding: 12px 22px;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3a4d30;
+        }
+
+        .btn-disabled {
+            background-color: #bbb;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <div class="encabezado">
+        <h2>🩺 Fórmula Médica</h2>
+        <small>Veterinaria Amigos Peludos</small>
+    </div>
+
+    <div class="datos-paciente">
+        <p><strong>Mascota:</strong> {{ consulta.mascota.nombre_mascota }}</p>
+        <p><strong>Dueño:</strong> {{ consulta.mascota.cliente.nombre }}</p>
+        <p><strong>Fecha de consulta:</strong> {{ consulta.fecha }}</p>
+        <p><strong>Diagnóstico:</strong> {{ consulta.diagnostico }}</p>
+        
+        <p>
+            <strong>Estado de entrega:</strong>
+            {% if consulta.med_entregado %}
+                <span style="color: green; font-weight: bold;">✅ Medicamentos Entregados</span>
+            {% else %}
+                <span style="color: orange; font-weight: bold;">⏳ Pendiente por entregar</span>
+            {% endif %}
+        </p>
+    </div>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Medicamento</th>
+                <th>Dosis</th>
+                <th>Frecuencia</th>
+                <th>Duración</th>
+                <th>Vía</th>
+                <th>Observaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for f in formulas %}
+            <tr>
+                <td>{{ f.medicamento.nombre_med }}</td>
+                <td>{{ f.dosis }}</td>
+                <td>{{ f.frecuencia }}</td>
+                <td>{{ f.duracion }}</td>
+                <td>{{ f.via_administracion }}</td>
+                <td>{{ f.observaciones }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No hay medicamentos registrados.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="acciones">
+        <button class="btn" onclick="window.history.back();">↩ Volver</button>
+        <button class="btn" onclick="window.print();">🖨 Imprimir</button>
+
+
+        {% if not consulta.med_entregado %}
+        <form method="post" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="accion" value="entregar">
+            <button type="submit" class="btn" onclick="return confirm('¿Confirmas la entrega de los medicamentos? Esta acción no se puede deshacer.')">
+                🚚 Entregar Medicamentos
+            </button>
+        </form>
+        {% else %}
+        <button class="btn btn-disabled" disabled>✅ Medicamentos Entregados</button>
+        {% endif %}
+    </div>
+</div>
+
+</body>
+</html>

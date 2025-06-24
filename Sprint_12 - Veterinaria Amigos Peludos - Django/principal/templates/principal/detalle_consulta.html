@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de la consulta de {{ consulta.mascota.nombre_mascota }}</title>
+    <link rel="icon" type="image/png" href="{% static 'principal/img/favicon.png' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f7f3;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #6D8777;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .contenido {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-top: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: left;
+            width: 800px;
+            max-width: 95%;
+        }
+
+        .campo {
+            margin-bottom: 20px;
+        }
+
+        .campo strong {
+            display: inline-block;
+            width: 180px;
+            color: #485935;
+        }
+
+        .botones-extra {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .conditional-btn {
+            background-color: #789262;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .conditional-btn:hover {
+            background-color: #5c7450;
+        }
+
+        .volver {
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color: #93A267;
+            font-weight: bold;
+        }
+
+        .volver:hover {
+            text-decoration: underline;
+            color: #45624E;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Detalle de la Consulta</h1>
+</header>
+
+<div class="contenido">
+    <div class="campo"><strong>Mascota:</strong> {{ consulta.mascota.nombre_mascota }} </div>
+    <div class="campo"><strong>Dueño:</strong> {{ consulta.mascota.cliente.nombre }}</div>
+    <div class="campo"><strong>Fecha:</strong> {{ consulta.fecha }}</div>
+    <div class="campo"><strong>Motivo:</strong> {{ consulta.motivo }}</div>
+    <div class="campo"><strong>Diagnóstico:</strong> {{ consulta.diagnostico }}</div>
+    <div class="campo"><strong>Tratamiento:</strong> {{ consulta.tratamiento }}</div>
+    <div class="campo"><strong>Observaciones:</strong> {{ consulta.observaciones }}</div>
+    <div class="campo"><strong>¿Requiere Medicamentos?:</strong> {{ consulta.req_medicamentos|yesno:"Sí,No" }}</div>
+    {% if consulta.req_medicamentos %}
+        <div class="campo">
+            <strong>Estado de Medicamentos:</strong>
+            {% if consulta.med_entregado %}
+                ✅ Medicamentos Entregados
+            {% else %}
+                ⏳ Pendientes por entregar
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div class="campo"><strong>¿Requiere Cirugía?:</strong> {{ consulta.req_cirugia|yesno:"Sí,No" }}</div>
+
+    <div class="botones-extra">
+        {% if consulta.req_medicamentos %}
+            {% if hay_formula %}
+                <a href="{% url 'ver_formula' consulta.id %}" class="conditional-btn">📄 Ver Fórmula Médica</a>
+            {% elif not consulta.med_entregado %}
+                <a href="{% url 'asignar_medicamentos' consulta.id %}" class="conditional-btn">Asignar Medicamentos</a>
+            {% endif %}
+        {% endif %}
+
+        {% if consulta.req_cirugia %}
+            <a href="{% url 'asignar_cirugia' consulta.id %}" class="conditional-btn">Asignar Cirugía</a>
+        {% endif %}
+    </div>
+
+
+
+
+
+
+    <a href="{% url 'lista_consultas' %}" class="volver">⬅️ Volver a la lista de consultas</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fórmulas Médicas</title>
+    <link rel="icon" type="image/png" href="{% static 'principal/img/favicon.png' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #6D8777;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 20px 10px;
+            padding: 14px 24px;
+            background-color: #45624E;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .search-box {
+            margin: 20px auto;
+        }
+
+        .search-box input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 1000px;
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #45624E;
+            color: white;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        td a {
+            text-decoration: none;
+            color: #6D8777;
+            font-weight: bold;
+        }
+
+        td a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📋 Módulo de Fórmulas Médicas</h1>
+    <a href="{% url 'inicio' %}" class="btn">🏠 Volver al inicio</a>
+</header>
+
+<div class="search-box">
+    <input type="text" id="buscar" placeholder="🔍 Buscar por mascota o dueño...">
+</div>
+
+<table id="tabla-formulas">
+    <thead>
+        <tr>
+            <th>Mascota</th>
+            <th>Dueño</th>
+            <th>Fecha de Consulta</th>
+            <th>Medicamentos</th>
+            <th>Cirugía</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for consulta in formulas %}
+        <tr>
+            <td>{{ consulta.mascota.nombre_mascota }}</td>
+            <td>{{ consulta.mascota.cliente.nombre }}</td>
+            <td>{{ consulta.fecha }}</td>
+            <td>{{ consulta.req_medicamentos|yesno:"✅,❌" }}</td>
+            <td>{{ consulta.req_cirugia|yesno:"✅,❌" }}</td>
+            <td>
+                <a href="{% url 'ver_formula' consulta.id %}">👁 Ver Fórmula</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="6">No se encontraron fórmulas médicas.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<footer>
+    <p>© 2025 Veterinaria Amigos Peludos</p>
+</footer>
+
+<script>
+    const buscador = document.getElementById('buscar');
+    const filas = document.querySelectorAll('#tabla-formulas tbody tr');
+
+    buscador.addEventListener('input', function () {
+        const texto = this.value.toLowerCase();
+
+        filas.forEach(fila => {
+            const mascota = fila.cells[0].textContent.toLowerCase();
+            const dueno = fila.cells[1].textContent.toLowerCase();
+
+            if (mascota.includes(texto) || dueno.includes(texto)) {
+                fila.style.display = '';
+            } else {
+                fila.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
