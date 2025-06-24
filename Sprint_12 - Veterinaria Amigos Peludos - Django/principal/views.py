@@ -8,9 +8,11 @@ from django.db.models import Q
 from django.db import models
 from conexion import crear_conexion  
 from datetime import date
-from .models import Cliente, Mascota, Consulta
-from .forms import ClienteForm, MascotaForm, ConsultaForm
+from .models import Cliente, Mascota, Consulta, FormulaMedica, Medicamento
+from .forms import ClienteForm, MascotaForm, ConsultaForm, FormulaMedicaForm
+from django.forms import modelformset_factory
 from django.templatetags.static import static
+from django.contrib import messages
 
 def inicio(request):
     fecha_str = request.GET.get('fecha')
@@ -164,6 +166,11 @@ def eliminar_consulta(request, pk):
     consulta.delete()
     return redirect('lista_consultas')
 
+def detalle_consulta(request, pk):
+    consulta = get_object_or_404(Consulta, pk=pk)
+    return render(request, 'principal/detalle_consulta.html', {'consulta': consulta})
+
+
 
 #Historia Clinica
 
@@ -213,3 +220,101 @@ def buscar_mascotas(request):
         } for m in resultados
     ]
     return JsonResponse(data, safe=False)
+
+#Formula medica
+
+def crear_formula_medica(request, consulta_id):
+    consulta = get_object_or_404(Consulta, pk=consulta_id)
+
+    if not consulta.req_medicamentos:
+        return redirect('detalle_consulta', consulta_id=consulta.id)
+
+    if request.method == 'POST':
+        form = FormulaMedicaForm(request.POST)
+        if form.is_valid():
+            formula = form.save(commit=False)
+            formula.consulta = consulta
+            formula.save()
+            return redirect('detalle_consulta', consulta_id=consulta.id)
+    else:
+        form = FormulaMedicaForm()
+
+    return render(request, 'principal/formula_medica_form.html', {
+        'form': form,
+        'consulta': consulta
+    })
+
+def asignar_medicamentos(request, consulta_id):
+    consulta = get_object_or_404(Consulta, id=consulta_id)
+
+    if consulta.med_entregado:
+        messages.warning(request, "🚫 Ya se entregaron medicamentos para esta consulta.")
+        return redirect('detalle_consulta', consulta_id=consulta.id)
+
+    medicamentos = Medicamento.objects.filter(activo=True).order_by('nombre_med')
+
+    if request.method == 'POST':
+        accion = request.POST.get('accion')
+        formulas = []
+
+        index = 0
+        while True:
+            med_id = request.POST.get(f'medicamento_{index}')
+            if not med_id:
+                break
+
+            dosis = request.POST.get(f'dosis_{index}', '')
+            frecuencia = request.POST.get(f'frecuencia_{index}', '')
+            duracion = request.POST.get(f'duracion_{index}', '')
+            via = request.POST.get(f'via_administracion_{index}', '')
+            observaciones = request.POST.get(f'observaciones_{index}', '')
+
+            medicamento = Medicamento.objects.filter(id=med_id).first()
+            if medicamento:
+                FormulaMedica.objects.create(
+                    consulta=consulta,
+                    medicamento=medicamento,
+                    dosis=dosis,
+                    frecuencia=frecuencia,
+                    duracion=duracion,
+                    via_administracion=via,
+                    observaciones=observaciones
+                )
+                formulas.append(medicamento.nombre_med)
+
+            index += 1
+
+        if accion == 'guardar':
+            messages.success(request, f"💾 Fórmula guardada con {len(formulas)} medicamentos.")
+            return render(request, 'principal/formulario_formula_medica.html', {
+                'consulta': consulta,
+                'medicamentos': medicamentos,
+                'guardado': True
+            })
+
+        elif accion == 'entregar':
+            consulta.med_entregado = True
+            consulta.save()
+            messages.success(request, f"🚚 Medicamentos entregados: {', '.join(formulas)}")
+            return redirect('detalle_consulta', consulta_id=consulta.id)
+
+    # Si es GET
+    return render(request, 'principal/formulario_formula_medica.html', {
+        'consulta': consulta,
+        'medicamentos': medicamentos,
+        'guardado': False
+    })
+
+def ver_formula_medica(request, consulta_id):
+    consulta = get_object_or_404(Consulta, id=consulta_id)
+    formulas = FormulaMedica.objects.filter(consulta=consulta)
+    return render(request, 'principal/ver_formula_medica.html', {
+        'consulta': consulta,
+        'formulas': formulas
+    })
+
+
+
+def asignar_cirugia(request, consulta_id):
+    # Por ahora puede estar vacía o con un return básico
+    return render(request, 'principal/asignar_cirugia.html', {'consulta_id': consulta_id})

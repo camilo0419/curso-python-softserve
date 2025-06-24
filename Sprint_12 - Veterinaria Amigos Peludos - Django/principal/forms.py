@@ -1,5 +1,5 @@
 from django import forms
-from .models import Cliente, Mascota, Consulta
+from .models import Cliente, Mascota, Consulta, FormulaMedica
 
 class ClienteForm(forms.ModelForm):
     class Meta:
@@ -34,10 +34,37 @@ class MascotaForm(forms.ModelForm):
 class ConsultaForm(forms.ModelForm):
     class Meta:
         model = Consulta
-        fields = ['fecha', 'motivo', 'diagnostico', 'mascota']
+        fields = [
+            'fecha', 
+            'motivo', 
+            'diagnostico', 
+            'mascota',
+            'tratamiento',
+            'observaciones',
+            'req_medicamentos',
+            'req_cirugia'
+        ]
         widgets = {
             'fecha': forms.DateInput(attrs={'type': 'date'}),
             'motivo': forms.Textarea(attrs={'placeholder': 'Motivo de la consulta'}),
             'diagnostico': forms.Textarea(attrs={'placeholder': 'Diagnóstico'}),
             'mascota': forms.Select(),
+            'tratamiento': forms.Textarea(attrs={'placeholder': 'Tratamiento prescrito'}),
+            'observaciones': forms.Textarea(attrs={'placeholder': 'Observaciones adicionales'}),
+        }
+
+class FormulaMedicaForm(forms.ModelForm):
+    class Meta:
+        model = FormulaMedica
+        fields = [
+            'medicamento', 'dosis', 'frecuencia', 
+            'duracion', 'via_administracion', 'observaciones'
+        ]
+        widgets = {
+            'medicamento': forms.Select(attrs={'class': 'form-control'}),
+            'dosis': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ej: 1 tableta'}),
+            'frecuencia': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ej: cada 8 horas'}),
+            'duracion': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ej: 5 días'}),
+            'via_administracion': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ej: Oral'}),
+            'observaciones': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Opcional'}),
         }

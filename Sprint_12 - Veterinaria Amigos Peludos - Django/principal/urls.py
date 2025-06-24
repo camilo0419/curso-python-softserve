@@ -32,6 +32,22 @@ urlpatterns = [
     path('mascotas/<int:mascota_id>/historia/pdf/', views.exportar_historia_pdf, name='exportar_historia_pdf'),
 
     path('buscar_mascotas/', views.buscar_mascotas, name='buscar_mascotas'),
+
+    path('consultas/detalle/<int:pk>/', views.detalle_consulta, name='detalle_consulta'),
+    path('consultas/<int:consulta_id>/formula/', views.crear_formula_medica, name='crear_formula_medica'),
+    path('consulta/<int:consulta_id>/asignar_medicamentos/', views.asignar_medicamentos, name='asignar_medicamentos'),
+    path('consulta/<int:consulta_id>/asignar_medicamentos/', views.asignar_medicamentos, name='asignar_medicamentos'),
+    path('consulta/<int:consulta_id>/asignar_cirugia/', views.asignar_cirugia, name='asignar_cirugia'),
+
+    path('consulta/<int:consulta_id>/asignar_medicamentos/', views.asignar_medicamentos, name='asignar_medicamentos'),
+
+    path('consulta/<int:consulta_id>/ver_formula/', views.ver_formula_medica, name='ver_formula_medica'),
+    
+
+
+
+
+
     
 
 

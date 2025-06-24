@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Cliente, Mascota, Consulta #
+from .models import Cliente, Mascota, Consulta, Medicamento, Profesional, Cirugia, FormulaMedica
 
-# Register your models here.
-admin.site.register(Cliente) # Registra el modelo Cliente
-admin.site.register(Mascota) # Registra el modelo Mascota
-admin.site.register(Consulta) # Registra el modelo Consulta
-
-# Usar python manage.py createsuperuser para crear usuario y administrador
-# con python manage.py runserver, accederemos al panel de admin e interacturemos con los datos
+admin.site.register(Cliente)
+admin.site.register(Mascota)
+admin.site.register(Consulta)
+admin.site.register(Medicamento)
+admin.site.register(Profesional)
+admin.site.register(Cirugia)
+admin.site.register(FormulaMedica)
