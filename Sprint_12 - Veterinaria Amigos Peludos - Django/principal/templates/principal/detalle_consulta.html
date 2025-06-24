@@ -120,14 +120,13 @@
         {% endif %}
 
         {% if consulta.req_cirugia %}
-            <a href="{% url 'asignar_cirugia' consulta.id %}" class="conditional-btn">Asignar Cirugía</a>
+            {% if consulta.cirugia %}
+                <a href="{% url 'ver_cirugia' consulta.id %}" class="conditional-btn">🔍 Ver Cirugía Programada</a>
+            {% else %}
+                <a href="{% url 'asignar_cirugia' consulta.id %}" class="conditional-btn">🩺 Programar cirugía</a>
+            {% endif %}
         {% endif %}
     </div>
-
-
-
-
-
 
     <a href="{% url 'lista_consultas' %}" class="volver">⬅️ Volver a la lista de consultas</a>
 </div>

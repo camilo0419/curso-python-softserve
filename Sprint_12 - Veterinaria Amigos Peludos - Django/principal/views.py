@@ -9,7 +9,7 @@ from django.db import models
 from conexion import crear_conexion  
 from datetime import date
 from .models import Cliente, Mascota, Consulta, FormulaMedica, Medicamento, Profesional
-from .forms import ClienteForm, MascotaForm, ConsultaForm, FormulaMedicaForm, MedicamentoForm, ProfesionalForm
+from .forms import ClienteForm, MascotaForm, ConsultaForm, FormulaMedicaForm, MedicamentoForm, ProfesionalForm, CirugiaForm
 from django.forms import modelformset_factory
 from django.templatetags.static import static
 from django.contrib import messages
@@ -151,13 +151,15 @@ def crear_consulta(request):
         form = ConsultaForm()
     return render(request, 'principal/formulario_consulta.html', {'form': form})
 
-def editar_consulta(request, pk):
-    consulta = get_object_or_404(Consulta, pk=pk)
+def editar_consulta(request, consulta_id):
+    consulta = get_object_or_404(Consulta, pk=consulta_id)
     if request.method == 'POST':
         form = ConsultaForm(request.POST, instance=consulta)
         if form.is_valid():
-            form.save()
-            return redirect('lista_consultas')
+            consulta = form.save()
+            if consulta.req_cirugia and not hasattr(consulta, 'cirugia'):
+                return redirect('asignar_cirugia', consulta_id=consulta.id)
+            return redirect('detalle_consulta', consulta.id)
     else:
         form = ConsultaForm(instance=consulta)
     return render(request, 'principal/formulario_consulta.html', {'form': form})
@@ -419,3 +421,89 @@ def crear_profesional(request):
 
 def historial_cirugias(request, pk):
     return HttpResponse("🔧 Módulo de cirugías en construcción.")
+
+def asignar_cirugia(request, consulta_id):
+    consulta = get_object_or_404(Consulta, pk=consulta_id)
+
+    if hasattr(consulta, 'cirugia'):
+        return redirect('ver_cirugia', consulta_id=consulta.id)
+
+    if request.method == 'POST':
+        form = CirugiaForm(request.POST)
+        if form.is_valid():
+            cirugia = form.save(commit=False)
+            cirugia.mascota = consulta.mascota
+            cirugia.consulta = consulta
+            cirugia.save()
+            messages.success(request, "✅ Cirugía programada correctamente.")
+            return redirect('detalle_consulta', consulta_id=consulta.id)
+    else:
+        form = CirugiaForm()
+
+    return render(request, 'principal/formulario_cirugia.html', {
+        'form': form,
+        'consulta': consulta
+    })
+
+def crear_consulta(request):
+    if request.method == 'POST':
+        form = ConsultaForm(request.POST)
+        if form.is_valid():
+            consulta = form.save()
+            if consulta.req_cirugia and not hasattr(consulta, 'cirugia'):
+                return redirect('asignar_cirugia', consulta_id=consulta.id)
+            return redirect('detalle_consulta', consulta.id)
+    else:
+        form = ConsultaForm()
+    return render(request, 'principal/formulario_consulta.html', {'form': form})
+
+def ver_cirugia(request, consulta_id):
+    consulta = get_object_or_404(Consulta, pk=consulta_id)
+    cirugia = getattr(consulta, 'cirugia', None)
+
+    if not cirugia:
+        return redirect('asignar_cirugia', consulta_id=consulta_id)
+
+    return render(request, 'principal/ver_cirugia.html', {
+        'consulta': consulta,
+        'cirugia': cirugia
+    })
+
+def editar_cirugia(request, consulta_id):
+    consulta = get_object_or_404(Consulta, pk=consulta_id)
+    cirugia = getattr(consulta, 'cirugia', None)
+
+    if not cirugia:
+        return redirect('asignar_cirugia', consulta_id=consulta_id)
+
+    if request.method == 'POST':
+        form = CirugiaForm(request.POST, instance=cirugia)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "✅ Cirugía actualizada correctamente.")
+            return redirect('ver_cirugia', consulta_id=consulta_id)
+    else:
+        form = CirugiaForm(instance=cirugia)
+
+    return render(request, 'principal/formulario_cirugia.html', {
+        'form': form,
+        'consulta': consulta
+    })
+
+def eliminar_cirugia(request, consulta_id):
+    consulta = get_object_or_404(Consulta, pk=consulta_id)
+    cirugia = getattr(consulta, 'cirugia', None)
+
+    if not cirugia:
+        return redirect('detalle_consulta', consulta_id=consulta_id)
+
+    if request.method == 'POST':
+        cirugia.delete()
+        messages.success(request, "🗑️ Cirugía eliminada correctamente.")
+        return redirect('detalle_consulta', consulta_id=consulta_id)
+
+    return render(request, 'principal/confirmar_eliminar.html', {
+        'objeto': cirugia,
+        'tipo': 'cirugía',
+        'consulta': consulta
+    })

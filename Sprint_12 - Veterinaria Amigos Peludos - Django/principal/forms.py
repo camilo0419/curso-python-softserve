@@ -1,5 +1,5 @@
 from django import forms
-from .models import Cliente, Mascota, Consulta, FormulaMedica, Medicamento, Profesional
+from .models import Cliente, Mascota, Consulta, FormulaMedica, Medicamento, Profesional, Cirugia
 
 class ClienteForm(forms.ModelForm):
     class Meta:
@@ -88,4 +88,14 @@ class ProfesionalForm(forms.ModelForm):
             'tarjeta_profesional': forms.TextInput(attrs={'placeholder': 'Número de tarjeta'}),
             'telefono': forms.TextInput(attrs={'placeholder': 'Ej: 3201234567'}),
             'especialidad': forms.TextInput(attrs={'placeholder': 'Ej: Cirujano, General'}),
+        }
+
+class CirugiaForm(forms.ModelForm):
+    class Meta:
+        model = Cirugia
+        fields = ['procedimiento', 'descripcion_proced', 'fecha_prog', 'hora_prog', 'duracion_aprox', 'estado', 'observaciones_cirugia', 'profesional']
+        widgets = {
+            'fecha_prog': forms.DateInput(attrs={'type': 'date'}),
+            'hora_prog': forms.TimeInput(attrs={'type': 'time'}),
+            'duracion_aprox': forms.TextInput(attrs={'placeholder': 'Ej: 01:30:00'}),
         }

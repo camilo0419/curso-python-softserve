@@ -1,0 +1,6 @@
+<h2>¿Estás seguro que deseas eliminar esta {{ tipo }}?</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn">✅ Confirmar</button>
+    <a href="{% url 'ver_cirugia' consulta.id %}" class="btn">❌ Cancelar</a>
+</form>

@@ -59,6 +59,12 @@ urlpatterns = [
     path('profesionales/eliminar/<int:pk>/', views.eliminar_profesional, name='eliminar_profesional'),
     path('profesionales/<int:pk>/cirugias/', views.historial_cirugias, name='historial_cirugias'),
 
+    # CRUD CIRUGIAS
+    path('consulta/<int:consulta_id>/asignar_cirugia/', views.asignar_cirugia, name='asignar_cirugia'),
+    path('consulta/<int:consulta_id>/ver_cirugia/', views.ver_cirugia, name='ver_cirugia'),
+    path('consulta/<int:consulta_id>/editar_cirugia/', views.editar_cirugia, name='editar_cirugia'),
+    path('consulta/<int:consulta_id>/eliminar_cirugia/', views.eliminar_cirugia, name='eliminar_cirugia'),
+
 
  
 

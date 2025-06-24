@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Programar Cirugía</title>
+    <link rel="stylesheet" href="{% static 'principal/css/estilos.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        h2 {
+            color: #485935;
+            margin-top: 20px;
+        }
+
+        form {
+            background: white;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 95%;
+            max-width: 900px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            flex: 1 1 45%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .acciones {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            background-color: #485935;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #45624E;
+        }
+
+        .volver {
+            text-decoration: none;
+            color: #93A267;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .volver:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Programar Cirugía para {{ consulta.mascota.nombre_mascota }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="procedimiento">Procedimiento:</label>
+            {{ form.procedimiento }}
+        </div>
+        <div class="form-group">
+            <label for="fecha_prog">Fecha Programada:</label>
+            {{ form.fecha_prog }}
+        </div>
+        <div class="form-group">
+            <label for="hora_prog">Hora Programada:</label>
+            {{ form.hora_prog }}
+        </div>
+        <div class="form-group">
+            <label for="duracion_aprox">Duración Aproximada:</label>
+            {{ form.duracion_aprox }}
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="estado">Estado:</label>
+            {{ form.estado }}
+        </div>
+        <div class="form-group">
+            <label for="profesional">Profesional a cargo:</label>
+            {{ form.profesional }}
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group" style="flex: 1 1 100%;">
+            <label for="descripcion_proced">Descripción del procedimiento:</label>
+            {{ form.descripcion_proced }}
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group" style="flex: 1 1 100%;">
+            <label for="observaciones_cirugia">Observaciones:</label>
+            {{ form.observaciones_cirugia }}
+        </div>
+    </div>
+
+    <div class="acciones">
+        <button type="submit" class="btn">💾 Programar Cirugía</button>
+        <a href="{% url 'detalle_consulta' consulta.id %}" class="volver">↩ Volver</a>
+    </div>
+</form>
+
+</body>
+</html>
