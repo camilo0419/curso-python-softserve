@@ -33,7 +33,8 @@ urlpatterns = [
 
     path('buscar_mascotas/', views.buscar_mascotas, name='buscar_mascotas'),
 
-    path('consultas/detalle/<int:pk>/', views.detalle_consulta, name='detalle_consulta'),
+    path('consultas/detalle/<int:consulta_id>/', views.detalle_consulta, name='detalle_consulta'),
+
     path('consultas/<int:consulta_id>/formula/', views.crear_formula_medica, name='crear_formula_medica'),
     path('consulta/<int:consulta_id>/asignar_medicamentos/', views.asignar_medicamentos, name='asignar_medicamentos'),
     path('consulta/<int:consulta_id>/asignar_medicamentos/', views.asignar_medicamentos, name='asignar_medicamentos'),
@@ -41,14 +42,10 @@ urlpatterns = [
 
     path('consulta/<int:consulta_id>/asignar_medicamentos/', views.asignar_medicamentos, name='asignar_medicamentos'),
 
-    path('consulta/<int:consulta_id>/ver_formula/', views.ver_formula_medica, name='ver_formula_medica'),
-    
-
-
-
-
-
-    
+    #path('consulta/<int:consulta_id>/ver_formula/', views.ver_formula_medica, name='ver_formula_medica'),
+    path('consulta/<int:consulta_id>/ver_formula/', views.ver_formula_medica, name='ver_formula'),
+    path('formulas/', views.lista_formulas, name='lista_formulas'),
+ 
 
 
 

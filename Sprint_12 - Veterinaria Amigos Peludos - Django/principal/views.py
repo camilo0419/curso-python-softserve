@@ -13,6 +13,7 @@ from .forms import ClienteForm, MascotaForm, ConsultaForm, FormulaMedicaForm
 from django.forms import modelformset_factory
 from django.templatetags.static import static
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_protect
 
 def inicio(request):
     fecha_str = request.GET.get('fecha')
@@ -166,9 +167,14 @@ def eliminar_consulta(request, pk):
     consulta.delete()
     return redirect('lista_consultas')
 
-def detalle_consulta(request, pk):
-    consulta = get_object_or_404(Consulta, pk=pk)
-    return render(request, 'principal/detalle_consulta.html', {'consulta': consulta})
+def detalle_consulta(request, consulta_id):
+    consulta = get_object_or_404(Consulta, id=consulta_id)
+    hay_formula = FormulaMedica.objects.filter(consulta=consulta).exists()
+
+    return render(request, 'principal/detalle_consulta.html', {
+        'consulta': consulta,
+        'hay_formula': hay_formula
+    })
 
 
 
@@ -286,11 +292,8 @@ def asignar_medicamentos(request, consulta_id):
 
         if accion == 'guardar':
             messages.success(request, f"💾 Fórmula guardada con {len(formulas)} medicamentos.")
-            return render(request, 'principal/formulario_formula_medica.html', {
-                'consulta': consulta,
-                'medicamentos': medicamentos,
-                'guardado': True
-            })
+            return redirect('detalle_consulta', consulta_id=consulta.id)
+
 
         elif accion == 'entregar':
             consulta.med_entregado = True
@@ -305,16 +308,41 @@ def asignar_medicamentos(request, consulta_id):
         'guardado': False
     })
 
+@csrf_protect
 def ver_formula_medica(request, consulta_id):
     consulta = get_object_or_404(Consulta, id=consulta_id)
     formulas = FormulaMedica.objects.filter(consulta=consulta)
+
+    if request.method == 'POST' and request.POST.get('accion') == 'entregar':
+        if not consulta.med_entregado:
+            consulta.med_entregado = True
+            consulta.save()
+            messages.success(request, "🚚 Medicamentos marcados como entregados.")
+            return redirect('ver_formula', consulta_id=consulta.id)
+
     return render(request, 'principal/ver_formula_medica.html', {
         'consulta': consulta,
         'formulas': formulas
     })
 
 
-
 def asignar_cirugia(request, consulta_id):
     # Por ahora puede estar vacía o con un return básico
     return render(request, 'principal/asignar_cirugia.html', {'consulta_id': consulta_id})
+
+def lista_formulas(request):
+    query = request.GET.get('buscar', '')
+    formulas = Consulta.objects.filter(req_medicamentos=True)
+
+    if query:
+        formulas = formulas.filter(
+            mascota__nombre_mascota__icontains=query
+        ) | formulas.filter(
+            mascota__cliente__nombre__icontains=query
+        )
+
+    context = {
+        'formulas': formulas,
+        'query': query,
+    }
+    return render(request, 'principal/lista_formulas.html', context)
