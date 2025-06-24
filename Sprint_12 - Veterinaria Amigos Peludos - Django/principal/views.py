@@ -8,8 +8,8 @@ from django.db.models import Q
 from django.db import models
 from conexion import crear_conexion  
 from datetime import date
-from .models import Cliente, Mascota, Consulta, FormulaMedica, Medicamento
-from .forms import ClienteForm, MascotaForm, ConsultaForm, FormulaMedicaForm
+from .models import Cliente, Mascota, Consulta, FormulaMedica, Medicamento, Profesional
+from .forms import ClienteForm, MascotaForm, ConsultaForm, FormulaMedicaForm, MedicamentoForm, ProfesionalForm
 from django.forms import modelformset_factory
 from django.templatetags.static import static
 from django.contrib import messages
@@ -346,3 +346,76 @@ def lista_formulas(request):
         'query': query,
     }
     return render(request, 'principal/lista_formulas.html', context)
+
+def lista_medicamentos(request):
+    medicamentos = Medicamento.objects.all()
+    return render(request, 'principal/lista_medicamentos.html', {'medicamentos': medicamentos})
+
+def lista_profesionales(request):
+    profesionales = Profesional.objects.all()
+    return render(request, 'principal/lista_profesionales.html', {'profesionales': profesionales})
+
+# Editar Medicamento
+def editar_medicamento(request, pk):
+    medicamento = get_object_or_404(Medicamento, pk=pk)
+    if request.method == 'POST':
+        form = MedicamentoForm(request.POST, instance=medicamento)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_medicamentos')
+    else:
+        form = MedicamentoForm(instance=medicamento)
+    return render(request, 'principal/formulario_medicamento.html', {'form': form})
+
+# Eliminar Medicamento
+def eliminar_medicamento(request, pk):
+    medicamento = get_object_or_404(Medicamento, pk=pk)
+    if request.method == 'POST':
+        medicamento.delete()
+        return redirect('lista_medicamentos')
+    return render(request, 'principal/confirmar_eliminar.html', {'objeto': medicamento, 'tipo': 'medicamento'})
+
+# Editar Profesional
+def editar_profesional(request, pk):
+    profesional = get_object_or_404(Profesional, pk=pk)
+    if request.method == 'POST':
+        form = ProfesionalForm(request.POST, instance=profesional)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_profesionales')
+    else:
+        form = ProfesionalForm(instance=profesional)
+    return render(request, 'principal/formulario_profesional.html', {'form': form})
+
+# Eliminar Profesional
+def eliminar_profesional(request, pk):
+    profesional = get_object_or_404(Profesional, pk=pk)
+    if request.method == 'POST':
+        profesional.delete()
+        return redirect('lista_profesionales')
+    return render(request, 'principal/confirmar_eliminar.html', {'objeto': profesional, 'tipo': 'profesional'})
+
+def crear_medicamento(request):
+    if request.method == 'POST':
+        form = MedicamentoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_medicamentos')
+    else:
+        form = MedicamentoForm()
+    return render(request, 'principal/formulario_medicamento.html', {'form': form})
+
+
+def crear_profesional(request):
+    if request.method == 'POST':
+        form = ProfesionalForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_profesionales')
+    else:
+        form = ProfesionalForm()
+    return render(request, 'principal/formulario_profesional.html', {'form': form})
+
+
+def historial_cirugias(request, pk):
+    return HttpResponse("🔧 Módulo de cirugías en construcción.")

@@ -45,6 +45,21 @@ urlpatterns = [
     #path('consulta/<int:consulta_id>/ver_formula/', views.ver_formula_medica, name='ver_formula_medica'),
     path('consulta/<int:consulta_id>/ver_formula/', views.ver_formula_medica, name='ver_formula'),
     path('formulas/', views.lista_formulas, name='lista_formulas'),
+
+    
+    path('medicamentos/', views.lista_medicamentos, name='lista_medicamentos'),
+    path('medicamentos/crear/', views.crear_medicamento, name='crear_medicamento'),
+    path('medicamentos/editar/<int:pk>/', views.editar_medicamento, name='editar_medicamento'),
+    path('medicamentos/eliminar/<int:pk>/', views.eliminar_medicamento, name='eliminar_medicamento'),
+
+    # PROFESIONALES
+    path('profesionales/', views.lista_profesionales, name='lista_profesionales'),
+    path('profesionales/crear/', views.crear_profesional, name='crear_profesional'),
+    path('profesionales/editar/<int:pk>/', views.editar_profesional, name='editar_profesional'),
+    path('profesionales/eliminar/<int:pk>/', views.eliminar_profesional, name='eliminar_profesional'),
+    path('profesionales/<int:pk>/cirugias/', views.historial_cirugias, name='historial_cirugias'),
+
+
  
 
 

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Cliente, Mascota, Consulta, FormulaMedica
+from .models import Cliente, Mascota, Consulta, FormulaMedica, Medicamento, Profesional
 
 class ClienteForm(forms.ModelForm):
     class Meta:
@@ -67,4 +67,25 @@ class FormulaMedicaForm(forms.ModelForm):
             'duracion': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ej: 5 días'}),
             'via_administracion': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ej: Oral'}),
             'observaciones': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Opcional'}),
+        }
+class MedicamentoForm(forms.ModelForm):
+    class Meta:
+        model = Medicamento
+        fields = ['nombre_med', 'presentacion', 'stock_disponible', 'fecha_vencimiento']
+        widgets = {
+            'fecha_vencimiento': forms.DateInput(attrs={'type': 'date'}),
+            'nombre_med': forms.TextInput(attrs={'placeholder': 'Nombre del medicamento'}),
+            'presentacion': forms.TextInput(attrs={'placeholder': 'Ej: Tableta, Inyectable...'}),
+        }
+
+
+class ProfesionalForm(forms.ModelForm):
+    class Meta:
+        model = Profesional
+        fields = ['nombre_prof', 'tarjeta_profesional', 'telefono', 'especialidad', 'activo']
+        widgets = {
+            'nombre_prof': forms.TextInput(attrs={'placeholder': 'Nombre completo'}),
+            'tarjeta_profesional': forms.TextInput(attrs={'placeholder': 'Número de tarjeta'}),
+            'telefono': forms.TextInput(attrs={'placeholder': 'Ej: 3201234567'}),
+            'especialidad': forms.TextInput(attrs={'placeholder': 'Ej: Cirujano, General'}),
         }
