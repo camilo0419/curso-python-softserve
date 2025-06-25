@@ -147,6 +147,7 @@
         <a href="{% url 'lista_formulas' %}">🧾 Fórmulas</a>
         <a href="{% url 'lista_medicamentos' %}">💊 Medicamentos</a>
         <a href="{% url 'lista_profesionales' %}">🩺 Profesionales</a>
+        <a href="{% url 'lista_cirugias' %}">🗓️ Cirugías</a>        
     </div>
 </div>
 
@@ -170,34 +171,39 @@
         <img src="{% static 'principal/img/main.png' %}" alt="Mascotas felices">
 
         <div class="calendar-box">
-            <form method="get">
-                <label for="fecha">Selecciona una fecha:</label><br>
-                <input type="date" name="fecha" value="{{ fecha }}" onchange="this.form.submit()">
-            </form>
-            <a href="{% url 'crear_consulta' %}" class="btn-consulta">➕ Agregar Consulta</a>
+            <h3>🗓️ Próximas Cirugías Programadas</h3>
 
-            {% if consultas %}
-                <h3>Consultas realizadas el: {{ fecha }}</h3>
-                <table>
-                    <tr><th>Mascota</th><th>Motivo</th><th>Diagnóstico</th></tr>
-                    {% for c in consultas %}
-                        <tr>
-                            <td>{{ c.mascota.nombre_mascota }}</td>
-                            <td>{{ c.motivo|default:"-" }}</td>
-                            <td>{{ c.diagnostico|default:"-" }}</td>
-                        </tr>
+            {% if cirugias %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Mascota</th>
+                        <th>Procedimiento</th>
+                        <th>Profesional</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in cirugias %}
+                    <tr>
+                        <td>{{ c.fecha_prog }}</td>
+                        <td>{{ c.hora_prog }}</td>
+                        <td>{{ c.mascota.nombre_mascota }}</td>
+                        <td>{{ c.procedimiento }}</td>
+                        <td>{{ c.profesional.nombre_prof }}</td>
+                    </tr>
                     {% endfor %}
-                </table>
+                </tbody>
+            </table>
             {% else %}
-                <p>No hay consultas registradas para esta fecha.</p>
+                <p>✅ No hay cirugías programadas.</p>
             {% endif %}
         </div>
-    </div>
-
+</div>
     <footer>
         <p>© 2025 Veterinaria Amigos Peludos</p>
     </footer>
-</div>
 
 </body>
 </html>

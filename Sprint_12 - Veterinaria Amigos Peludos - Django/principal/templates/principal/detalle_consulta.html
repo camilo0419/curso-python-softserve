@@ -120,12 +120,15 @@
         {% endif %}
 
         {% if consulta.req_cirugia %}
-            {% if consulta.cirugia %}
-                <a href="{% url 'ver_cirugia' consulta.id %}" class="conditional-btn">🔍 Ver Cirugía Programada</a>
-            {% else %}
-                <a href="{% url 'asignar_cirugia' consulta.id %}" class="conditional-btn">🩺 Programar cirugía</a>
-            {% endif %}
+            {% with cirugia=consulta.cirugia.first %}
+                {% if cirugia and cirugia.procedimiento and cirugia.fecha_prog and cirugia.profesional %}
+                    <a href="{% url 'ver_cirugia' consulta.id %}" class="conditional-btn">🔍 Ver cirugía programada</a>
+                {% else %}
+                    <a href="{% url 'asignar_cirugia' consulta.id %}" class="conditional-btn">🩺 Programar cirugía</a>
+                {% endif %}
+            {% endwith %}
         {% endif %}
+
     </div>
 
     <a href="{% url 'lista_consultas' %}" class="volver">⬅️ Volver a la lista de consultas</a>

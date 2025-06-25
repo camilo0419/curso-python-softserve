@@ -25,7 +25,7 @@ urlpatterns = [
     # CRUD de consultas
     path('consultas/lista/', views.lista_consultas, name='lista_consultas'),
     path('consultas/nueva/', views.crear_consulta, name='crear_consulta'),
-    path('consultas/editar/<int:pk>/', views.editar_consulta, name='editar_consulta'),
+    path('consultas/editar/<int:consulta_id>/', views.editar_consulta, name='editar_consulta'),
     path('consultas/eliminar/<int:pk>/', views.eliminar_consulta, name='eliminar_consulta'),
 
     path('mascotas/<int:mascota_id>/historia/', views.historia_clinica, name='historia_clinica'),
@@ -64,6 +64,13 @@ urlpatterns = [
     path('consulta/<int:consulta_id>/ver_cirugia/', views.ver_cirugia, name='ver_cirugia'),
     path('consulta/<int:consulta_id>/editar_cirugia/', views.editar_cirugia, name='editar_cirugia'),
     path('consulta/<int:consulta_id>/eliminar_cirugia/', views.eliminar_cirugia, name='eliminar_cirugia'),
+    path('cirugias/', views.lista_cirugias, name='lista_cirugias'),
+    path('cirugias/editar/<int:cirugia_id>/', views.editar_cirugia_directa, name='editar_cirugia_directa'),
+    path('cirugias/cancelar/<int:cirugia_id>/', views.cancelar_cirugia, name='cancelar_cirugia'),
+    path('cirugias/pendientes/', views.cirugias_pendientes, name='cirugias_pendientes'),
+    path('cirugias/nueva/', views.crear_cirugia, name='crear_cirugia'),
+
+
 
 
  

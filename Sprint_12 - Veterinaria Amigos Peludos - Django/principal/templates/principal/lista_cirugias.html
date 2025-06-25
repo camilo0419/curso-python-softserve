@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Cirugías</title>
+    <link rel="stylesheet" href="{% static 'principal/css/estilos.css' %}">
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 95%;
+            max-width: 1100px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #485935;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        .acciones a {
+            margin-right: 8px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn-cancelar {
+            color: crimson;
+        }
+
+        .btn-editar {
+            color: #485935;
+        }
+
+        .estado-activo {
+            color: green;
+            font-weight: bold;
+        }
+
+        .estado-cancelado {
+            color: red;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #485935;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>📋 Cirugías Programadas</h2>
+<header>
+    <a href="{% url 'inicio' %}" class="btn">🏠 Volver al inicio</a>
+    <a href="{% url 'cirugias_pendientes' %}">⏳ Cirugías Pendientes por Programar</a>
+</header>
+
+<table>
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Mascota</th>
+            <th>Profesional</th>
+            <th>Procedimiento</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cirugia in cirugias %}
+        <tr>
+            <td>{{ cirugia.fecha_prog }}</td>
+            <td>{{ cirugia.mascota.nombre_mascota }}</td>
+            <td>{{ cirugia.profesional.nombre_prof }}</td>
+            <td>{{ cirugia.procedimiento }}</td>
+            <td>
+                {% if cirugia.estado == "Cancelada" %}
+                    <span class="estado-cancelado">❌ {{ cirugia.estado }}</span>
+                {% else %}
+                    <span class="estado-activo">✅ {{ cirugia.estado }}</span>
+                {% endif %}
+            </td>
+            <td class="acciones">
+                <a href="{% url 'editar_cirugia_directa' cirugia.id %}" class="btn-editar">✏️ Editar</a>
+                <a href="{% url 'cancelar_cirugia' cirugia.id %}" onclick="return confirm('Cancelar esta cirugía?');">🗑 Cancelar</a>                            
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">No hay cirugías programadas.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

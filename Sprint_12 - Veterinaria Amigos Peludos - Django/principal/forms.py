@@ -90,12 +90,51 @@ class ProfesionalForm(forms.ModelForm):
             'especialidad': forms.TextInput(attrs={'placeholder': 'Ej: Cirujano, General'}),
         }
 
+PROCEDIMIENTOS_VETERINARIOS = [
+    ('', 'Seleccione un procedimiento'),
+    ('Castración', 'Castración'),
+    ('Esterilización', 'Esterilización'),
+    ('Extracción dental', 'Extracción dental'),
+    ('Amputación', 'Amputación'),
+    ('Apendicectomía', 'Apendicectomía'),
+    ('Cesárea', 'Cesárea'),
+    ('Limpieza de heridas', 'Limpieza de heridas'),
+    ('Remoción de tumor', 'Remoción de tumor'),
+    ('Laparotomía exploratoria', 'Laparotomía exploratoria'),
+    ('Sutura de heridas', 'Sutura de heridas'),
+]
+
+DURACIONES = [
+    ('00:30:00', '30 minutos'),
+    ('01:00:00', '1 hora'),
+    ('01:30:00', '1 hora 30 minutos'),
+    ('02:00:00', '2 horas'),
+    ('02:30:00', '2 horas 30 minutos'),
+    ('03:00:00', '3 horas'),
+    ('03:30:00', '3 horas 30 minutos'),
+    ('04:00:00', '4 horas'),
+    ('05:00:00', '5 horas'),
+    ('06:00:00', '6 horas'),
+]
+
 class CirugiaForm(forms.ModelForm):
+    procedimiento = forms.ChoiceField(choices=PROCEDIMIENTOS_VETERINARIOS)
+    duracion_aprox = forms.ChoiceField(choices=DURACIONES)
+
     class Meta:
         model = Cirugia
-        fields = ['procedimiento', 'descripcion_proced', 'fecha_prog', 'hora_prog', 'duracion_aprox', 'estado', 'observaciones_cirugia', 'profesional']
+        fields = [
+            'procedimiento', 'descripcion_proced', 'fecha_prog',
+            'hora_prog', 'duracion_aprox',
+            'observaciones_cirugia', 'profesional'
+        ]
         widgets = {
             'fecha_prog': forms.DateInput(attrs={'type': 'date'}),
             'hora_prog': forms.TimeInput(attrs={'type': 'time'}),
-            'duracion_aprox': forms.TextInput(attrs={'placeholder': 'Ej: 01:30:00'}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Solo establece valor inicial si no se está editando
+        
+
