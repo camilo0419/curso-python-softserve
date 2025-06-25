@@ -8,27 +8,23 @@ from django.db.models import Q
 from django.db import models
 from conexion import crear_conexion  
 from datetime import date
-from .models import Cliente, Mascota, Consulta, FormulaMedica, Medicamento, Profesional
+from .models import Cliente, Mascota, Consulta, FormulaMedica, Medicamento, Profesional, Cirugia
 from .forms import ClienteForm, MascotaForm, ConsultaForm, FormulaMedicaForm, MedicamentoForm, ProfesionalForm, CirugiaForm
 from django.forms import modelformset_factory
 from django.templatetags.static import static
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect
+from django.utils import timezone
 
 def inicio(request):
-    fecha_str = request.GET.get('fecha')
-    if fecha_str:
-        fecha = date.fromisoformat(fecha_str)
-    else:
-        fecha = date.today()
+    cirugias = Cirugia.objects.filter(
+        activo=True,
+        fecha_prog__gte=date.today()
+    ).order_by('fecha_prog', 'hora_prog')[:5]  # próximas 5
 
-    consultas = Consulta.objects.filter(fecha=fecha).select_related('mascota')
-
-    context = {
-        'fecha': fecha.strftime('%Y-%m-%d'),  # Formato compatible con el input date
-        'consultas': consultas,
-    }
-    return render(request, 'principal/inicio.html', context)
+    return render(request, 'principal/inicio.html', {
+        'cirugias': cirugias
+    })
 
 def clientes(request):
     return render(request, 'principal/clientes.html')
@@ -145,8 +141,10 @@ def crear_consulta(request):
     if request.method == 'POST':
         form = ConsultaForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('lista_consultas')
+            consulta = form.save()
+            if consulta.req_cirugia and not Cirugia.objects.filter(consulta=consulta).exists():
+                return redirect('asignar_cirugia', consulta_id=consulta.id)
+            return redirect('detalle_consulta', consulta.id)
     else:
         form = ConsultaForm()
     return render(request, 'principal/formulario_consulta.html', {'form': form})
@@ -157,7 +155,7 @@ def editar_consulta(request, consulta_id):
         form = ConsultaForm(request.POST, instance=consulta)
         if form.is_valid():
             consulta = form.save()
-            if consulta.req_cirugia and not hasattr(consulta, 'cirugia'):
+            if consulta.req_cirugia and not Cirugia.objects.filter(consulta=consulta).exists():
                 return redirect('asignar_cirugia', consulta_id=consulta.id)
             return redirect('detalle_consulta', consulta.id)
     else:
@@ -425,8 +423,8 @@ def historial_cirugias(request, pk):
 def asignar_cirugia(request, consulta_id):
     consulta = get_object_or_404(Consulta, pk=consulta_id)
 
-    if hasattr(consulta, 'cirugia'):
-        return redirect('ver_cirugia', consulta_id=consulta.id)
+    if Cirugia.objects.filter(consulta=consulta).exists():
+        return redirect('detalle_consulta', consulta_id=consulta.id)
 
     if request.method == 'POST':
         form = CirugiaForm(request.POST)
@@ -434,9 +432,10 @@ def asignar_cirugia(request, consulta_id):
             cirugia = form.save(commit=False)
             cirugia.mascota = consulta.mascota
             cirugia.consulta = consulta
+            cirugia.estado = "Programada" # 
             cirugia.save()
             messages.success(request, "✅ Cirugía programada correctamente.")
-            return redirect('detalle_consulta', consulta_id=consulta.id)
+            return redirect('detalle_consulta', consulta.id)
     else:
         form = CirugiaForm()
 
@@ -445,24 +444,13 @@ def asignar_cirugia(request, consulta_id):
         'consulta': consulta
     })
 
-def crear_consulta(request):
-    if request.method == 'POST':
-        form = ConsultaForm(request.POST)
-        if form.is_valid():
-            consulta = form.save()
-            if consulta.req_cirugia and not hasattr(consulta, 'cirugia'):
-                return redirect('asignar_cirugia', consulta_id=consulta.id)
-            return redirect('detalle_consulta', consulta.id)
-    else:
-        form = ConsultaForm()
-    return render(request, 'principal/formulario_consulta.html', {'form': form})
-
 def ver_cirugia(request, consulta_id):
     consulta = get_object_or_404(Consulta, pk=consulta_id)
-    cirugia = getattr(consulta, 'cirugia', None)
+    cirugia = Cirugia.objects.filter(consulta=consulta).first()
 
     if not cirugia:
-        return redirect('asignar_cirugia', consulta_id=consulta_id)
+        messages.info(request, "ℹ️ No se encontró una cirugía registrada.")
+        return redirect('asignar_cirugia', consulta_id=consulta.id)
 
     return render(request, 'principal/ver_cirugia.html', {
         'consulta': consulta,
@@ -471,17 +459,18 @@ def ver_cirugia(request, consulta_id):
 
 def editar_cirugia(request, consulta_id):
     consulta = get_object_or_404(Consulta, pk=consulta_id)
-    cirugia = getattr(consulta, 'cirugia', None)
+    cirugia = consulta.cirugia.first() 
 
     if not cirugia:
-        return redirect('asignar_cirugia', consulta_id=consulta_id)
+        messages.warning(request, "No hay una cirugía programada para esta consulta.")
+        return redirect('asignar_cirugia', consulta_id=consulta.id)
 
     if request.method == 'POST':
         form = CirugiaForm(request.POST, instance=cirugia)
         if form.is_valid():
             form.save()
             messages.success(request, "✅ Cirugía actualizada correctamente.")
-            return redirect('ver_cirugia', consulta_id=consulta_id)
+            return redirect('ver_cirugia', consulta_id=consulta.id)
     else:
         form = CirugiaForm(instance=cirugia)
 
@@ -507,3 +496,73 @@ def eliminar_cirugia(request, consulta_id):
         'tipo': 'cirugía',
         'consulta': consulta
     })
+
+def lista_cirugias(request):
+    cirugias = Cirugia.objects.filter(activo=True).order_by('fecha_prog', 'hora_prog')
+    return render(request, 'principal/lista_cirugias.html', {'cirugias': cirugias})
+
+def editar_cirugia_directa(request, cirugia_id):
+    cirugia = get_object_or_404(Cirugia, pk=cirugia_id, activo=True)
+
+    if request.method == 'POST':
+        form = CirugiaForm(request.POST, instance=cirugia)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "✅ Cirugía actualizada correctamente.")
+            return redirect('lista_cirugias')
+    else:
+        form = CirugiaForm(instance=cirugia)
+
+    return render(request, 'principal/formulario_cirugia.html', {
+        'form': form,
+        'consulta': cirugia.consulta  # puede ser None
+    })
+
+def cancelar_cirugia(request, cirugia_id):
+    cirugia = get_object_or_404(Cirugia, pk=cirugia_id, activo=True)
+    cirugia.activo = False
+    cirugia.estado = 'Cancelada'
+    cirugia.save()
+    messages.warning(request, "❌ Cirugía cancelada correctamente.")
+    return redirect('lista_cirugias')
+
+def cirugias_pendientes(request):
+    # 1. Cirugías incompletas (ya existen pero les faltan datos clave)
+    cirugias_incompletas = Cirugia.objects.filter(
+        activo=True
+    ).filter(
+        Q(procedimiento__isnull=True) | Q(procedimiento='') |
+        Q(fecha_prog__isnull=True) |
+        Q(hora_prog__isnull=True) |
+        Q(profesional__isnull=True)
+    )
+
+    # 2. Consultas que requieren cirugía pero aún no la tienen
+    consultas_sin_cirugia = Consulta.objects.filter(
+        req_cirugia=True
+    ).exclude(
+        cirugia__isnull=False  # Evita las que ya tienen al menos una cirugía
+    )
+
+    return render(request, 'principal/cirugias_pendientes.html', {
+        'cirugias': cirugias_incompletas,
+        'consultas': consultas_sin_cirugia
+    })
+
+def crear_cirugia(request):
+    if request.method == 'POST':
+        form = CirugiaForm(request.POST)
+        if form.is_valid():
+            nueva_cirugia = form.save(commit=False)
+            nueva_cirugia.estado = 'Programada'
+            nueva_cirugia.activo = True
+            nueva_cirugia.save()
+            messages.success(request, "✅ Cirugía creada correctamente.")
+            return redirect('lista_cirugias')
+    else:
+        form = CirugiaForm()
+
+    return render(request, 'principal/formulario_cirugia.html', {
+        'form': form
+    })
+
