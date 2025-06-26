@@ -1,81 +1,81 @@
 body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #6D8777;
-            color: white;
-            padding: 30px;
-        }
-        .form-container {
-            background: white;
-            width: 400px;
-            margin: 40px auto;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        form {
-            text-align: left;
-        }
-        form p {
-            margin-bottom: 15px;
-        }
-        input, select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            box-sizing: border-box;
-        }
-        /* === BOTONES PARA FORMULARIOS === */
-        .acciones {
-            text-align: center;
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 8px; 
-            flex-wrap: wrap;
-        }
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    background-color: #6D8777;
+    color: white;
+    padding: 30px;
+}
+.form-container {
+    background: white;
+    width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+form {
+    text-align: left;
+}
+form p {
+    margin-bottom: 15px;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+/* === BOTONES PARA FORMULARIOS === */
+.acciones {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 8px; 
+    flex-wrap: wrap;
+}
 
 
-        .boton-form {
-            background-color: #6D8777;
-            color: white;
-            padding: 12px 24px;
-            font-size: 16px;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            margin: 10px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
+.boton-form {
+    background-color: #6D8777;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
 
-        /* Hover */
-        .boton-form:hover {
-            background-color: #45624E;
-            transform: scale(1.03);
-        }
+/* Hover */
+.boton-form:hover {
+    background-color: #45624E;
+    transform: scale(1.03);
+}
 
-        /* Estilo específico para el botón Guardar */
-        .boton-form.guardar {
-            background-color: #6D8777;
-            border: 2px solid #45624E;
-        }
+/* Estilo específico para el botón Guardar */
+.boton-form.guardar {
+    background-color: #6D8777;
+    border: 2px solid #45624E;
+}
 
-        .boton-form.guardar:hover {
-            background-color: #3f7d59;
-        }
+.boton-form.guardar:hover {
+    background-color: #3f7d59;
+}
 

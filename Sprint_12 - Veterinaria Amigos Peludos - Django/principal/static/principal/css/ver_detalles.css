@@ -1,0 +1,121 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eaeff1;
+    margin: 0;
+    padding: 40px 0;
+}
+
+.contenedor {
+    background-color: white;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.encabezado h2 {
+    color: #2f4f4f;
+    margin: 10px 0;
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.encabezado small {
+    color: #888;
+     display: block;
+    margin-top: 5px;
+}
+
+.datos-paciente {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.datos-paciente strong {
+    color: #485935;
+    display: inline-block;
+    width: 200px;
+}
+
+.datos-paciente p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #6D8777;
+    color: white;
+}
+
+.acciones {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #6D8777;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3a4d30;
+}
+
+.btn-disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+/* Estilo para botones activos */
+.acciones .btn:not([disabled]) {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 8px;
+    background-color: #6D8777;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+    appearance: none;
+}
+
+.acciones .btn:not([disabled]):hover {
+    background-color: #3a4d30;
+}
+
+

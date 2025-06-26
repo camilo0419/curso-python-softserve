@@ -5,96 +5,39 @@
     <meta charset="UTF-8">
     <title>Cirugía Programada</title>
     <link rel="stylesheet" href="{% static 'principal/css/estilos.css' %}">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .contenedor {
-            background: white;
-            margin: auto;
-            padding: 30px;
-            border-radius: 10px;
-            width: 95%;
-            max-width: 900px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: left;
-        }
-
-        h2 {
-            color: #485935;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .dato {
-            margin-bottom: 15px;
-        }
-
-        .dato strong {
-            color: #45624E;
-        }
-
-        .acciones {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .btn {
-            background-color: #485935;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .btn:hover {
-            background-color: #45624E;
-        }
-
-        .volver {
-            margin-left: 10px;
-            text-decoration: none;
-            color: #93A267;
-            font-weight: bold;
-        }
-
-        .volver:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'principal/css/ver_detalles.css' %}">
 </head>
 <body>
-<h1>Detalles de Cirugía</h1>
 <div class="contenedor">
-    <h2>Cirugía Programada para {{ consulta.mascota.nombre_mascota }}</h2>
+    <div class="encabezado">
+        <h2>🔪 Cirugía Programada para {{ consulta.mascota.nombre_mascota }}</h2>
+        <h2>Detalles de Cirugía</h2>
+        <small>Veterinaria Amigos Peludos</small>
+    </div>
 
-    <div class="dato"><strong>Profesional:</strong> {{ cirugia.profesional.nombre_prof }}</div>
-    <div class="dato"><strong>Procedimiento:</strong> {{ cirugia.procedimiento }}</div>
-    <div class="dato"><strong>Fecha:</strong> {{ cirugia.fecha_prog }}</div>
-    <div class="dato"><strong>Hora:</strong> {{ cirugia.hora_prog }}</div>
-    <div class="dato"><strong>Duración Aproximada:</strong> {{ cirugia.duracion_aprox }}</div>
-    <div class="dato"><strong>Estado:</strong> {{ cirugia.estado }}</div>
+    <div class="datos-paciente">
+        <p><strong>Mascota:</strong> {{ consulta.mascota.nombre_mascota }}</p>
+        <p><strong>Profesional:</strong> {{ cirugia.profesional.nombre_prof }}</p>
+        <p><strong>Procedimiento:</strong> {{ cirugia.procedimiento }}</p>
+        <p><strong>Fecha:</strong> {{ cirugia.fecha_prog }}</p>
+        <p><strong>Hora:</strong> {{ cirugia.hora_prog }}</p>
+        <p><strong>Duración Aproximada:</strong> {{ cirugia.duracion_aprox }}</p>
+        <p><strong>Estado:</strong> {{ cirugia.estado }}</p>
 
-    {% if cirugia.descripcion_proced %}
-    <div class="dato"><strong>Descripción:</strong> {{ cirugia.descripcion_proced }}</div>
-    {% endif %}
+        {% if cirugia.descripcion_proced %}
+        <p><strong>Descripción:</strong> {{ cirugia.descripcion_proced }}</p>
+        {% endif %}
 
-    {% if cirugia.observaciones_cirugia %}
-    <div class="dato"><strong>Observaciones:</strong> {{ cirugia.observaciones_cirugia }}</div>
-    {% endif %}
+        {% if cirugia.observaciones_cirugia %}
+        <p><strong>Observaciones:</strong> {{ cirugia.observaciones_cirugia }}</p>
+        {% endif %}
+    </div>
 
     <div class="acciones">
-        <a href="{% url 'editar_cirugia' consulta.id %}" class="btn">✏️ Editar</a>
-        <a href="{% url 'eliminar_cirugia' consulta.id %}" class="btn">🗑️ Eliminar</a>
-        <a href="{% url 'detalle_consulta' consulta.id %}" class="volver">↩ Volver</a>
+            <a href="{% url 'editar_cirugia' consulta.id %}" class="btn">✏️ Editar</a>
+            <a href="{% url 'eliminar_cirugia' consulta.id %}" class="btn">🗑️ Eliminar</a>
+            <button type="button" class="btn" onclick="window.history.back();">↩ Volver</button>
     </div>
 </div>
-
 </body>
 </html>
