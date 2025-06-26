@@ -1,0 +1,93 @@
+/* === Estilos Generales para Listas === */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #6D8777;
+    color: white;
+    padding: 30px 20px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 10px;
+    padding: 14px 24px;
+    background-color: #45624E;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #6D8777;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #273526;
+    transform: scale(1.03);
+}
+
+.search-box {
+    margin: 20px auto;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1000px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #45624E;
+    color: white;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td a {
+    text-decoration: none;
+    color: #6D8777;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 40px;
+    color: #e3e3e3;
+}
+
+td:nth-child(5) {
+    text-align: center;
+}

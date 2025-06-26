@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista de Cirugías</title>
-    <link rel="stylesheet" href="{% static 'principal/css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'principal/css/listas.css' %}">
 </head>
 <body>
 
-<h2>📋 Cirugías Programadas</h2>
+
 <header>
-    <a href="{% url 'inicio' %}" class="btn">🏠 Volver al inicio</a>
+    <h2>📋 Cirugías Programadas</h2>
     <a href="{% url 'cirugias_pendientes' %}" class="btn">⏳ Cirugías Pendientes por Programar</a>
+    <a href="{% url 'inicio' %}" class="btn">🏠 Volver al inicio</a>
 </header>
 
 <table>
