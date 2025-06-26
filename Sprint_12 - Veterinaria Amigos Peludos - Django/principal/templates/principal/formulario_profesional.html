@@ -17,10 +17,13 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Guardar</button>
+        <div class="acciones">
+            <button type="submit" class="boton-form guardar">💾 Guardar</button>
+            <a href="{% url 'lista_clientes' %}" class="boton-form">⬅️ Volver a la lista</a>
+        </div>
     </form>
 
-    <a class="volver" href="{% url 'lista_profesionales' %}">← Volver a la lista</a>
+    
 </div>
 
 </body>
