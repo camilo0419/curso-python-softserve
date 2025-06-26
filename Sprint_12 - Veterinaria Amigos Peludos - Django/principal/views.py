@@ -169,12 +169,21 @@ def eliminar_consulta(request, pk):
 
 def detalle_consulta(request, consulta_id):
     consulta = get_object_or_404(Consulta, id=consulta_id)
-    hay_formula = FormulaMedica.objects.filter(consulta=consulta).exists()
+    
+    # Determinar el estado de medicamentos
+    formulas = FormulaMedica.objects.filter(consulta=consulta)
+    if not formulas.exists():
+        estado_medicamentos = "pendiente_asignar"
+    elif not consulta.med_entregado:
+        estado_medicamentos = "pendiente_entregar"
+    else:
+        estado_medicamentos = "entregado"
 
-    return render(request, 'principal/detalle_consulta.html', {
+    context = {
         'consulta': consulta,
-        'hay_formula': hay_formula
-    })
+        'estado_medicamentos': estado_medicamentos
+    }
+    return render(request, 'principal/detalle_consulta.html', context)
 
 
 

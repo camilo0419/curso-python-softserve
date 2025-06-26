@@ -100,13 +100,17 @@
     {% if consulta.req_medicamentos %}
         <div class="campo">
             <strong>Estado de Medicamentos:</strong>
-            {% if consulta.med_entregado %}
+            {% if estado_medicamentos == "pendiente_asignar" %}
+                ⚠️ Pendiente por asignar
+            {% elif estado_medicamentos == "pendiente_entregar" %}
+                ⏳ Pendiente por entregar
+            {% elif estado_medicamentos == "entregado" %}
                 ✅ Medicamentos Entregados
-            {% else %}
-                ⏳ Pendientes por entregar
             {% endif %}
         </div>
     {% endif %}
+
+
 
     <div class="campo"><strong>¿Requiere Cirugía?:</strong> {{ consulta.req_cirugia|yesno:"Sí,No" }}</div>
 
