@@ -116,12 +116,13 @@
 
     <div class="botones-extra">
         {% if consulta.req_medicamentos %}
-            {% if hay_formula %}
+            {% if estado_medicamentos == "pendiente_asignar" %}
+                <a href="{% url 'asignar_medicamentos' consulta.id %}" class="conditional-btn">📝 Asignar Medicamentos</a>
+            {% elif estado_medicamentos == "pendiente_entregar" or estado_medicamentos == "entregado" %}
                 <a href="{% url 'ver_formula' consulta.id %}" class="conditional-btn">📄 Ver Fórmula Médica</a>
-            {% elif not consulta.med_entregado %}
-                <a href="{% url 'asignar_medicamentos' consulta.id %}" class="conditional-btn">Asignar Medicamentos</a>
             {% endif %}
         {% endif %}
+
 
         {% if consulta.req_cirugia %}
             {% with cirugia=consulta.cirugia.first %}

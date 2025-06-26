@@ -83,6 +83,7 @@
         .datos-mascota h2 {
             margin-top: 0;
             color: #45624E;
+            text-align: center;
         }
 
         .info-columns {
@@ -177,9 +178,18 @@
         .subseccion p {
             margin: 6px 0;
             line-height: 1.5;
+            text-align: justify;
+            text-indent: 20px;
         }
 
-                .floating-buttons {
+        .subseccion p strong {
+            display: inline-block;
+        width: 200px;
+        color: #485935;
+        }
+
+
+        .floating-buttons {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -260,7 +270,7 @@
             <img src="{% static 'principal/img/Logo.png' %}" alt="Logo Veterinaria Amigos Peludos">
         </div>
         <div class="datos-mascota">
-            <h2>Historia Clínica</h2>
+            <h2>Historia Clínica de {{ mascota.nombre_mascota }}</h2>
             <div class="info-columns">
                 <div>
                     <p><strong>Nombre:</strong> {{ mascota.nombre_mascota }}</p>
