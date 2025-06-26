@@ -15,6 +15,8 @@ from django.templatetags.static import static
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect
 from django.utils import timezone
+from principal.utils.export_excel import generar_excel
+
 
 def inicio(request):
     cirugias = Cirugia.objects.filter(
@@ -578,4 +580,120 @@ def crear_cirugia(request):
     return render(request, 'principal/formulario_cirugia.html', {
         'form': form
     })
+
+
+#Exportar Excel
+
+def exportar_clientes(request):
+    clientes = Cliente.objects.all()
+    encabezados = ['Nombre', 'Cédula', 'Teléfono', 'Dirección', 'Activo']
+    filas = [
+        [c.nombre, c.cedula, c.telefono or '', c.direccion or '', 'Sí' if c.activo else 'No']
+        for c in clientes
+    ]
+    return generar_excel("clientes", encabezados, filas)
+
+def exportar_mascotas(request):
+    mascotas = Mascota.objects.select_related('cliente')
+    encabezados = ['Nombre', 'Especie', 'Raza', 'Edad', 'Dueño', 'Activo']
+    filas = [
+        [m.nombre_mascota, m.especie, m.raza, m.edad, m.cliente.nombre, 'Sí' if m.activo else 'No']
+        for m in mascotas
+    ]
+    return generar_excel("mascotas", encabezados, filas)
+
+def exportar_consultas(request):
+    consultas = Consulta.objects.select_related('mascota', 'mascota__cliente')
+    encabezados = ['Fecha', 'Mascota', 'Dueño', 'Motivo', 'Diagnóstico', 'Medicamentos', 'Entregado', 'Cirugía']
+    filas = [
+        [
+            c.fecha,
+            c.mascota.nombre_mascota,
+            c.mascota.cliente.nombre,
+            c.motivo,
+            c.diagnostico,
+            'Sí' if c.req_medicamentos else 'No',
+            'Sí' if c.med_entregado else 'No',
+            'Sí' if c.req_cirugia else 'No'
+        ] for c in consultas
+    ]
+    return generar_excel("consultas", encabezados, filas)
+
+def exportar_cirugias(request):
+    cirugias = Cirugia.objects.select_related('mascota', 'profesional', 'consulta')
+    encabezados = [
+        'Mascota', 'Profesional', 'Procedimiento', 'Descripción', 'Fecha', 'Hora',
+        'Duración', 'Estado', 'Observaciones', 'Consulta Relacionada', 'Activo'
+    ]
+    filas = [
+        [
+            c.mascota.nombre_mascota,
+            c.profesional.nombre_prof if c.profesional else '',
+            c.procedimiento,
+            c.descripcion_proced or '',
+            c.fecha_prog,
+            c.hora_prog,
+            str(c.duracion_aprox),
+            c.estado,
+            c.observaciones_cirugia or '',
+            c.consulta.id if c.consulta else '',
+            'Sí' if c.activo else 'No'
+        ]
+        for c in cirugias
+    ]
+    return generar_excel("cirugias", encabezados, filas)
+
+def exportar_formulas(request):
+    formulas = FormulaMedica.objects.select_related('consulta', 'medicamento')
+    encabezados = [
+        'Consulta ID', 'Mascota', 'Medicamento', 'Dosis', 'Frecuencia', 'Duración',
+        'Vía Administración', 'Observaciones', 'Fecha de Creación'
+    ]
+    filas = [
+        [
+            f.consulta.id,
+            f.consulta.mascota.nombre_mascota,
+            f.medicamento.nombre_med,
+            f.dosis,
+            f.frecuencia,
+            f.duracion,
+            f.via_administracion,
+            f.observaciones or '',
+            f.fecha_creacion.strftime('%Y-%m-%d %H:%M')
+        ]
+        for f in formulas
+    ]
+    return generar_excel("formulas_medicas", encabezados, filas)
+
+
+def exportar_profesionales(request):
+    profesionales = Profesional.objects.all()
+    encabezados = ['Nombre', 'Tarjeta Profesional', 'Teléfono', 'Especialidad', 'Activo']
+    filas = [
+        [
+            p.nombre_prof,
+            p.tarjeta_profesional,
+            p.telefono or '',
+            p.especialidad or '',
+            'Sí' if p.activo else 'No'
+        ]
+        for p in profesionales
+    ]
+    return generar_excel("profesionales", encabezados, filas)
+
+
+def exportar_medicamentos(request):
+    medicamentos = Medicamento.objects.all()
+    encabezados = ['Nombre', 'Presentación', 'Stock Disponible', 'Fecha de Vencimiento', 'Activo']
+    filas = [
+        [
+            m.nombre_med,
+            m.presentacion,
+            m.stock_disponible,
+            m.fecha_vencimiento,
+            'Sí' if m.activo else 'No'
+        ]
+        for m in medicamentos
+    ]
+    return generar_excel("medicamentos", encabezados, filas)
 

@@ -228,3 +228,10 @@ footer {
     color: #45624E;
     text-decoration: underline;
 }
+
+.floating-export {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}

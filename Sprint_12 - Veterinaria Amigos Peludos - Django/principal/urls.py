@@ -70,6 +70,16 @@ urlpatterns = [
     path('cirugias/pendientes/', views.cirugias_pendientes, name='cirugias_pendientes'),
     path('cirugias/nueva/', views.crear_cirugia, name='crear_cirugia'),
 
+    #EXPORTAR EXCEL
+    path('exportar/clientes/', views.exportar_clientes, name='exportar_clientes'),
+    path('exportar/mascotas/', views.exportar_mascotas, name='exportar_mascotas'),
+    path('exportar/consultas/', views.exportar_consultas, name='exportar_consultas'),
+    path('exportar/cirugias/', views.exportar_cirugias, name='exportar_cirugias'),
+    path('exportar/formulas/', views.exportar_formulas, name='exportar_formulas'),
+    path('exportar/profesionales/', views.exportar_profesionales, name='exportar_profesionales'),
+    path('exportar/medicamentos/', views.exportar_medicamentos, name='exportar_medicamentos'),
+
+
 
 
 
