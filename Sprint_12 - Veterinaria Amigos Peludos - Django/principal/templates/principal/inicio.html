@@ -5,136 +5,7 @@
     <meta charset="UTF-8">
     <title>Veterinaria Amigos Peludos</title>
     <link rel="icon" type="image/png" href="{% static 'principal/img/favicon.png' %}">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            display: flex;
-        }
-
-        .sidebar {
-            width: 230px;
-            background-color: #45624E;
-            color: white;
-            padding: 30px 20px 20px;
-            min-height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-            box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar h2 {
-            font-size: 24px;
-            margin-bottom: 40px;
-            text-align: center;
-            border-bottom: 2px solid #5e7b67;
-            padding-bottom: 10px;
-        }
-
-        .menu {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .menu a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 12px 16px;
-            border-radius: 8px;
-            font-weight: bold;
-            background-color: #5e7b67;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-            transition: all 0.2s ease;
-        }
-
-        .menu a:hover {
-            background-color: #7a977f;
-            transform: scale(1.02);
-        }
-
-        .main-content {
-            margin-left: 250px;
-            padding: 20px;
-            width: 100%;
-        }
-
-        header {
-            background-color: #6D8777;
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .bienvenida {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            margin-top: 20px;
-            line-height: 1.6;
-        }
-
-        .main-section {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .main-section img {
-            max-width: 400px;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .calendar-box {
-            margin-left: 30px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            flex: 1;
-            min-width: 300px;
-        }
-
-        table {
-            margin-top: 10px;
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 8px;
-            border: 1px solid #ccc;
-            text-align: left;
-        }
-
-        footer {
-            margin-top: 40px;
-            color: #888;
-            text-align: center;
-        }
-
-        .btn-consulta {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 6px 12px;
-            background-color: #ccc;
-            color: #333;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 13px;
-        }
-
-        .btn-consulta:hover {
-            background-color: #bbb;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'principal/css/estilos.css' %}">
 </head>
 <body>
 
@@ -151,12 +22,7 @@
     </div>
 </div>
 
-<div class="main-content">
-    <header>
-        <h1>Clínica Veterinaria Amigos Peludos</h1>
-        <p>Cuidamos a tus mascotas como parte de nuestra familia</p>
-    </header>
-
+<div class="main-section">
     <div class="bienvenida">
         <p>
             En <strong>Amigos Peludos</strong> entendemos que tu mascota es un miembro más de tu familia.  
@@ -167,40 +33,41 @@
         </p>
     </div>
 
-    <div class="main-section">
+    <div class="imagen-central">
         <img src="{% static 'principal/img/main.png' %}" alt="Mascotas felices">
+    </div>
 
-        <div class="calendar-box">
-            <h3>🗓️ Próximas Cirugías Programadas</h3>
-
-            {% if cirugias %}
-            <table>
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Hora</th>
-                        <th>Mascota</th>
-                        <th>Procedimiento</th>
-                        <th>Profesional</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for c in cirugias %}
-                    <tr>
-                        <td>{{ c.fecha_prog }}</td>
-                        <td>{{ c.hora_prog }}</td>
-                        <td>{{ c.mascota.nombre_mascota }}</td>
-                        <td>{{ c.procedimiento }}</td>
-                        <td>{{ c.profesional.nombre_prof }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-            {% else %}
-                <p>✅ No hay cirugías programadas.</p>
-            {% endif %}
-        </div>
+    <div class="calendar-box">
+        <h3>🗓️ Próximas Cirugías Programadas</h3>
+        {% if cirugias %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Mascota</th>
+                    <th>Procedimiento</th>
+                    <th>Profesional</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in cirugias %}
+                <tr>
+                    <td>{{ c.fecha_prog }}</td>
+                    <td>{{ c.hora_prog }}</td>
+                    <td>{{ c.mascota.nombre_mascota }}</td>
+                    <td>{{ c.procedimiento }}</td>
+                    <td>{{ c.profesional.nombre_prof }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p>✅ No hay cirugías programadas.</p>
+        {% endif %}
+    </div>
 </div>
+
     <footer>
         <p>© 2025 Veterinaria Amigos Peludos</p>
     </footer>
