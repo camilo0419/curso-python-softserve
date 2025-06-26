@@ -50,12 +50,11 @@
                 </div>
             {% endif %}
         </p>
-
-
-        <button type="submit">Guardar</button>
+        <button type="submit" class="boton-form guardar">💾 Guardar</button>
+        <a href="{% url 'lista_clientes' %}" class="boton-form">⬅️ Volver a la lista</a>
     </form>
 
-    <a class="volver" href="{% url 'lista_mascotas' %}">← Volver a la lista</a>
+    
 </div>
 
 <script>
