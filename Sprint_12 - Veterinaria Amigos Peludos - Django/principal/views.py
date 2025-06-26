@@ -184,13 +184,17 @@ def detalle_consulta(request, consulta_id):
 
 from .models import Mascota, Consulta
 from django.shortcuts import render, get_object_or_404
+from datetime import datetime
 
 def historia_clinica(request, mascota_id):
-    mascota = get_object_or_404(Mascota, pk=mascota_id)
-    consultas = mascota.consultas.all().order_by('-fecha')  # related_name='consultas'
+    mascota = get_object_or_404(Mascota, id=mascota_id)
+    consultas = mascota.consultas.select_related('mascota', 'mascota__cliente').prefetch_related('formulas__medicamento', 'cirugia').order_by('-fecha')
+    hora_actual = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
+
     return render(request, 'principal/historia_clinica.html', {
         'mascota': mascota,
-        'consultas': consultas
+        'consultas': consultas,
+        'hora_actual': hora_actual
     })
 
 

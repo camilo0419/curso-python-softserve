@@ -8,13 +8,28 @@
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            margin: 40px;
+            margin: 0;
+            padding: 0;
             background: #fdfdfd;
         }
 
+        header {
+            background-color: #45624E;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header img {
+            height: 50px;
+        }
+
         .container {
-            max-width: 900px;
-            margin: auto;
+            max-width: 1000px;
+            margin: 40px auto;
             background: white;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -26,32 +41,63 @@
             text-align: center;
         }
 
+        .fecha-impresion {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
         .cabecera {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
             margin-bottom: 30px;
-        }
-
-        .datos-mascota {
-            background-color: #f3f3f3;
-            padding: 15px;
-            border-radius: 8px;
-            flex: 1;
-        }
-
-        .datos-mascota strong {
-            color: #45624E;
+            flex-wrap: wrap;
         }
 
         .logo {
-            text-align: right;
-            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 200px;
         }
 
         .logo img {
-            max-width: 150px;
+            height: auto;
+            max-height: 100%;
+            width: auto;
+            max-width: 100%;
+        }
+
+        .datos-mascota {
+            background-color: #f0f5f2;
+            padding: 20px 30px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 280px;
+            max-width: 600px;
+        }
+
+        .datos-mascota h2 {
+            margin-top: 0;
+            color: #45624E;
+        }
+
+        .info-columns {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .info-columns div {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .info-columns p {
+            margin: 6px 0;
         }
 
         table {
@@ -80,64 +126,246 @@
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
         .btn:hover {
             background-color: #273526;
         }
 
+        .subseccion {
+            margin-top: 20px;
+        }
+
+        .entregado {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .entregado.ok {
+            color: green;
+        }
+
+        .entregado.pendiente {
+            color: red;
+        }
+
+        .consulta {
+            background-color: #f9fdfb;
+            border: 1px solid #d2e3d5;
+            border-radius: 10px;
+            padding: 25px 30px;
+            margin-top: 30px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        }
+
+        .consulta h2 {
+            color: #45624E;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #cde2c8;
+            padding-bottom: 8px;
+        }
+
+        .subseccion h3 {
+            color: #485935;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #aac3b4;
+            padding-bottom: 5px;
+        }
+
+        .subseccion p {
+            margin: 6px 0;
+            line-height: 1.5;
+        }
+
+                .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 12px;
+            z-index: 1000;
+        }
+
+        .floating-buttons .btn {
+            margin-top: 0;
+            padding: 10px 16px;
+            font-size: 14px;
+        }
+
     </style>
+
+    <style media="print">
+        body {
+            zoom: 0.9; /* Escala general para mejor ajuste */
+        }
+
+        .btn {
+            display: none !important;
+        }
+
+        header, .cabecera, .consulta {
+            page-break-inside: avoid;
+        }
+
+        header img {
+            height: 40px !important; /* Más pequeño al imprimir */
+        }
+
+        .logo img {
+            height: 80px !important;
+        }
+
+        .container {
+            margin: 10mm auto;
+            padding: 15mm;
+            box-shadow: none;
+            border: none;
+        }
+
+        .datos-mascota {
+            padding: 10px 20px;
+        }
+
+        .consulta {
+            margin-top: 20px;
+            padding: 15px 20px;
+        }
+
+        h1, h2, h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+
 </head>
+
+
+
 <body>
-    <header style="background-color: #45624E; color: white; padding: 20px; display: flex; align-items: center; justify-content: center; gap: 20px;">
-        <img src="{% static 'principal/img/favicon.png' %}" alt="Logo Veterinaria" style="height: 50px;">
-        <h1 style="color: white; margin: 0;">Clínica Veterinaria Amigos Peludos</h1>
-    </header>
+
+<header>
+    <h1>Clínica Veterinaria Amigos Peludos</h1>
+</header>
 
 
-    <div class="container">
-        <h1>Historia Clínica</h1>
+</head>
 
-        <div class="cabecera">
-            <div class="datos-mascota">
-                <p><strong>Nombre:</strong> {{ mascota.nombre_mascota }}</p>
-                <p><strong>Especie:</strong> {{ mascota.especie }}</p>
-                <p><strong>Raza:</strong> {{ mascota.raza }}</p>
-                <p><strong>Edad:</strong> {{ mascota.edad }} años</p>
-                <p><strong>Dueño:</strong> {{ mascota.cliente.nombre }}</p>
-            </div>
-            <div class="logo">
-                <img src="{% static 'principal/img/Logo.png' %}" alt="Logo Veterinaria Amigos Peludos">
+<div class="floating-buttons">
+    <a href="#" onclick="history.back(); return false;" class="btn">⬅ Volver</a>
+    <a href="#" onclick="window.print(); return false;" class="btn">🖨️ Imprimir</a>
+</div>
+
+
+<body>
+
+<header>
+    <h1>Clínica Veterinaria Amigos Peludos</h1>
+</header>
+
+
+<div class="container">
+    <p class="fecha-impresion" id="fechaImpresion"></p>
+
+    <div class="cabecera">
+        <div class="logo">
+            <img src="{% static 'principal/img/Logo.png' %}" alt="Logo Veterinaria Amigos Peludos">
+        </div>
+        <div class="datos-mascota">
+            <h2>Historia Clínica</h2>
+            <div class="info-columns">
+                <div>
+                    <p><strong>Nombre:</strong> {{ mascota.nombre_mascota }}</p>
+                    <p><strong>Especie:</strong> {{ mascota.especie }}</p>
+                    <p><strong>Raza:</strong> {{ mascota.raza }}</p>
+                </div>
+                <div>
+                    <p><strong>Edad:</strong> {{ mascota.edad }} años</p>
+                    <p><strong>Dueño:</strong> {{ mascota.cliente.nombre }}</p>
+                    <p><strong>Cédula:</strong> {{ mascota.cliente.cedula }}</p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <h2>Consultas Realizadas</h2>
+    {% for consulta in consultas %}
+    <div class="consulta">
+        <h2>Consulta - {{ consulta.fecha }}</h2>
 
-        {% if consultas %}
-        <table>
-            <thead>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Motivo</th>
-                    <th>Diagnóstico</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for consulta in consultas %}
-                <tr>
-                    <td>{{ consulta.fecha }}</td>
-                    <td>{{ consulta.motivo|default:"-" }}</td>
-                    <td>{{ consulta.diagnostico|default:"-" }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        {% else %}
-            <p>No hay consultas registradas para esta mascota.</p>
+        <div class="subseccion">
+            <p><strong>Motivo:</strong> {{ consulta.motivo|default:"-" }}</p>
+            <p><strong>Diagnóstico:</strong> {{ consulta.diagnostico|default:"-" }}</p>
+            <p><strong>Tratamiento:</strong> {{ consulta.tratamiento|default:"-" }}</p>
+            <p><strong>Observaciones:</strong> {{ consulta.observaciones|default:"-" }}</p>
+        </div>
+
+        {% if consulta.formulas.all %}
+        <div class="subseccion">
+            <h3>Fórmula Médica</h3>
+
+            {% if consulta.med_entregado %}
+                <p class="entregado ok">✅ Medicamentos entregados</p>
+            {% else %}
+                <p class="entregado pendiente">⚠️ Medicamentos pendientes de entrega</p>
+            {% endif %}
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Medicamento</th>
+                        <th>Dosis</th>
+                        <th>Frecuencia</th>
+                        <th>Duración</th>
+                        <th>Vía</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for formula in consulta.formulas.all %}
+                    <tr>
+                        <td>{{ formula.medicamento.nombre_med }}</td>
+                        <td>{{ formula.dosis }}</td>
+                        <td>{{ formula.frecuencia }}</td>
+                        <td>{{ formula.duracion }}</td>
+                        <td>{{ formula.via_administracion }}</td>
+                        <td>{{ formula.observaciones|default:"-" }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
         {% endif %}
 
-        <a href="#" onclick="history.back(); return false" class="btn">⬅️ Volver</a>
-        <a href="{% url 'exportar_historia_pdf' mascota.id %}" class="btn">📄 Exportar a PDF</a>
+        {% if consulta.cirugia.exists %}
+        {% with consulta.cirugia.first as cirugia %}
+        <div class="subseccion">
+            <h3>Cirugía Programada</h3>
+            <p><strong>Procedimiento:</strong> {{ cirugia.procedimiento }}</p>
+            <p><strong>Profesional:</strong> {{ cirugia.profesional.nombre_prof }}</p>
+            <p><strong>Fecha y hora:</strong> {{ cirugia.fecha_prog }} {{ cirugia.hora_prog }}</p>
+            <p><strong>Duración aproximada:</strong> {{ cirugia.duracion_aprox }}</p>
+            <p><strong>Estado:</strong> {{ cirugia.estado }}</p>
+            <p><strong>Observaciones:</strong> {{ cirugia.observaciones_cirugia|default:"-" }}</p>
+        </div>
+        {% endwith %}
+        {% endif %}
     </div>
+    {% empty %}
+    <p>No hay consultas registradas para esta mascota.</p>
+    {% endfor %}
+
+   
+</div>
+
+<script>
+    const fecha = new Date();
+    const opcionesFecha = { year: 'numeric', month: 'long', day: 'numeric' };
+    const fechaTexto = fecha.toLocaleDateString('es-CO', opcionesFecha);
+    const horaTexto = fecha.toLocaleTimeString('es-CO', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    document.getElementById('fechaImpresion').textContent = 'Fecha de impresión: ' + fechaTexto + ' - ' + horaTexto;
+</script>
+
+
 </body>
 </html>
