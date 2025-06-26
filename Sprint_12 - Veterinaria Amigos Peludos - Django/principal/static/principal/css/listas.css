@@ -204,18 +204,24 @@ footer {
 
 
 .acciones {
-    white-space: nowrap;
     text-align: center;
+    white-space: nowrap;
+}
+
+.acciones span {
+    display: inline-flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 .acciones a {
-    display: inline;
-    margin: 0 6px;
     font-weight: bold;
     color: #93A267;
     text-decoration: none;
-    transition: color 0.2s ease;
     font-size: 14px;
+    transition: color 0.2s ease;
 }
 
 .acciones a:hover {

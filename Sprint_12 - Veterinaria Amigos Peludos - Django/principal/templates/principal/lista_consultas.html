@@ -40,10 +40,13 @@
             <td>{{ consulta.motivo|default:"-" }}</td>
             <td>{{ consulta.diagnostico|default:"-" }}</td>
             <td class="acciones">
-                <a href="{% url 'detalle_consulta' consulta.id %}">👁 Ver Detalle</a> |
-                <a href="{% url 'editar_consulta' consulta.id %}">✏️ Editar</a> |
-                <a href="{% url 'eliminar_consulta' consulta.id %}" onclick="return confirm('¿Eliminar esta consulta?');">🗑 Eliminar</a>
+                <span>
+                    <a href="{% url 'detalle_consulta' consulta.id %}">👁 Ver</a>
+                    <a href="{% url 'editar_consulta' consulta.id %}">✏️ Editar</a>
+                    <a href="{% url 'eliminar_consulta' consulta.id %}" onclick="return confirm('¿Eliminar esta consulta?');">🗑 Eliminar</a>
+                </span>
             </td>
+
 
 
         </tr>
