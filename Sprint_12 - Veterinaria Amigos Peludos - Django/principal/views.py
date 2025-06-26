@@ -142,13 +142,11 @@ def crear_consulta(request):
         form = ConsultaForm(request.POST)
         if form.is_valid():
             consulta = form.save()
-            if consulta.req_cirugia and not Cirugia.objects.filter(consulta=consulta).exists():
-                return redirect('asignar_cirugia', consulta_id=consulta.id)
-            return redirect('detalle_consulta', consulta.id)
-            return redirect('detalle_consulta', consulta.id)  # ✅ Siempre redirige al detalle
+            return redirect('detalle_consulta', consulta.id)  # Redirige siempre al detalle
     else:
         form = ConsultaForm()
     return render(request, 'principal/formulario_consulta.html', {'form': form})
+
 
 
 def editar_consulta(request, consulta_id):
