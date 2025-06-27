@@ -76,7 +76,7 @@ tr:nth-child(even) {
 td a {
     text-decoration: none;
     color: #6D8777;
-    font-weight: bold;
+    font-weight: bold;    
 }
 
 td a:hover {
@@ -248,4 +248,8 @@ footer {
 
 .paginacion a.btn:hover {
     background-color: #3a4d30;
+}
+
+.centrado {
+    text-align: center;
 }

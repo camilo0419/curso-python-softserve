@@ -25,8 +25,8 @@
             <th>Mascota</th>
             <th>Dueño</th>
             <th>Fecha de Consulta</th>
-            <th>Medicamentos</th>
-            <th>Cirugía</th>
+            <th>¿Requiere Medicamentos?</th>
+            <th>¿Requiere Cirugía?</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -36,7 +36,7 @@
             <td>{{ consulta.mascota.nombre_mascota }}</td>
             <td>{{ consulta.mascota.cliente.nombre }}</td>
             <td>{{ consulta.fecha }}</td>
-            <td>{{ consulta.req_medicamentos|yesno:"✅,❌" }}</td>
+            <td style="text-align: center;">{{ consulta.req_medicamentos|yesno:"✅,❌" }}</td>
             <td>{{ consulta.req_cirugia|yesno:"✅,❌" }}</td>
             <td>
                 <a href="{% url 'ver_formula' consulta.id %}">👁 Ver Fórmula</a>
