@@ -147,5 +147,42 @@
     </div>
 </form>
 
+<script>
+        const descripciones = {
+            "Castración": "Orquiectomía realizada mediante incisión escrotal o preescrotal para la extracción de los testículos, con fines de control reproductivo y conductual.",
+            "Esterilización": "Ovariohisterectomía practicada mediante incisión ventral en línea media, con retiro de ovarios y útero para inhibición reproductiva definitiva en hembras.",
+            "Extracción dental": "Exodoncia de piezas dentales comprometidas por enfermedad periodontal avanzada, realizada bajo anestesia general y con control de hemorragia.",
+            "Amputación": "Resección quirúrgica completa de una extremidad o parte anatómica afectada, con técnica de cierre en muñón limpio y preservación neurovascular.",
+            "Apendicectomía": "Extirpación del apéndice vermiforme mediante abordaje laparotómico por línea alba, en casos de apendicitis u otras patologías relacionadas.",
+            "Cesárea": "Laparotomía ventral para incisión del útero y extracción manual de los fetos, seguida de sutura uterina en doble plano y revisión de viabilidad fetal.",
+            "Limpieza de heridas": "Desbridamiento quirúrgico de tejidos desvitalizados, lavado a presión con solución estéril y eventual cierre primario o diferido.",
+            "Remoción de tumor": "Exéresis completa de masa tumoral con márgenes amplios según localización, seguida de análisis histopatológico si se indica.",
+            "Laparotomía exploratoria": "Incisión abdominal en línea media para exploración manual y visual de estructuras viscerales ante signos clínicos de origen indefinido.",
+            "Sutura de heridas": "Cierre primario de lesiones cutáneas mediante técnica de puntos simples o continuos, previo lavado quirúrgico y evaluación tisular."
+        };
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const procedimientoSelect = document.getElementById("id_procedimiento");
+            const descripcionInput = document.getElementById("id_descripcion_proced");
+
+            procedimientoSelect.addEventListener("change", function() {
+                const seleccion = this.value;
+                if (descripciones[seleccion]) {
+                    descripcionInput.value = descripciones[seleccion];
+                } else {
+                    descripcionInput.value = "";
+                }
+            });
+
+            // Autocompletar al editar
+            const valorSeleccionado = procedimientoSelect.value;
+            if (descripciones[valorSeleccionado] && !descripcionInput.value) {
+                descripcionInput.value = descripciones[valorSeleccionado];
+            }
+        });
+    </script>
+
 </body>
+
 </html>
