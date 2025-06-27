@@ -36,16 +36,26 @@
             <td>{{ cirugia.profesional.nombre_prof }}</td>
             <td>{{ cirugia.procedimiento }}</td>
             <td>
-                {% if cirugia.estado == "Cancelada" %}
-                    <span class="estado-cancelado">❌ {{ cirugia.estado }}</span>
+               {% if cirugia.estado|lower == "realizada" %}
+                    <span class="estado-realizada">✅ Realizada</span>
+                {% elif cirugia.estado|lower == "programada" %}
+                    <span class="estado-activa">⏳ Programada</span>
+                {% elif cirugia.estado|lower == "cancelada" %}
+                    <span class="estado-cancelado">❌ Cancelada</span>
                 {% else %}
-                    <span class="estado-activo">✅ {{ cirugia.estado }}</span>
+                    <span style="color: gray;">⛔ Sin estado definido</span>
                 {% endif %}
             </td>
             <td class="acciones">
                 <a href="{% url 'editar_cirugia_directa' cirugia.id %}" class="btn-editar">✏️ Editar</a>
-                <a href="{% url 'cancelar_cirugia' cirugia.id %}" onclick="return confirm('Cancelar esta cirugía?');">🗑 Cancelar</a>                            
+                <a href="{% url 'cancelar_cirugia' cirugia.id %}" onclick="return confirm('Cancelar esta cirugía?');">🗑 Cancelar</a>
+
+                {% if cirugia.estado|lower == "programada" %}
+                    |
+                    <a href="{% url 'cirugia_realizada' cirugia.id %}" onclick="return confirm('¿Marcar como realizada?');">✅ Realizada</a>
+                {% endif %}
             </td>
+
         </tr>
         {% empty %}
         <tr>

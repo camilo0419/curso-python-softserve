@@ -38,7 +38,7 @@
     </div>
 
     <div class="calendar-box">
-        <h3>🗓️ Próximas Cirugías Programadas</h3>
+        <h3>🗓️ Próximas Cirugías</h3>
         {% if cirugias %}
         <table>
             <thead>
@@ -48,6 +48,7 @@
                     <th>Mascota</th>
                     <th>Procedimiento</th>
                     <th>Profesional</th>
+                    <th>Estado</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,6 +59,7 @@
                     <td>{{ c.mascota.nombre_mascota }}</td>
                     <td>{{ c.procedimiento }}</td>
                     <td>{{ c.profesional.nombre_prof }}</td>
+                    <td>{{ c.estado }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

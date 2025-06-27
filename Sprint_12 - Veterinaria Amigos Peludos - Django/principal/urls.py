@@ -63,6 +63,7 @@ urlpatterns = [
     path('cirugias/', views.lista_cirugias, name='lista_cirugias'),
     path('cirugias/editar/<int:cirugia_id>/', views.editar_cirugia_directa, name='editar_cirugia_directa'),
     path('cirugias/cancelar/<int:cirugia_id>/', views.cancelar_cirugia, name='cancelar_cirugia'),
+    path('cirugias/realizar/<int:cirugia_id>/', views.cirugia_realizada, name='cirugia_realizada'),
     path('cirugias/pendientes/', views.cirugias_pendientes, name='cirugias_pendientes'),
     path('cirugias/nueva/', views.crear_cirugia, name='crear_cirugia'),
 

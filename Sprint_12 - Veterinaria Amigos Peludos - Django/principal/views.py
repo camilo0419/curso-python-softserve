@@ -566,10 +566,17 @@ def editar_cirugia_directa(request, cirugia_id):
 
 def cancelar_cirugia(request, cirugia_id):
     cirugia = get_object_or_404(Cirugia, pk=cirugia_id, activo=True)
-    cirugia.activo = False
+    #cirugia.activo = False
     cirugia.estado = 'Cancelada'
     cirugia.save()
     messages.warning(request, "❌ Cirugía cancelada correctamente.")
+    return redirect('lista_cirugias')
+
+def cirugia_realizada(request, cirugia_id):
+    cirugia = get_object_or_404(Cirugia, pk=cirugia_id, activo=True)
+    cirugia.estado = 'Realizada'
+    cirugia.save()
+    messages.success(request, "✅ Cirugía marcada como realizada correctamente.")
     return redirect('lista_cirugias')
 
 def cirugias_pendientes(request):

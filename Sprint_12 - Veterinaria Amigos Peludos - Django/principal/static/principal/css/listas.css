@@ -253,3 +253,19 @@ footer {
 .centrado {
     text-align: center;
 }
+
+.estado-activa {
+    color: orange;
+    font-weight: bold;
+}
+
+.estado-realizada {
+    color: green;
+    font-weight: bold;
+}
+
+.estado-cancelado {
+    color: red;
+    font-weight: bold;
+}
+
