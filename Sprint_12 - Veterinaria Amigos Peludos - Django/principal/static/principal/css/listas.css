@@ -235,3 +235,17 @@ footer {
     right: 20px;
     z-index: 1000;
 }
+
+.paginacion a.btn {
+    background-color: #6D8777;
+    color: white;
+    padding: 8px 16px;
+    margin: 0 5px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.paginacion a.btn:hover {
+    background-color: #3a4d30;
+}

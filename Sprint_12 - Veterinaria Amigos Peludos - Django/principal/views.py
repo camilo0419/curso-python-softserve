@@ -16,6 +16,7 @@ from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect
 from django.utils import timezone
 from principal.utils.export_excel import generar_excel
+from django.core.paginator import Paginator
 
 
 def inicio(request):
@@ -379,12 +380,26 @@ def lista_formulas(request):
     return render(request, 'principal/lista_formulas.html', context)
 
 def lista_medicamentos(request):
-    medicamentos = Medicamento.objects.all()
-    return render(request, 'principal/lista_medicamentos.html', {'medicamentos': medicamentos})
+    medicamentos = Medicamento.objects.filter(activo=True).order_by('nombre_med')  # o el filtro que uses
+    paginator = Paginator(medicamentos, 10)  # 10 por página
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'principal/lista_medicamentos.html', {
+        'page_obj': page_obj
+    })
 
 def lista_profesionales(request):
-    profesionales = Profesional.objects.all()
-    return render(request, 'principal/lista_profesionales.html', {'profesionales': profesionales})
+    profesionales = Profesional.objects.filter(activo=True).order_by('nombre_prof')
+    paginator = Paginator(profesionales, 10)
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'principal/lista_profesionales.html', {
+        'page_obj': page_obj
+    })
 
 # Editar Medicamento
 def editar_medicamento(request, pk):
