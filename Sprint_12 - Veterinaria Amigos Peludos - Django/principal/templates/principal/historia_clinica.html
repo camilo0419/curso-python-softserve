@@ -259,8 +259,11 @@
 
 <div class="floating-buttons">
     <a href="#" onclick="history.back(); return false;" class="btn">⬅ Volver</a>
-    <a href="#" onclick="window.print(); return false;" class="btn">🖨️ Imprimir</a>
+    {% if consultas %}
+        <a href="#" onclick="window.print(); return false;" class="btn">🖨️ Imprimir</a>
+    {% endif %}
 </div>
+
 
 <div class="container">
     <p class="fecha-impresion" id="fechaImpresion"></p>
@@ -353,10 +356,7 @@
     <div style="text-align: center; margin-top: 30px;">
     <a href="{% url 'crear_consulta' mascota.id %}" class="btn">➕ Registrar nueva consulta</a>
     </div>
-    {% endfor %}
-
-
-   
+    {% endfor %}   
 </div>
 
 <script>
