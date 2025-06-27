@@ -9,7 +9,6 @@
 </head>
 <body>
 
-
 <header>
     <h2>📋 Cirugías Programadas</h2>
     <a href="{% url 'exportar_cirugias' %}" class="btn">📤 Exportar a Excel</a>
@@ -17,7 +16,11 @@
     <a href="{% url 'inicio' %}" class="btn">🏠 Volver al inicio</a>
 </header>
 
-<table>
+<div class="search-box">
+    <input type="text" id="buscar" placeholder="🔍 Buscar por mascota o profesional...">
+</div>
+
+<table id="tabla-cirugias">
     <thead>
         <tr>
             <th>Fecha</th>
@@ -55,7 +58,6 @@
                     <a href="{% url 'cirugia_realizada' cirugia.id %}" onclick="return confirm('¿Marcar como realizada?');">✅ Realizada</a>
                 {% endif %}
             </td>
-
         </tr>
         {% empty %}
         <tr>
@@ -64,6 +66,24 @@
         {% endfor %}
     </tbody>
 </table>
+
+<footer>
+    <p>© 2025 Veterinaria Amigos Peludos</p>
+</footer>
+
+<script>
+    const buscador = document.getElementById('buscar');
+    const filas = document.querySelectorAll('#tabla-cirugias tbody tr');
+
+    buscador.addEventListener('keyup', function () {
+        const texto = this.value.toLowerCase();
+        filas.forEach(fila => {
+            const mascota = fila.cells[1].textContent.toLowerCase();
+            const profesional = fila.cells[2].textContent.toLowerCase();
+            fila.style.display = (mascota.includes(texto) || profesional.includes(texto)) ? '' : 'none';
+        });
+    });
+</script>
 
 </body>
 </html>

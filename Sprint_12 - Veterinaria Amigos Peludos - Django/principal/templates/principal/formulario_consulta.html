@@ -14,8 +14,8 @@
 <form method="post">
     {% csrf_token %}
     <p>
-        <label for="fecha">Fecha:</label>
-        <input type="date" name="fecha" value="{{ form.fecha.value|default:'' }}" required>
+        <label for="{{ form.fecha.id_for_label }}">Fecha:</label>
+        {{ form.fecha }}
     </p>
     <p>
         <label for="motivo">Motivo:</label>
@@ -59,11 +59,25 @@
     <p>
         <label for="mascota_input">Mascota:</label>
         <div class="autocomplete-box">
-            <input type="text" id="mascota_input" placeholder="Buscar por nombre o dueño..." autocomplete="off">
+            {% with mascota_id=form.mascota.value %}
+                {% if mascota_id %}
+                    {% for m in form.fields.mascota.queryset %}
+                        {% if m.id|stringformat:"s" == mascota_id|stringformat:"s" %}
+                            <input type="text" id="mascota_input"
+                                value="{{ m.nombre_mascota }} ({{ m.cliente.nombre }})"
+                                placeholder="Buscar por nombre o dueño..." autocomplete="off">
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <input type="text" id="mascota_input" placeholder="Buscar por nombre o dueño..." autocomplete="off">
+                {% endif %}
+            {% endwith %}
+
             <div id="mascota_results" class="autocomplete-results"></div>
             <input type="hidden" name="mascota" id="mascota_hidden" value="{{ form.mascota.value|default:'' }}">
         </div>
     </p>
+
     <div class="acciones">
         <button type="submit" class="btn">💾 Guardar Consulta</button>
         <a href="#" onclick="history.back(); return false;" class="volver. btn">⬅️ Volver atrás</a>

@@ -8,54 +8,66 @@
     <link rel="stylesheet" href="{% static 'principal/css/estilos.css' %}">
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    padding: 20px;
-    text-align: center;
-}
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
 
-h2 {
-    color: #485935;
-    margin-bottom: 20px;
-}
+        h2 {
+            color: #485935;
+            margin-bottom: 20px;
+        }
 
-table {
-    margin: auto;
-    border-collapse: collapse;
-    width: 95%;
-    max-width: 1000px;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-}
+        .search-box {
+            margin-bottom: 20px;
+        }
 
-th, td {
-    padding: 12px 16px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-}
+        .search-box input {
+            padding: 8px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
 
-th {
-    background-color: #485935;
-    color: white;
-}
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 95%;
+            max-width: 1000px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
 
-tr:hover {
-    background-color: #f2f2f2;
-}
+        th, td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
 
-a {
-    text-decoration: none;
-    color: #485935;
-    font-weight: bold;
-}
+        th {
+            background-color: #485935;
+            color: white;
+        }
 
-a:hover {
-    text-decoration: underline;
-    color: #3a4a28;
-}
+        tr:hover {
+            background-color: #f2f2f2;
+        }
 
-.conditional-btn {
+        a {
+            text-decoration: none;
+            color: #485935;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #3a4a28;
+        }
+
+        .conditional-btn {
             background-color: #485935;
             color: white;
             border: none;
@@ -66,17 +78,20 @@ a:hover {
             transition: background-color 0.3s;
             text-decoration: none;
         }
-
     </style>
 </head>
 <body>
     
 <h2>📌 Consultas con Cirugía Requerida, pero Sin Programar</h2>
-<table>
+
+<div class="search-box">
+    <input type="text" id="buscar" placeholder="🔍 Buscar por mascota o motivo...">
+</div>
+
+<table id="tabla-cirugias-pendientes">
     <thead>
         <tr>
             <th>Mascota</th>
-            <th>Motivo</th>
             <th>Fecha de Consulta</th>
             <th>Acción</th>
         </tr>
@@ -85,7 +100,6 @@ a:hover {
         {% for consulta in consultas %}
         <tr>
             <td>{{ consulta.mascota.nombre_mascota }}</td>
-            <td>{{ consulta.motivo_consulta }}</td>
             <td>{{ consulta.fecha }}</td>
             <td><a href="{% url 'asignar_cirugia' consulta.id %}">➕ Programar</a></td>
         </tr>
@@ -94,6 +108,22 @@ a:hover {
         {% endfor %}
     </tbody>
 </table>
+
 <a href="#" onclick="history.back(); return false" class="conditional-btn">⬅️ Volver</a>
+
+<script>
+    const buscador = document.getElementById('buscar');
+    const filas = document.querySelectorAll('#tabla-cirugias-pendientes tbody tr');
+
+    buscador.addEventListener('keyup', function () {
+        const texto = this.value.toLowerCase();
+        filas.forEach(fila => {
+            const mascota = fila.cells[0].textContent.toLowerCase();
+            const motivo = fila.cells[1].textContent.toLowerCase();
+            fila.style.display = (mascota.includes(texto) || motivo.includes(texto)) ? '' : 'none';
+        });
+    });
+</script>
+
 </body>
 </html>

@@ -148,25 +148,22 @@ def lista_consultas(request):
     consultas = Consulta.objects.select_related('mascota').order_by('-fecha')
     return render(request, 'principal/lista_consultas.html', {'consultas': consultas})
 
-def crear_consulta(request, mascota_id):
-    mascota = get_object_or_404(Mascota, pk=mascota_id)
+def crear_consulta(request):
     if request.method == 'POST':
         form = ConsultaForm(request.POST)
         if form.is_valid():
             consulta = form.save(commit=False)
-            consulta.mascota = mascota
+            consulta.mascota = form.cleaned_data['mascota']
             consulta.save()
-            return redirect('historia_clinica', mascota.id)
+            return redirect('detalle_consulta', consulta.id)
     else:
         form = ConsultaForm()
-    return render(request, 'principal/formulario_consulta.html', {
-        'form': form,
-        'mascota': mascota
-    })
+    return render(request, 'principal/formulario_consulta.html', {'form': form})
 
-def crear_consulta_general(request):
+
+#def crear_consulta_general(request):
     # Redirige a una búsqueda de mascota o muestra error
-    return HttpResponse("Selecciona una mascota para iniciar una consulta.")
+    #return HttpResponse("Selecciona una mascota para iniciar una consulta.")
 
 def editar_consulta(request, consulta_id):
     consulta = get_object_or_404(Consulta, pk=consulta_id)

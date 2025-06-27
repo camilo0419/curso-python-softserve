@@ -24,8 +24,8 @@ urlpatterns = [
 
     # CRUD de consultas
     path('consultas/lista/', views.lista_consultas, name='lista_consultas'),
-    path('consultas/nueva/', views.crear_consulta_general, name='crear_consulta_general'),
-    path('consultas/nueva/<int:mascota_id>/', views.crear_consulta, name='crear_consulta'),
+    path('consultas/nueva/', views.crear_consulta, name='crear_consulta'),
+    #path('consultas/nueva/<int:mascota_id>/', views.crear_consulta, name='crear_consulta'),
     path('consultas/editar/<int:consulta_id>/', views.editar_consulta, name='editar_consulta'),
     path('consultas/eliminar/<int:pk>/', views.eliminar_consulta, name='eliminar_consulta'),
     path('mascotas/<int:mascota_id>/historia/', views.historia_clinica, name='historia_clinica'),
