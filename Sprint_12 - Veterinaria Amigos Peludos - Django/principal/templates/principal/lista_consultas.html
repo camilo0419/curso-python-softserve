@@ -12,7 +12,7 @@
 <header>
     <h1>Módulo de Consultas</h1>
     <a href="{% url 'exportar_consultas' %}" class="btn">📤 Exportar a Excel</a>
-    <a href="{% url 'crear_consulta' %}" class="btn">➕ Nueva Consulta</a>
+    <a href="{% url 'crear_consulta_general' %}" class="btn">➕ Nueva consulta</a>
     <a href="{% url 'inicio' %}" class="btn">🏠 Volver al inicio</a>
 </header>
 
@@ -64,11 +64,13 @@
     buscador.addEventListener('keyup', function () {
         const texto = this.value.toLowerCase();
         filas.forEach(fila => {
-            const mascota = fila.cells[1].textContent.toLowerCase();
-            fila.style.display = mascota.includes(texto) ? '' : 'none';
+            const enlaceMascota = fila.querySelector('.enlace-mascota');
+            const nombreMascota = enlaceMascota ? enlaceMascota.textContent.trim().toLowerCase() : '';
+            fila.style.display = nombreMascota.includes(texto) ? '' : 'none';
         });
     });
 </script>
+
 
 </body>
 </html>

@@ -163,8 +163,9 @@ def crear_consulta(request, mascota_id):
         'mascota': mascota
     })
 
-
-
+def crear_consulta_general(request):
+    # Redirige a una búsqueda de mascota o muestra error
+    return HttpResponse("Selecciona una mascota para iniciar una consulta.")
 
 def editar_consulta(request, consulta_id):
     consulta = get_object_or_404(Consulta, pk=consulta_id)
