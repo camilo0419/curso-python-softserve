@@ -96,19 +96,27 @@ def crear_mascota(request):
         'cliente': cliente  # lo usamos para mostrar el nombre
     })
 
-
-
-
 def editar_mascota(request, pk):
     mascota = get_object_or_404(Mascota, pk=pk)
+    cliente = mascota.cliente  # Obtenemos el cliente actual (dueño)
+
     if request.method == 'POST':
         form = MascotaForm(request.POST, instance=mascota)
         if form.is_valid():
-            form.save()
+            mascota_editada = form.save(commit=False)
+            mascota_editada.cliente = cliente  # Evitamos que se cambie el dueño
+            mascota_editada.save()
             return redirect('lista_mascotas')
     else:
         form = MascotaForm(instance=mascota)
-    return render(request, 'principal/formulario_mascota.html', {'form': form, 'modo': 'Editar'})
+
+    return render(request, 'principal/formulario_mascota.html', {
+        'form': form,
+        'modo': 'Editar',
+        'cliente_bloqueado': True,
+        'cliente': cliente
+    })
+
 
 
 def eliminar_mascota(request, pk):

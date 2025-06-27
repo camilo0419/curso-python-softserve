@@ -30,6 +30,11 @@ class MascotaForm(forms.ModelForm):
             'edad': forms.NumberInput(attrs={'placeholder': 'Edad (en años)'}),
             'cliente': forms.Select(),
         }
+    def clean_cliente(self):
+        cliente = self.cleaned_data.get('cliente')
+        if not cliente:
+            raise forms.ValidationError("Debes seleccionar un dueño para la mascota.")
+        return cliente
 
 class ConsultaForm(forms.ModelForm):
     class Meta:
