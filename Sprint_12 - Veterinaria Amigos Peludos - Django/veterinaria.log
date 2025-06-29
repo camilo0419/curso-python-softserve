@@ -1,0 +1,981 @@
+2025-06-28 13:01:27,140 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:01:32,854 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:01:32,951 [INFO] django.server - "GET /static/principal/css/inicio.css HTTP/1.1" 304 0
+2025-06-28 13:01:32,973 [INFO] django.server - "GET /static/principal/img/main.png HTTP/1.1" 304 0
+2025-06-28 13:01:50,486 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 13:01:50,558 [INFO] django.server - "GET /static/principal/css/listas.css HTTP/1.1" 304 0
+2025-06-28 13:01:51,800 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:03:31,350 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:03:32,089 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:03:33,604 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:03:33,782 [INFO] django.server - "GET /static/principal/img/favicon.png HTTP/1.1" 304 0
+2025-06-28 13:04:48,390 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:04:49,132 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:04:50,655 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:04:53,568 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:06:25,755 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:06:26,416 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:06:32,790 [INFO] django.server - "GET /clientes/crear/ HTTP/1.1" 200 1492
+2025-06-28 13:06:32,876 [INFO] django.server - "GET /static/principal/css/formularios.css HTTP/1.1" 304 0
+2025-06-28 13:06:34,572 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:07:32,345 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:07:33,021 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:08:10,091 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:08:10,726 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:08:33,167 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:08:42,037 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:08:44,863 [INFO] django.server - "GET /clientes/editar/1017/ HTTP/1.1" 200 1564
+2025-06-28 13:08:47,394 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:08:51,063 [INFO] django.server - "GET /clientes/1/mascotas/ HTTP/1.1" 200 2623
+2025-06-28 13:09:03,425 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:09:04,050 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:45:05,156 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:45:05,836 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:46:03,394 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:46:04,021 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:46:06,363 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:46:07,695 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 13:46:11,138 [INFO] django.server - "GET /mascotas/nueva/ HTTP/1.1" 200 3741
+2025-06-28 13:46:13,677 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:47:32,580 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:47:33,193 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:48:04,137 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:48:04,743 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:48:07,522 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:48:08,622 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 13:48:09,461 [INFO] django.server - "GET /mascotas/nueva/ HTTP/1.1" 200 3741
+2025-06-28 13:48:10,723 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:48:11,751 [INFO] django.server - "GET /clientes/editar/1017/ HTTP/1.1" 200 1564
+2025-06-28 13:48:13,999 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:48:34,679 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:48:35,937 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 13:48:40,741 [ERROR] django.request - Internal Server Error: /mascotas/editar/1/
+Traceback (most recent call last):
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view principal.views.editar_mascota didn't return an HttpResponse object. It returned None instead.
+2025-06-28 13:48:40,742 [ERROR] django.server - "GET /mascotas/editar/1/ HTTP/1.1" 500 71052
+2025-06-28 13:48:40,952 [WARNING] django.request - Not Found: /favicon.ico
+2025-06-28 13:48:40,953 [WARNING] django.server - "GET /favicon.ico HTTP/1.1" 404 17727
+2025-06-28 13:48:51,410 [INFO] django.server - "GET /mascotas/nueva/ HTTP/1.1" 200 3741
+2025-06-28 13:48:52,952 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:48:54,238 [INFO] django.server - "GET /clientes/editar/1017/ HTTP/1.1" 200 1564
+2025-06-28 13:48:55,944 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:48:59,628 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:49:00,870 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 13:49:02,288 [INFO] django.server - "GET /mascotas/nueva/ HTTP/1.1" 200 3741
+2025-06-28 13:49:03,422 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:49:04,726 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:49:05,706 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 13:49:07,020 [ERROR] django.request - Internal Server Error: /mascotas/editar/1/
+Traceback (most recent call last):
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view principal.views.editar_mascota didn't return an HttpResponse object. It returned None instead.
+2025-06-28 13:49:07,021 [ERROR] django.server - "GET /mascotas/editar/1/ HTTP/1.1" 500 71052
+2025-06-28 13:49:19,492 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:49:20,176 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:49:22,780 [ERROR] django.request - Internal Server Error: /mascotas/editar/1/
+Traceback (most recent call last):
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view principal.views.editar_mascota didn't return an HttpResponse object. It returned None instead.
+2025-06-28 13:49:22,781 [ERROR] django.server - "GET /mascotas/editar/1/ HTTP/1.1" 500 71189
+2025-06-28 13:49:23,602 [ERROR] django.request - Internal Server Error: /mascotas/editar/1/
+Traceback (most recent call last):
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view principal.views.editar_mascota didn't return an HttpResponse object. It returned None instead.
+2025-06-28 13:49:23,603 [ERROR] django.server - "GET /mascotas/editar/1/ HTTP/1.1" 500 71189
+2025-06-28 13:49:24,108 [ERROR] django.request - Internal Server Error: /mascotas/editar/1/
+Traceback (most recent call last):
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view principal.views.editar_mascota didn't return an HttpResponse object. It returned None instead.
+2025-06-28 13:49:24,109 [ERROR] django.server - "GET /mascotas/editar/1/ HTTP/1.1" 500 71189
+2025-06-28 13:49:24,311 [ERROR] django.request - Internal Server Error: /mascotas/editar/1/
+Traceback (most recent call last):
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view principal.views.editar_mascota didn't return an HttpResponse object. It returned None instead.
+2025-06-28 13:49:24,313 [ERROR] django.server - "GET /mascotas/editar/1/ HTTP/1.1" 500 71189
+2025-06-28 13:49:24,499 [ERROR] django.request - Internal Server Error: /mascotas/editar/1/
+Traceback (most recent call last):
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view principal.views.editar_mascota didn't return an HttpResponse object. It returned None instead.
+2025-06-28 13:49:24,500 [ERROR] django.server - "GET /mascotas/editar/1/ HTTP/1.1" 500 71189
+2025-06-28 13:49:46,373 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:49:47,101 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:49:49,175 [INFO] django.server - "GET /mascotas/editar/1/ HTTP/1.1" 200 3535
+2025-06-28 13:49:51,717 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:49:55,070 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:49:56,255 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 13:51:22,560 [INFO] django.server - "GET /mascotas/nueva/ HTTP/1.1" 200 3741
+2025-06-28 13:51:23,708 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 13:51:25,902 [INFO] django.server - "GET /mascotas/editar/1/ HTTP/1.1" 200 3535
+2025-06-28 13:51:27,632 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 13:52:42,683 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:52:43,344 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:52:47,301 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:52:48,624 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 13:53:25,880 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:53:26,688 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:53:29,407 [INFO] django.server - "GET /clientes/1/mascotas/ HTTP/1.1" 200 2623
+2025-06-28 13:53:33,859 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:53:34,805 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 13:53:37,678 [INFO] django.server - "GET /clientes/1/mascotas/ HTTP/1.1" 200 2623
+2025-06-28 13:53:41,655 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 13:53:46,744 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:53:47,472 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:54:28,658 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:54:29,376 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:54:30,923 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14111
+2025-06-28 13:55:45,364 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:55:46,109 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:55:48,272 [INFO] django.server - "GET /consultas/nueva/ HTTP/1.1" 200 4024
+2025-06-28 13:55:48,340 [INFO] django.server - "GET /static/principal/css/form_consulta.css HTTP/1.1" 304 0
+2025-06-28 13:56:48,139 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:56:48,847 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:57:21,835 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:57:22,537 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:57:25,264 [INFO] django.server - "GET /consultas/editar/30/ HTTP/1.1" 200 4894
+2025-06-28 13:58:31,660 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:58:32,440 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:58:33,781 [INFO] django.server - "GET /consultas/detalle/30/ HTTP/1.1" 200 3425
+2025-06-28 13:59:46,330 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 13:59:47,032 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 13:59:57,552 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14111
+2025-06-28 13:59:58,810 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:00:03,980 [INFO] django.server - "GET /formulas/ HTTP/1.1" 200 5452
+2025-06-28 14:00:06,447 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:00:07,718 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14111
+2025-06-28 14:00:09,347 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:00:10,165 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 14:00:11,286 [INFO] django.server - "GET /mascotas/1/historia/ HTTP/1.1" 200 12755
+2025-06-28 14:00:11,420 [INFO] django.server - "GET /static/principal/img/Logo.png HTTP/1.1" 304 0
+2025-06-28 14:00:42,814 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:00:46,907 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 14:00:48,063 [INFO] django.server - "GET /mascotas/1/historia/ HTTP/1.1" 200 12755
+2025-06-28 14:00:52,101 [INFO] django.server - "GET /mascotas/6/historia/ HTTP/1.1" 200 7436
+2025-06-28 14:00:54,147 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:01:33,158 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:01:33,882 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:01:40,282 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 14:01:41,245 [INFO] django.server - "GET /mascotas/1/historia/ HTTP/1.1" 200 12755
+2025-06-28 14:01:44,077 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:02:53,541 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:02:54,347 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:02:55,786 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14111
+2025-06-28 14:02:57,068 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:02:57,842 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 14:02:58,791 [INFO] django.server - "GET /mascotas/1/historia/ HTTP/1.1" 200 12755
+2025-06-28 14:03:13,370 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:03:17,819 [INFO] django.server - "GET /cirugias/ HTTP/1.1" 200 4711
+2025-06-28 14:03:20,496 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:03:21,378 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 14:03:22,676 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:03:23,626 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:03:24,849 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:04:38,351 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:04:38,976 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:04:42,452 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 14:05:56,090 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:05:56,820 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:05:58,652 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:05:59,983 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:06:01,179 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:06:02,428 [INFO] django.server - "GET /formulas/ HTTP/1.1" 200 5452
+2025-06-28 14:06:06,312 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:06:07,468 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14111
+2025-06-28 14:06:09,674 [INFO] django.server - "GET /consultas/detalle/30/ HTTP/1.1" 200 3425
+2025-06-28 14:06:12,581 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14111
+2025-06-28 14:06:14,089 [INFO] django.server - "GET /consultas/detalle/31/ HTTP/1.1" 200 3437
+2025-06-28 14:06:15,602 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14111
+2025-06-28 14:06:16,420 [INFO] django.server - "GET /consultas/detalle/12/ HTTP/1.1" 200 3518
+2025-06-28 14:06:17,721 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14111
+2025-06-28 14:06:18,561 [INFO] django.server - "GET /consultas/detalle/20/ HTTP/1.1" 200 3052
+2025-06-28 14:06:21,152 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14111
+2025-06-28 14:06:24,250 [INFO] django.server - "GET /consultas/detalle/21/ HTTP/1.1" 200 3048
+2025-06-28 14:06:25,324 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14111
+2025-06-28 14:06:27,205 [INFO] django.server - "GET /consultas/detalle/27/ HTTP/1.1" 200 3450
+2025-06-28 14:07:35,407 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14111
+2025-06-28 14:07:36,742 [INFO] django.server - "GET /consultas/nueva/ HTTP/1.1" 200 4024
+2025-06-28 14:09:23,103 [INFO] django.server - "GET /buscar_mascotas/?q=I HTTP/1.1" 200 655
+2025-06-28 14:09:23,331 [INFO] django.server - "GET /buscar_mascotas/?q=Ii HTTP/1.1" 200 2
+2025-06-28 14:09:24,314 [INFO] django.server - "GET /buscar_mascotas/?q=I HTTP/1.1" 200 655
+2025-06-28 14:09:25,110 [INFO] django.server - "GET /buscar_mascotas/?q=I HTTP/1.1" 200 655
+2025-06-28 14:09:25,281 [INFO] django.server - "GET /buscar_mascotas/?q=Is HTTP/1.1" 200 118
+2025-06-28 14:09:25,428 [INFO] django.server - "GET /buscar_mascotas/?q=Isi HTTP/1.1" 200 118
+2025-06-28 14:09:29,060 [INFO] django.server - "POST /consultas/nueva/ HTTP/1.1" 302 0
+2025-06-28 14:09:29,080 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3393
+2025-06-28 14:09:37,647 [INFO] django.server - "GET /consulta/32/asignar_medicamentos/ HTTP/1.1" 200 8194
+2025-06-28 14:09:37,747 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 14:09:39,303 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3393
+2025-06-28 14:09:51,382 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:09:52,130 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:09:53,848 [INFO] django.server - "GET /consulta/32/asignar_medicamentos/ HTTP/1.1" 200 8194
+2025-06-28 14:09:53,926 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 14:10:10,735 [INFO] django.server - "POST /consulta/32/asignar_medicamentos/ HTTP/1.1" 302 0
+2025-06-28 14:10:10,755 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3382
+2025-06-28 14:13:49,453 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:13:50,081 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:13:54,263 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:13:54,908 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:13:59,025 [INFO] principal - [VISITA] Vista de fórmula médica accedida para la consulta ID=32
+2025-06-28 14:13:59,056 [INFO] django.server - "GET /consulta/32/ver_formula/ HTTP/1.1" 200 2375
+2025-06-28 14:13:59,192 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 14:13:59,224 [INFO] django.server - "GET /static/principal/css/ver_detalles.css HTTP/1.1" 304 0
+2025-06-28 14:14:56,826 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:14:57,514 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:15:03,872 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 14:15:05,692 [INFO] django.server - "GET /consultas/detalle/30/ HTTP/1.1" 200 3425
+2025-06-28 14:15:07,423 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 14:15:08,395 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3382
+2025-06-28 14:15:09,487 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 14:15:10,249 [INFO] django.server - "GET /consultas/detalle/31/ HTTP/1.1" 200 3437
+2025-06-28 14:15:11,581 [INFO] django.server - "GET /consulta/31/asignar_cirugia/ HTTP/1.1" 200 9181
+2025-06-28 14:15:11,691 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 14:16:10,540 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 14:16:11,652 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:16:13,434 [INFO] django.server - "GET /formulas/ HTTP/1.1" 200 5764
+2025-06-28 14:16:20,426 [INFO] principal - [VISITA] Vista de fórmula médica accedida para la consulta ID=32
+2025-06-28 14:16:20,433 [INFO] django.server - "GET /consulta/32/ver_formula/ HTTP/1.1" 200 2375
+2025-06-28 14:16:20,541 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 14:16:27,143 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:18:20,456 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:18:22,471 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-28 14:18:25,173 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:19:36,626 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:19:37,368 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:19:38,800 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 50
+2025-06-28 14:19:38,828 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:19:41,914 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:19:42,998 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 20
+2025-06-28 14:19:43,005 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 14:19:44,916 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:19:45,965 [INFO] principal - [VISITA] Vista de lista de fórmulas accedida. Total resultados: 13
+2025-06-28 14:19:45,985 [INFO] django.server - "GET /formulas/ HTTP/1.1" 200 5764
+2025-06-28 14:19:47,646 [INFO] principal - [VISITA] Vista de fórmula médica accedida para la consulta ID=32
+2025-06-28 14:19:47,655 [INFO] django.server - "GET /consulta/32/ver_formula/ HTTP/1.1" 200 2375
+2025-06-28 14:19:47,742 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 14:19:51,243 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:19:52,521 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 14:19:59,440 [INFO] django.server - "GET /mascotas/5/historia/ HTTP/1.1" 200 9445
+2025-06-28 14:20:11,627 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:20:18,813 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 50
+2025-06-28 14:20:18,819 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:20:19,932 [INFO] django.server - "GET /medicamentos/crear/ HTTP/1.1" 200 1538
+2025-06-28 14:20:24,794 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 14:20:28,348 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:20:29,618 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 50
+2025-06-28 14:20:29,623 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:20:31,407 [INFO] django.server - "GET /medicamentos/crear/ HTTP/1.1" 200 1538
+2025-06-28 14:21:03,401 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 14:21:04,879 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:21:06,856 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 50
+2025-06-28 14:21:06,861 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:21:21,357 [INFO] django.server - "GET /medicamentos/crear/ HTTP/1.1" 200 1536
+2025-06-28 14:21:22,248 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 50
+2025-06-28 14:21:22,253 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:22:29,051 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:22:29,741 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:22:37,300 [INFO] django.server - "GET /medicamentos/editar/23/ HTTP/1.1" 200 1615
+2025-06-28 14:22:41,253 [INFO] principal - [EDICIÓN] Medicamento editado: Amoxicilina 102 (ID: 23)
+2025-06-28 14:22:41,255 [INFO] django.server - "POST /medicamentos/editar/23/ HTTP/1.1" 302 0
+2025-06-28 14:22:41,265 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 50
+2025-06-28 14:22:41,271 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:23:36,140 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:23:36,899 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:23:41,602 [INFO] django.server - "GET /medicamentos/crear/ HTTP/1.1" 200 1536
+2025-06-28 14:24:00,704 [INFO] principal - [CREACIÓN] Medicamento creado: Testing medicine (ID: 51)
+2025-06-28 14:24:00,706 [INFO] django.server - "POST /medicamentos/crear/ HTTP/1.1" 302 0
+2025-06-28 14:24:00,714 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 14:24:00,720 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:24:03,160 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 51
+2025-06-28 14:24:03,166 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-28 14:24:04,237 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 51
+2025-06-28 14:24:04,243 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-28 14:24:05,343 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 51
+2025-06-28 14:24:05,350 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-28 14:24:06,586 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 51
+2025-06-28 14:24:06,591 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 6004
+2025-06-28 14:24:10,182 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 6, Total: 51
+2025-06-28 14:24:10,184 [INFO] django.server - "GET /medicamentos/?page=6 HTTP/1.1" 200 2225
+2025-06-28 14:24:13,308 [INFO] django.server - "GET /medicamentos/editar/51/ HTTP/1.1" 200 1611
+2025-06-28 14:24:16,011 [INFO] principal - [EDICIÓN] Medicamento editado: Testing medicine (ID: 51)
+2025-06-28 14:24:16,013 [INFO] django.server - "POST /medicamentos/editar/51/ HTTP/1.1" 302 0
+2025-06-28 14:24:16,021 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 14:24:16,026 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:24:17,807 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 51
+2025-06-28 14:24:17,817 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-28 14:24:20,137 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 51
+2025-06-28 14:24:20,140 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-28 14:24:21,129 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 51
+2025-06-28 14:24:21,133 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-28 14:24:22,036 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 51
+2025-06-28 14:24:22,040 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 6004
+2025-06-28 14:24:23,552 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 6, Total: 51
+2025-06-28 14:24:23,554 [INFO] django.server - "GET /medicamentos/?page=6 HTTP/1.1" 200 2225
+2025-06-28 14:24:26,358 [ERROR] principal - [ERROR] al eliminar medicamento (ID: 51): Reverse for 'ver_cirugia' with arguments '('',)' not found. 1 pattern(s) tried: ['consulta/(?P<consulta_id>[0-9]+)/ver_cirugia/\\Z']
+2025-06-28 14:24:26,360 [INFO] django.server - "GET /medicamentos/eliminar/51/ HTTP/1.1" 302 0
+2025-06-28 14:24:26,368 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 14:24:26,373 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:24:44,548 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:25:45,854 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:25:46,556 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:26:21,665 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:26:22,419 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:26:36,551 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 14:26:36,579 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:26:37,861 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:26:38,860 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 20
+2025-06-28 14:26:38,867 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 14:27:00,840 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:27:01,531 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:27:10,824 [INFO] django.server - "GET /profesionales/crear/ HTTP/1.1" 200 1724
+2025-06-28 14:27:37,621 [INFO] principal - [CREACIÓN] Profesional creado: John Arias (ID: 21)
+2025-06-28 14:27:37,623 [INFO] django.server - "POST /profesionales/crear/ HTTP/1.1" 302 0
+2025-06-28 14:27:37,634 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 21
+2025-06-28 14:27:37,648 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 14:27:41,018 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 2, Total: 21
+2025-06-28 14:27:41,022 [INFO] django.server - "GET /profesionales/?page=2 HTTP/1.1" 200 6878
+2025-06-28 14:27:42,086 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 3, Total: 21
+2025-06-28 14:27:42,088 [INFO] django.server - "GET /profesionales/?page=3 HTTP/1.1" 200 2303
+2025-06-28 14:27:45,160 [INFO] django.server - "GET /profesionales/editar/21/ HTTP/1.1" 200 1801
+2025-06-28 14:27:50,288 [INFO] principal - [EDICIÓN] Profesional editado: John Mario Arias (ID: 21)
+2025-06-28 14:27:50,290 [INFO] django.server - "POST /profesionales/editar/21/ HTTP/1.1" 302 0
+2025-06-28 14:27:50,301 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 21
+2025-06-28 14:27:50,306 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 14:27:52,807 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 2, Total: 21
+2025-06-28 14:27:52,810 [INFO] django.server - "GET /profesionales/?page=2 HTTP/1.1" 200 6878
+2025-06-28 14:27:54,111 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 3, Total: 21
+2025-06-28 14:27:54,113 [INFO] django.server - "GET /profesionales/?page=3 HTTP/1.1" 200 2309
+2025-06-28 14:28:05,360 [ERROR] principal - [ERROR] al eliminar profesional (ID: 21): Reverse for 'ver_cirugia' with arguments '('',)' not found. 1 pattern(s) tried: ['consulta/(?P<consulta_id>[0-9]+)/ver_cirugia/\\Z']
+2025-06-28 14:28:05,361 [INFO] django.server - "GET /profesionales/eliminar/21/ HTTP/1.1" 302 0
+2025-06-28 14:28:05,374 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 21
+2025-06-28 14:28:05,378 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 14:28:07,232 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 2, Total: 21
+2025-06-28 14:28:07,236 [INFO] django.server - "GET /profesionales/?page=2 HTTP/1.1" 200 6878
+2025-06-28 14:28:08,453 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 3, Total: 21
+2025-06-28 14:28:08,455 [INFO] django.server - "GET /profesionales/?page=3 HTTP/1.1" 200 2309
+2025-06-28 14:28:12,508 [ERROR] principal - [ERROR] al eliminar profesional (ID: 21): Reverse for 'ver_cirugia' with arguments '('',)' not found. 1 pattern(s) tried: ['consulta/(?P<consulta_id>[0-9]+)/ver_cirugia/\\Z']
+2025-06-28 14:28:12,510 [INFO] django.server - "GET /profesionales/eliminar/21/ HTTP/1.1" 302 0
+2025-06-28 14:28:12,523 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 21
+2025-06-28 14:28:12,526 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 14:28:14,293 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 2, Total: 21
+2025-06-28 14:28:14,298 [INFO] django.server - "GET /profesionales/?page=2 HTTP/1.1" 200 6878
+2025-06-28 14:28:15,705 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 3, Total: 21
+2025-06-28 14:28:15,706 [INFO] django.server - "GET /profesionales/?page=3 HTTP/1.1" 200 2309
+2025-06-28 14:28:25,635 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:28:26,352 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:28:27,817 [ERROR] principal - [ERROR] al eliminar profesional (ID: 21): Reverse for 'ver_cirugia' with arguments '('',)' not found. 1 pattern(s) tried: ['consulta/(?P<consulta_id>[0-9]+)/ver_cirugia/\\Z']
+2025-06-28 14:28:27,819 [INFO] django.server - "GET /profesionales/eliminar/21/ HTTP/1.1" 302 0
+2025-06-28 14:28:27,829 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 21
+2025-06-28 14:28:27,842 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 14:28:29,470 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 2, Total: 21
+2025-06-28 14:28:29,474 [INFO] django.server - "GET /profesionales/?page=2 HTTP/1.1" 200 6878
+2025-06-28 14:28:30,838 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 3, Total: 21
+2025-06-28 14:28:30,839 [INFO] django.server - "GET /profesionales/?page=3 HTTP/1.1" 200 2309
+2025-06-28 14:28:40,261 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:28:41,287 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 14:28:41,294 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:28:42,676 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 51
+2025-06-28 14:28:42,681 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-28 14:28:43,740 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 51
+2025-06-28 14:28:43,744 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-28 14:28:44,644 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 51
+2025-06-28 14:28:44,647 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-28 14:28:45,691 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 51
+2025-06-28 14:28:45,694 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 6004
+2025-06-28 14:28:46,793 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 6, Total: 51
+2025-06-28 14:28:46,794 [INFO] django.server - "GET /medicamentos/?page=6 HTTP/1.1" 200 2225
+2025-06-28 14:28:51,879 [ERROR] principal - [ERROR] al eliminar medicamento (ID: 51): Reverse for 'ver_cirugia' with arguments '('',)' not found. 1 pattern(s) tried: ['consulta/(?P<consulta_id>[0-9]+)/ver_cirugia/\\Z']
+2025-06-28 14:28:51,880 [INFO] django.server - "GET /medicamentos/eliminar/51/ HTTP/1.1" 302 0
+2025-06-28 14:28:51,895 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 14:28:51,901 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 14:31:09,297 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:31:11,177 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 14:31:14,307 [INFO] django.server - "GET /consultas/nueva/ HTTP/1.1" 200 4024
+2025-06-28 14:31:32,414 [INFO] django.server - "GET /buscar_mascotas/?q=a HTTP/1.1" 200 655
+2025-06-28 14:31:32,494 [INFO] django.server - "GET /buscar_mascotas/?q=an HTTP/1.1" 200 240
+2025-06-28 14:31:36,722 [INFO] django.server - "POST /consultas/nueva/ HTTP/1.1" 302 0
+2025-06-28 14:31:36,748 [INFO] django.server - "GET /consultas/detalle/33/ HTTP/1.1" 200 3391
+2025-06-28 14:31:39,189 [INFO] django.server - "GET /consulta/33/asignar_medicamentos/ HTTP/1.1" 200 8272
+2025-06-28 14:31:39,308 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 14:32:21,842 [INFO] django.server - "POST /consulta/33/asignar_medicamentos/ HTTP/1.1" 302 0
+2025-06-28 14:32:21,865 [INFO] django.server - "GET /consultas/detalle/33/ HTTP/1.1" 200 3380
+2025-06-28 14:32:24,450 [INFO] django.server - "GET /consulta/33/asignar_cirugia/ HTTP/1.1" 200 9219
+2025-06-28 14:32:24,562 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 14:32:44,081 [INFO] django.server - "POST /consulta/33/asignar_cirugia/ HTTP/1.1" 302 0
+2025-06-28 14:32:44,108 [INFO] django.server - "GET /consultas/detalle/33/ HTTP/1.1" 200 3381
+2025-06-28 14:32:47,677 [INFO] principal - [VISITA] Vista de fórmula médica accedida para la consulta ID=33
+2025-06-28 14:32:47,686 [INFO] django.server - "GET /consulta/33/ver_formula/ HTTP/1.1" 200 2637
+2025-06-28 14:32:47,806 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 14:32:50,621 [INFO] principal - [VISITA] Vista de fórmula médica accedida para la consulta ID=33
+2025-06-28 14:32:50,630 [INFO] principal - [ENTREGA] Medicamentos entregados para consulta ID=33
+2025-06-28 14:32:50,631 [INFO] django.server - "POST /consulta/33/ver_formula/ HTTP/1.1" 302 0
+2025-06-28 14:32:50,642 [INFO] principal - [VISITA] Vista de fórmula médica accedida para la consulta ID=33
+2025-06-28 14:32:50,648 [INFO] django.server - "GET /consulta/33/ver_formula/ HTTP/1.1" 200 2227
+2025-06-28 14:32:50,811 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 14:32:58,281 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 15376
+2025-06-28 14:33:02,212 [INFO] django.server - "GET /consultas/eliminar/33/ HTTP/1.1" 302 0
+2025-06-28 14:33:02,243 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 14:33:12,671 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:33:14,082 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 14:33:15,782 [INFO] django.server - "GET /clientes/crear/ HTTP/1.1" 200 1492
+2025-06-28 14:33:57,472 [INFO] django.server - "POST /clientes/crear/ HTTP/1.1" 302 0
+2025-06-28 14:33:57,497 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 7173
+2025-06-28 14:34:02,282 [INFO] django.server - "GET /clientes/editar/78596120/ HTTP/1.1" 200 1568
+2025-06-28 14:34:08,783 [INFO] django.server - "POST /clientes/editar/78596120/ HTTP/1.1" 302 0
+2025-06-28 14:34:08,808 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 7172
+2025-06-28 14:34:13,913 [INFO] django.server - "GET /clientes/14/mascotas/ HTTP/1.1" 200 940
+2025-06-28 14:34:16,671 [INFO] django.server - "GET /mascotas/nueva/?cliente_id=14 HTTP/1.1" 200 3521
+2025-06-28 14:34:28,798 [INFO] django.server - "POST /mascotas/nueva/?cliente_id=14 HTTP/1.1" 302 0
+2025-06-28 14:34:28,839 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10871
+2025-06-28 14:34:48,149 [INFO] django.server - "GET /mascotas/editar/15/ HTTP/1.1" 200 3541
+2025-06-28 14:34:54,714 [INFO] django.server - "POST /mascotas/editar/15/ HTTP/1.1" 302 0
+2025-06-28 14:34:54,743 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10874
+2025-06-28 14:34:58,146 [INFO] django.server - "GET /mascotas/15/historia/ HTTP/1.1" 200 7117
+2025-06-28 14:35:03,776 [INFO] django.server - "GET /mascotas/eliminar/15/ HTTP/1.1" 302 0
+2025-06-28 14:35:03,811 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 14:35:07,285 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:35:08,846 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 7172
+2025-06-28 14:35:11,765 [INFO] django.server - "GET /clientes/14/mascotas/ HTTP/1.1" 200 1295
+2025-06-28 14:35:14,951 [INFO] django.server - "GET /mascotas/eliminar/15/ HTTP/1.1" 302 0
+2025-06-28 14:35:14,984 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 14:35:19,125 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:35:20,441 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 7172
+2025-06-28 14:35:24,301 [INFO] django.server - "GET /clientes/14/mascotas/ HTTP/1.1" 200 1295
+2025-06-28 14:35:44,838 [INFO] django.server - "GET /clientes/eliminar/78596120/ HTTP/1.1" 302 0
+2025-06-28 14:35:44,865 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 14:35:59,580 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:36:35,436 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:36:36,210 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:37:47,973 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 14:37:48,695 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 14:37:50,782 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 14:37:58,494 [INFO] django.server - "GET / HTTP/1.1" 200 3283
+2025-06-28 14:37:59,353 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 14:38:01,416 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3382
+2025-06-28 14:38:03,089 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 14:38:04,872 [INFO] django.server - "GET /consultas/editar/32/ HTTP/1.1" 200 5083
+2025-06-28 14:38:07,835 [INFO] django.server - "POST /consultas/editar/32/ HTTP/1.1" 302 0
+2025-06-28 14:38:07,843 [INFO] principal - [ACCESO] Vista de asignación de cirugía para consulta ID 32
+2025-06-28 14:38:07,867 [INFO] django.server - "GET /consulta/32/asignar_cirugia/ HTTP/1.1" 200 9219
+2025-06-28 14:38:08,025 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:32:45,067 [INFO] principal - [ACCESO] Vista de asignación de cirugía para consulta ID 32
+2025-06-28 18:32:45,083 [INFO] principal - [CREACIÓN] Cirugía programada para consulta ID 32 (cirugía ID 9)
+2025-06-28 18:32:45,085 [INFO] django.server - "POST /consulta/32/asignar_cirugia/ HTTP/1.1" 302 0
+2025-06-28 18:32:45,111 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3565
+2025-06-28 18:33:51,637 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 18:33:52,536 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 18:33:56,224 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:33:56,225 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:33:56,266 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1536
+2025-06-28 18:33:56,411 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:34:11,260 [INFO] django.server - "GET /consulta/32/editar_cirugia/ HTTP/1.1" 200 9408
+2025-06-28 18:34:11,402 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:34:23,642 [INFO] django.server - "POST /consulta/32/editar_cirugia/ HTTP/1.1" 302 0
+2025-06-28 18:34:23,649 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:34:23,651 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:34:23,653 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1618
+2025-06-28 18:34:23,856 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:34:52,743 [INFO] django.server - "GET /consulta/32/editar_cirugia/ HTTP/1.1" 200 9433
+2025-06-28 18:34:52,831 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:34:56,091 [INFO] django.server - "POST /consulta/32/editar_cirugia/ HTTP/1.1" 302 0
+2025-06-28 18:34:56,101 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:34:56,103 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:34:56,106 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1618
+2025-06-28 18:34:56,298 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:35:28,923 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 18:35:29,838 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 18:35:30,737 [INFO] principal - [ACCESO] Editar cirugía para consulta ID 32
+2025-06-28 18:35:30,764 [INFO] django.server - "GET /consulta/32/editar_cirugia/ HTTP/1.1" 200 9433
+2025-06-28 18:35:30,850 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:35:39,907 [INFO] principal - [ACCESO] Editar cirugía para consulta ID 32
+2025-06-28 18:35:39,925 [INFO] principal - [ACTUALIZACIÓN] Cirugía ID 9 actualizada correctamente.
+2025-06-28 18:35:39,938 [INFO] django.server - "POST /consulta/32/editar_cirugia/ HTTP/1.1" 302 0
+2025-06-28 18:35:39,945 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:35:39,949 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:35:39,953 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1618
+2025-06-28 18:35:40,165 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:35:59,218 [INFO] django.server - "GET /consulta/32/eliminar_cirugia/ HTTP/1.1" 200 344
+2025-06-28 18:36:05,306 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:36:05,307 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:36:05,311 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1618
+2025-06-28 18:36:05,435 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:36:51,665 [INFO] django.server - "GET /consulta/32/eliminar_cirugia/ HTTP/1.1" 200 344
+2025-06-28 18:36:54,561 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:36:54,562 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:36:54,566 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1618
+2025-06-28 18:36:54,704 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:38:36,447 [INFO] django.server - "GET /consulta/32/eliminar_cirugia/ HTTP/1.1" 200 344
+2025-06-28 18:38:38,187 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:38:38,188 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:38:38,193 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1656
+2025-06-28 18:38:38,265 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:39:43,707 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:39:43,708 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:39:43,711 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1656
+2025-06-28 18:39:43,854 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:39:44,360 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:39:44,362 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:39:44,364 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1656
+2025-06-28 18:39:44,450 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:40:57,702 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:40:57,704 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:40:57,707 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1656
+2025-06-28 18:40:57,827 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:40:59,975 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:40:59,977 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:40:59,981 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1656
+2025-06-28 18:41:00,117 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:41:12,824 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:41:12,827 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:41:12,830 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1656
+2025-06-28 18:41:12,913 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:41:32,963 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 18:41:36,656 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-28 18:41:36,751 [INFO] django.server - "GET /static/principal/css/inicio.css HTTP/1.1" 304 0
+2025-06-28 18:41:41,048 [INFO] django.server - "GET /cirugias/ HTTP/1.1" 200 5455
+2025-06-28 18:41:41,114 [INFO] django.server - "GET /static/principal/css/listas.css HTTP/1.1" 304 0
+2025-06-28 18:41:50,681 [INFO] django.server - "GET /cirugias/editar/9/ HTTP/1.1" 200 9433
+2025-06-28 18:41:50,773 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:41:52,624 [INFO] django.server - "POST /cirugias/editar/9/ HTTP/1.1" 302 0
+2025-06-28 18:41:52,647 [INFO] django.server - "GET /cirugias/ HTTP/1.1" 200 5455
+2025-06-28 18:41:54,005 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-28 18:41:55,386 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 18:41:57,935 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3565
+2025-06-28 18:41:59,361 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:41:59,364 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:41:59,370 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1656
+2025-06-28 18:41:59,480 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:42:10,554 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 18:42:11,858 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-28 18:42:32,434 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 18:42:34,477 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3565
+2025-06-28 18:42:35,582 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:42:35,584 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:42:35,588 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1656
+2025-06-28 18:42:35,708 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:42:39,023 [ERROR] django.request - Internal Server Error: /consulta/32/eliminar_cirugia/
+Traceback (most recent call last):
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py", line 859, in eliminar_cirugia
+    return render(request, 'principal/confirmar_eliminar.html', {
+        'objeto': cirugia,
+        'tipo': 'cirugía',
+        'consulta': consulta
+    })
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: principal/confirmar_eliminar.html
+2025-06-28 18:42:39,025 [ERROR] django.server - "GET /consulta/32/eliminar_cirugia/ HTTP/1.1" 500 88560
+2025-06-28 18:43:47,792 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 18:43:49,112 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-28 18:43:50,201 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 18:43:50,245 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 18:43:52,276 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 51
+2025-06-28 18:43:52,282 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-28 18:43:53,543 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 51
+2025-06-28 18:43:53,548 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-28 18:43:54,500 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 51
+2025-06-28 18:43:54,506 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-28 18:43:55,471 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 51
+2025-06-28 18:43:55,475 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 6004
+2025-06-28 18:43:56,346 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 6, Total: 51
+2025-06-28 18:43:56,350 [INFO] django.server - "GET /medicamentos/?page=6 HTTP/1.1" 200 2225
+2025-06-28 18:43:59,380 [ERROR] principal - [ERROR] al eliminar medicamento (ID: 51): principal/confirmar_eliminar.html
+2025-06-28 18:43:59,381 [INFO] django.server - "GET /medicamentos/eliminar/51/ HTTP/1.1" 302 0
+2025-06-28 18:43:59,393 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 18:43:59,402 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 18:44:01,603 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 51
+2025-06-28 18:44:01,608 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-28 18:44:02,758 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 51
+2025-06-28 18:44:02,766 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-28 18:44:03,673 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 51
+2025-06-28 18:44:03,679 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-28 18:44:04,582 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 51
+2025-06-28 18:44:04,586 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 6004
+2025-06-28 18:44:05,504 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 6, Total: 51
+2025-06-28 18:44:05,506 [INFO] django.server - "GET /medicamentos/?page=6 HTTP/1.1" 200 2225
+2025-06-28 18:44:08,253 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-28 18:44:29,346 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 18:44:31,607 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3565
+2025-06-28 18:44:32,924 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 18:44:32,926 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 18:44:32,929 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1656
+2025-06-28 18:44:33,055 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 18:44:34,620 [ERROR] django.request - Internal Server Error: /consulta/32/eliminar_cirugia/
+Traceback (most recent call last):
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py", line 859, in eliminar_cirugia
+    return render(request, 'principal/confirmar_eliminar.html', {
+        'objeto': cirugia,
+        'tipo': 'cirugía',
+        'consulta': consulta
+    })
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: principal/confirmar_eliminar.html
+2025-06-28 18:44:34,622 [ERROR] django.server - "GET /consulta/32/eliminar_cirugia/ HTTP/1.1" 500 88564
+2025-06-28 18:44:41,904 [ERROR] django.request - Internal Server Error: /consulta/32/eliminar_cirugia/
+Traceback (most recent call last):
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py", line 859, in eliminar_cirugia
+    return render(request, 'principal/confirmar_eliminar.html', {
+        'objeto': cirugia,
+        'tipo': 'cirugía',
+        'consulta': consulta
+    })
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: principal/confirmar_eliminar.html
+2025-06-28 18:44:41,905 [ERROR] django.server - "GET /consulta/32/eliminar_cirugia/ HTTP/1.1" 500 88564
+2025-06-28 19:00:44,026 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 19:00:45,330 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-28 19:00:46,769 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 19:00:46,773 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 19:00:49,959 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 51
+2025-06-28 19:00:49,964 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-28 19:00:51,207 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 51
+2025-06-28 19:00:51,211 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-28 19:00:52,081 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 51
+2025-06-28 19:00:52,088 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-28 19:00:52,930 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 51
+2025-06-28 19:00:52,936 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 6004
+2025-06-28 19:00:53,798 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 6, Total: 51
+2025-06-28 19:00:53,801 [INFO] django.server - "GET /medicamentos/?page=6 HTTP/1.1" 200 2225
+2025-06-28 19:00:59,882 [ERROR] principal - [ERROR] al eliminar medicamento (ID: 51): principal/confirmar_eliminar.html
+2025-06-28 19:00:59,884 [INFO] django.server - "GET /medicamentos/eliminar/51/ HTTP/1.1" 302 0
+2025-06-28 19:00:59,894 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 19:00:59,899 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 19:01:01,320 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-28 19:03:59,727 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:04:00,811 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:04:55,373 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 19:04:56,966 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3565
+2025-06-28 19:04:58,724 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 19:04:58,726 [INFO] principal - [DETALLE] Mostrando cirugía ID 9 para consulta ID 32
+2025-06-28 19:04:58,732 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1756
+2025-06-28 19:04:58,868 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 19:04:58,889 [INFO] django.server - "GET /static/principal/css/ver_detalles.css HTTP/1.1" 304 0
+2025-06-28 19:05:01,841 [INFO] principal - [ELIMINACIÓN] Cirugía eliminada para consulta ID 32
+2025-06-28 19:05:01,843 [INFO] django.server - "GET /consulta/32/eliminar_cirugia/ HTTP/1.1" 302 0
+2025-06-28 19:05:01,872 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3564
+2025-06-28 19:05:03,759 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 19:05:06,139 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3564
+2025-06-28 19:05:08,830 [INFO] principal - [ACCESO] Vista de asignación de cirugía para consulta ID 32
+2025-06-28 19:05:08,928 [INFO] django.server - "GET /consulta/32/asignar_cirugia/ HTTP/1.1" 200 9219
+2025-06-28 19:05:09,059 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 19:05:11,687 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 19:05:23,163 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3564
+2025-06-28 19:05:24,176 [INFO] principal - [ACCESO] Vista de asignación de cirugía para consulta ID 32
+2025-06-28 19:05:24,188 [INFO] django.server - "GET /consulta/32/asignar_cirugia/ HTTP/1.1" 200 9219
+2025-06-28 19:05:24,315 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 19:05:47,138 [INFO] principal - [ACCESO] Vista de asignación de cirugía para consulta ID 32
+2025-06-28 19:05:47,157 [INFO] principal - [CREACIÓN] Cirugía programada para consulta ID 32 (cirugía ID 10)
+2025-06-28 19:05:47,158 [INFO] django.server - "POST /consulta/32/asignar_cirugia/ HTTP/1.1" 302 0
+2025-06-28 19:05:47,180 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3565
+2025-06-28 19:05:49,059 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 19:05:49,061 [INFO] principal - [DETALLE] Mostrando cirugía ID 10 para consulta ID 32
+2025-06-28 19:05:49,065 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1744
+2025-06-28 19:05:49,171 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 19:07:40,919 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 19:07:40,922 [INFO] principal - [DETALLE] Mostrando cirugía ID 10 para consulta ID 32
+2025-06-28 19:07:40,927 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1781
+2025-06-28 19:07:41,024 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 19:09:16,350 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:09:17,159 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:09:20,635 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 19:09:21,920 [INFO] django.server - "GET / HTTP/1.1" 200 3586
+2025-06-28 19:09:24,035 [INFO] principal - [ACCESO] Vista de lista de cirugías accedida por AnonymousUser. Total: 6
+2025-06-28 19:09:24,080 [INFO] django.server - "GET /cirugias/ HTTP/1.1" 200 5454
+2025-06-28 19:10:34,892 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:10:35,543 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:11:28,907 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:11:29,574 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:12:14,764 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:12:15,480 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:13:14,966 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:13:15,708 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:14:21,470 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:14:22,130 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:23:20,894 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:23:21,682 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:23:22,695 [INFO] django.server - "GET / HTTP/1.1" 200 3586
+2025-06-28 19:23:24,720 [INFO] principal - [ACCESO] Vista de lista de cirugías accedida por AnonymousUser. Total: 6
+2025-06-28 19:23:24,736 [INFO] django.server - "GET /cirugias/ HTTP/1.1" 200 5454
+2025-06-28 19:23:32,654 [INFO] principal - [ACCESO] Edición directa de cirugía (ID: 10) accedida por AnonymousUser.
+2025-06-28 19:23:32,672 [INFO] django.server - "GET /cirugias/editar/10/ HTTP/1.1" 200 9424
+2025-06-28 19:23:32,805 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 19:23:50,465 [INFO] principal - [ACCESO] Edición directa de cirugía (ID: 10) accedida por AnonymousUser.
+2025-06-28 19:23:50,482 [INFO] principal - [ACTUALIZACIÓN] Cirugía actualizada exitosamente (ID: 10) por AnonymousUser.
+2025-06-28 19:23:50,487 [INFO] django.server - "POST /cirugias/editar/10/ HTTP/1.1" 302 0
+2025-06-28 19:23:50,497 [INFO] principal - [ACCESO] Vista de lista de cirugías accedida por AnonymousUser. Total: 6
+2025-06-28 19:23:50,515 [INFO] django.server - "GET /cirugias/ HTTP/1.1" 200 5454
+2025-06-28 19:23:56,803 [INFO] principal - [ACCESO] Edición directa de cirugía (ID: 10) accedida por AnonymousUser.
+2025-06-28 19:23:56,812 [INFO] django.server - "GET /cirugias/editar/10/ HTTP/1.1" 200 9457
+2025-06-28 19:23:56,925 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 19:24:06,188 [INFO] principal - [ACTUALIZACIÓN] Cirugía ID 10 marcada como 'Realizada' (antes: 'Programada') por AnonymousUser.
+2025-06-28 19:24:06,191 [INFO] django.server - "GET /cirugias/realizar/10/ HTTP/1.1" 302 0
+2025-06-28 19:24:06,203 [INFO] principal - [ACCESO] Vista de lista de cirugías accedida por AnonymousUser. Total: 6
+2025-06-28 19:24:06,225 [INFO] django.server - "GET /cirugias/ HTTP/1.1" 200 5292
+2025-06-28 19:24:07,865 [INFO] principal - [ACCESO] Edición directa de cirugía (ID: 10) accedida por AnonymousUser.
+2025-06-28 19:24:07,874 [INFO] django.server - "GET /cirugias/editar/10/ HTTP/1.1" 200 9457
+2025-06-28 19:24:07,973 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 19:24:14,748 [INFO] principal - [CANCELACIÓN] Cirugía ID 10 cambiada de estado 'Realizada' a 'Cancelada' por AnonymousUser.
+2025-06-28 19:24:14,751 [INFO] django.server - "GET /cirugias/cancelar/10/ HTTP/1.1" 302 0
+2025-06-28 19:24:14,760 [INFO] principal - [ACCESO] Vista de lista de cirugías accedida por AnonymousUser. Total: 6
+2025-06-28 19:24:14,780 [INFO] django.server - "GET /cirugias/ HTTP/1.1" 200 5292
+2025-06-28 19:24:16,940 [INFO] principal - [ACCESO] Edición directa de cirugía (ID: 10) accedida por AnonymousUser.
+2025-06-28 19:24:16,952 [INFO] django.server - "GET /cirugias/editar/10/ HTTP/1.1" 200 9457
+2025-06-28 19:24:17,088 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 19:24:24,668 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:24:25,704 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 19:24:29,211 [INFO] django.server - "GET /mascotas/5/historia/ HTTP/1.1" 200 9985
+2025-06-28 19:24:39,779 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:24:40,801 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 19:24:44,346 [INFO] django.server - "GET /clientes/3/mascotas/ HTTP/1.1" 200 2605
+2025-06-28 19:24:46,873 [INFO] django.server - "GET /mascotas/5/historia/ HTTP/1.1" 200 9985
+2025-06-28 19:24:51,270 [INFO] django.server - "GET /mascotas/editar/5/ HTTP/1.1" 200 3529
+2025-06-28 19:24:51,404 [INFO] django.server - "GET /static/principal/css/formularios.css HTTP/1.1" 304 0
+2025-06-28 19:24:53,028 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 19:24:54,070 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:27:03,206 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:27:04,104 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:27:05,413 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 19:27:06,167 [INFO] principal - [EXPORTACIÓN] Se exportaron 14 clientes a Excel.
+2025-06-28 19:27:06,212 [INFO] django.server - "GET /exportar/clientes/ HTTP/1.1" 200 5518
+2025-06-28 19:28:00,307 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:28:01,142 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:28:02,302 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:28:03,146 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 19:28:04,179 [INFO] principal - [EXPORTACIÓN] Se exportaron 15 mascotas a Excel.
+2025-06-28 19:28:04,209 [INFO] django.server - "GET /exportar/mascotas/ HTTP/1.1" 200 5512
+2025-06-28 19:29:54,736 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:29:55,655 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:29:57,081 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:29:58,086 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 19:29:58,930 [INFO] principal - [EXPORTACIÓN] 21 consultas exportadas a Excel.
+2025-06-28 19:29:58,960 [INFO] django.server - "GET /exportar/consultas/ HTTP/1.1" 200 6152
+2025-06-28 19:31:08,386 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:31:09,521 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:31:10,582 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:31:11,799 [INFO] principal - [ACCESO] Vista de lista de cirugías accedida por AnonymousUser. Total: 6
+2025-06-28 19:31:11,821 [INFO] django.server - "GET /cirugias/ HTTP/1.1" 200 5292
+2025-06-28 19:31:13,377 [INFO] principal - [EXPORTACIÓN] 8 cirugías exportadas a Excel.
+2025-06-28 19:31:13,405 [INFO] django.server - "GET /exportar/cirugias/ HTTP/1.1" 200 6097
+2025-06-28 19:32:09,125 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:32:09,912 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:32:17,069 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:32:18,899 [INFO] principal - [VISITA] Vista de lista de fórmulas accedida. Total resultados: 13
+2025-06-28 19:32:18,953 [INFO] django.server - "GET /formulas/ HTTP/1.1" 200 5764
+2025-06-28 19:32:20,409 [INFO] principal - [EXPORTACIÓN] 17 fórmulas médicas exportadas a Excel.
+2025-06-28 19:32:20,435 [INFO] django.server - "GET /exportar/formulas/ HTTP/1.1" 200 5924
+2025-06-28 19:33:27,664 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:33:28,864 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:33:30,016 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:33:31,191 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 21
+2025-06-28 19:33:31,232 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 19:33:32,045 [INFO] principal - [EXPORTACIÓN] 21 profesionales exportados a Excel.
+2025-06-28 19:33:32,078 [INFO] django.server - "GET /exportar/profesionales/ HTTP/1.1" 200 5949
+2025-06-28 19:33:46,055 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:34:18,099 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:34:18,992 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:34:26,826 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 19:34:26,897 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 19:34:27,893 [INFO] principal - [EXPORTACIÓN] 51 medicamentos exportados a Excel.
+2025-06-28 19:34:27,931 [INFO] django.server - "GET /exportar/medicamentos/ HTTP/1.1" 200 6619
+2025-06-28 19:34:43,888 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:34:44,598 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:41:15,030 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:41:15,889 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:41:18,587 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 51
+2025-06-28 19:41:18,616 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-28 19:41:19,989 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 51
+2025-06-28 19:41:19,995 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-28 19:41:20,957 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 51
+2025-06-28 19:41:20,961 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-28 19:41:21,847 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 51
+2025-06-28 19:41:21,851 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 6004
+2025-06-28 19:41:22,679 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 6, Total: 51
+2025-06-28 19:41:22,683 [INFO] django.server - "GET /medicamentos/?page=6 HTTP/1.1" 200 2225
+2025-06-28 19:41:25,918 [INFO] principal - [ELIMINACIÓN] Medicamento eliminado: Testing medicine (ID: 51)
+2025-06-28 19:41:25,921 [INFO] django.server - "GET /medicamentos/eliminar/51/ HTTP/1.1" 302 0
+2025-06-28 19:41:25,933 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 50
+2025-06-28 19:41:25,939 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 19:41:32,936 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:41:33,874 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:47:35,891 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:47:36,744 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:47:39,329 [INFO] django.server - "GET /medicamentos/crear/ HTTP/1.1" 200 1536
+2025-06-28 19:47:50,380 [INFO] principal - [CREACIÓN] Medicamento creado: Testing medicine (ID: 52)
+2025-06-28 19:47:50,382 [INFO] django.server - "POST /medicamentos/crear/ HTTP/1.1" 302 0
+2025-06-28 19:47:50,390 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 19:47:50,397 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 19:47:52,138 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 51
+2025-06-28 19:47:52,144 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-28 19:47:52,988 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 51
+2025-06-28 19:47:52,995 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-28 19:47:53,970 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 51
+2025-06-28 19:47:53,974 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-28 19:47:54,735 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 51
+2025-06-28 19:47:54,739 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 6004
+2025-06-28 19:47:55,541 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 6, Total: 51
+2025-06-28 19:47:55,545 [INFO] django.server - "GET /medicamentos/?page=6 HTTP/1.1" 200 2225
+2025-06-28 19:47:57,994 [INFO] django.server - "GET /medicamentos/editar/52/ HTTP/1.1" 200 1611
+2025-06-28 19:48:01,077 [INFO] principal - [EDICIÓN] Medicamento editado: Testing medicine (ID: 52)
+2025-06-28 19:48:01,079 [INFO] django.server - "POST /medicamentos/editar/52/ HTTP/1.1" 302 0
+2025-06-28 19:48:01,088 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-28 19:48:01,093 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 19:48:02,428 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 51
+2025-06-28 19:48:02,432 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-28 19:48:03,160 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 51
+2025-06-28 19:48:03,165 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-28 19:48:03,940 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 51
+2025-06-28 19:48:03,946 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-28 19:48:04,755 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 51
+2025-06-28 19:48:04,759 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 6004
+2025-06-28 19:48:05,600 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 6, Total: 51
+2025-06-28 19:48:05,602 [INFO] django.server - "GET /medicamentos/?page=6 HTTP/1.1" 200 2225
+2025-06-28 19:48:10,055 [ERROR] principal - [ERROR] al eliminar medicamento (ID: 52): name 'nombre' is not defined
+2025-06-28 19:48:10,060 [INFO] django.server - "GET /medicamentos/eliminar/52/ HTTP/1.1" 302 0
+2025-06-28 19:48:10,078 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 50
+2025-06-28 19:48:10,084 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-28 19:49:09,990 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:49:10,675 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:49:16,062 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:49:17,329 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 21
+2025-06-28 19:49:17,339 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 19:49:19,278 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 2, Total: 21
+2025-06-28 19:49:19,281 [INFO] django.server - "GET /profesionales/?page=2 HTTP/1.1" 200 6878
+2025-06-28 19:49:20,409 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 3, Total: 21
+2025-06-28 19:49:20,410 [INFO] django.server - "GET /profesionales/?page=3 HTTP/1.1" 200 2309
+2025-06-28 19:50:53,399 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:50:54,484 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:50:56,560 [INFO] django.server - "GET /profesionales/editar/21/ HTTP/1.1" 200 1807
+2025-06-28 19:51:02,190 [INFO] principal - [EDICIÓN] Profesional editado: John Mario Arias (ID: 21)
+2025-06-28 19:51:02,192 [INFO] django.server - "POST /profesionales/editar/21/ HTTP/1.1" 302 0
+2025-06-28 19:51:02,203 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 21
+2025-06-28 19:51:02,222 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 19:51:03,621 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 2, Total: 21
+2025-06-28 19:51:03,624 [INFO] django.server - "GET /profesionales/?page=2 HTTP/1.1" 200 6878
+2025-06-28 19:51:04,434 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 3, Total: 21
+2025-06-28 19:51:04,436 [INFO] django.server - "GET /profesionales/?page=3 HTTP/1.1" 200 2311
+2025-06-28 19:51:20,193 [INFO] principal - [ELIMINACIÓN] Profesional eliminado: John Mario Arias (ID: 21)
+2025-06-28 19:51:20,195 [INFO] django.server - "GET /profesionales/eliminar/21/ HTTP/1.1" 302 0
+2025-06-28 19:51:20,206 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 20
+2025-06-28 19:51:20,212 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-28 19:51:25,044 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 19:51:26,013 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 19:52:17,376 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:52:18,522 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 19:52:19,904 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:52:20,728 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 19:52:24,635 [INFO] django.server - "GET /clientes/3/mascotas/ HTTP/1.1" 200 2605
+2025-06-28 19:52:28,825 [INFO] django.server - "GET /mascotas/nueva/?cliente_id=3 HTTP/1.1" 200 3511
+2025-06-28 19:52:45,796 [INFO] django.server - "POST /mascotas/nueva/?cliente_id=3 HTTP/1.1" 302 0
+2025-06-28 19:52:45,840 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10866
+2025-06-28 19:52:50,378 [INFO] django.server - "GET /mascotas/16/historia/ HTTP/1.1" 200 7103
+2025-06-28 19:52:53,336 [INFO] django.server - "GET /mascotas/editar/16/ HTTP/1.1" 200 3533
+2025-06-28 19:52:57,168 [INFO] django.server - "POST /mascotas/editar/16/ HTTP/1.1" 302 0
+2025-06-28 19:52:57,212 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10866
+2025-06-28 19:53:00,977 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 19:53:02,234 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-28 19:53:04,772 [INFO] django.server - "GET /clientes/3/mascotas/ HTTP/1.1" 200 3050
+2025-06-28 19:53:19,274 [INFO] django.server - "GET /mascotas/eliminar/16/ HTTP/1.1" 302 0
+2025-06-28 19:53:19,328 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 19:53:22,820 [INFO] django.server - "GET /clientes/3/mascotas/ HTTP/1.1" 200 3050
+2025-06-28 20:00:00,725 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 20:00:01,436 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 20:00:13,606 [INFO] django.utils.autoreload - C:\Users\Admin\OneDrive\Desktop\Python Projects\Github Repositories\curso-python-softserve\Sprint_12 - Veterinaria Amigos Peludos - Django\principal\views.py changed, reloading.
+2025-06-28 20:00:14,517 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-28 20:00:17,719 [INFO] django.server - "GET /mascotas/eliminar/16/ HTTP/1.1" 302 0
+2025-06-28 20:00:17,785 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10260
+2025-06-28 20:00:20,995 [INFO] django.server - "GET /clientes/3/mascotas/ HTTP/1.1" 200 2605
+2025-06-28 20:00:51,824 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 20:00:52,924 [INFO] principal - [ACCESO] Vista de lista de cirugías accedida por AnonymousUser. Total: 6
+2025-06-28 20:00:52,945 [INFO] django.server - "GET /cirugias/ HTTP/1.1" 200 5292
+2025-06-28 20:00:56,085 [INFO] principal - [CONSULTA] Vista de cirugías pendientes accedida por AnonymousUser. Incompletas: 0, Sin asignar: 5
+2025-06-28 20:00:56,121 [INFO] django.server - "GET /cirugias/pendientes/ HTTP/1.1" 200 3888
+2025-06-28 20:00:56,248 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 20:00:58,128 [INFO] django.server - "GET / HTTP/1.1" 200 3585
+2025-06-28 20:00:59,165 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-28 20:01:01,378 [INFO] django.server - "GET /consultas/detalle/32/ HTTP/1.1" 200 3565
+2025-06-28 20:01:02,452 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 32
+2025-06-28 20:01:02,454 [INFO] principal - [DETALLE] Mostrando cirugía ID 10 para consulta ID 32
+2025-06-28 20:01:02,461 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1813
+2025-06-28 20:01:02,594 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-28 20:01:04,825 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760

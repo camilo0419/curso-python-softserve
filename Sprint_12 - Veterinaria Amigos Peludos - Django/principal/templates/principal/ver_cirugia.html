@@ -36,7 +36,11 @@
 
     <div class="acciones">
             <a href="{% url 'editar_cirugia' consulta.id %}" class="btn">✏️ Editar</a>
-            <a href="{% url 'eliminar_cirugia' consulta.id %}" class="btn">🗑️ Eliminar</a>
+            <a href="{% url 'eliminar_cirugia' consulta.id %}"
+                class="btn eliminar"
+                onclick="return confirm('¿Estás seguro de eliminar esta cirugía? Esta acción no se puede deshacer.');">
+                🗑 Eliminar
+            </a>
             <button type="button" class="btn" onclick="window.history.back();">↩ Volver</button>
     </div>
 </div>
