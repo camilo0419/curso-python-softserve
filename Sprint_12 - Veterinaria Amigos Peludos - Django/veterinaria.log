@@ -1119,3 +1119,4 @@ django.template.exceptions.TemplateDoesNotExist: principal/confirmar_eliminar.ht
 2025-06-30 15:28:34,179 [INFO] principal - [CONSULTA] Vista de cirugías pendientes accedida por AnonymousUser. Incompletas: 0, Sin asignar: 5
 2025-06-30 15:28:34,222 [INFO] django.server - "GET /cirugias/pendientes/ HTTP/1.1" 200 3888
 2025-06-30 15:28:34,312 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-30 15:29:36,080 [INFO] django.server - "GET / HTTP/1.1" 200 3589
