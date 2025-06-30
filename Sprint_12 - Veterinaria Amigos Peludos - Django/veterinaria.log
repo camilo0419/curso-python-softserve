@@ -979,3 +979,143 @@ django.template.exceptions.TemplateDoesNotExist: principal/confirmar_eliminar.ht
 2025-06-28 20:01:02,461 [INFO] django.server - "GET /consulta/32/ver_cirugia/ HTTP/1.1" 200 1813
 2025-06-28 20:01:02,594 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
 2025-06-28 20:01:04,825 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-30 15:15:46,235 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-06-30 15:15:51,502 [INFO] django.server - "GET / HTTP/1.1" 200 3277
+2025-06-30 15:15:51,614 [INFO] django.server - "GET /static/principal/css/inicio.css HTTP/1.1" 304 0
+2025-06-30 15:15:51,630 [INFO] django.server - "GET /static/principal/img/main.png HTTP/1.1" 304 0
+2025-06-30 15:15:51,865 [INFO] django.server - "GET /static/principal/img/favicon.png HTTP/1.1" 304 0
+2025-06-30 15:17:36,380 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-30 15:17:36,542 [INFO] django.server - "GET /static/principal/css/listas.css HTTP/1.1" 200 4603
+2025-06-30 15:18:00,649 [INFO] django.server - "GET /clientes/crear/ HTTP/1.1" 200 1492
+2025-06-30 15:18:00,742 [INFO] django.server - "GET /static/principal/css/formularios.css HTTP/1.1" 304 0
+2025-06-30 15:18:21,199 [INFO] django.server - "POST /clientes/crear/ HTTP/1.1" 302 0
+2025-06-30 15:18:21,249 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 7170
+2025-06-30 15:18:36,236 [INFO] django.server - "GET /clientes/editar/1478523690/ HTTP/1.1" 200 1561
+2025-06-30 15:18:42,184 [INFO] django.server - "POST /clientes/editar/1478523690/ HTTP/1.1" 302 0
+2025-06-30 15:18:42,309 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 7178
+2025-06-30 15:19:06,976 [INFO] django.server - "GET /clientes/15/mascotas/ HTTP/1.1" 200 942
+2025-06-30 15:19:35,467 [INFO] django.server - "GET /mascotas/nueva/?cliente_id=15 HTTP/1.1" 200 3524
+2025-06-30 15:20:10,294 [INFO] django.server - "POST /mascotas/nueva/?cliente_id=15 HTTP/1.1" 302 0
+2025-06-30 15:20:10,344 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10872
+2025-06-30 15:20:17,794 [INFO] django.server - "GET /clientes/15/mascotas/ HTTP/1.1" 200 1294
+2025-06-30 15:20:23,548 [INFO] django.server - "GET /mascotas/editar/17/ HTTP/1.1" 200 3544
+2025-06-30 15:20:28,276 [INFO] django.server - "POST /mascotas/editar/17/ HTTP/1.1" 302 0
+2025-06-30 15:20:28,329 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10871
+2025-06-30 15:20:38,164 [INFO] django.server - "GET /mascotas/17/historia/ HTTP/1.1" 200 7110
+2025-06-30 15:20:38,229 [INFO] django.server - "GET /static/principal/img/Logo.png HTTP/1.1" 304 0
+2025-06-30 15:21:12,911 [INFO] django.server - "GET /mascotas/17/historia/ HTTP/1.1" 200 7110
+2025-06-30 15:21:16,449 [INFO] django.server - "GET / HTTP/1.1" 200 3277
+2025-06-30 15:21:17,880 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 14760
+2025-06-30 15:21:19,546 [INFO] django.server - "GET /consultas/nueva/ HTTP/1.1" 200 4024
+2025-06-30 15:21:19,638 [INFO] django.server - "GET /static/principal/css/form_consulta.css HTTP/1.1" 304 0
+2025-06-30 15:22:05,367 [INFO] django.server - "GET /buscar_mascotas/?q=A HTTP/1.1" 200 655
+2025-06-30 15:22:05,647 [INFO] django.server - "GET /buscar_mascotas/?q=An HTTP/1.1" 200 368
+2025-06-30 15:22:07,425 [INFO] django.server - "GET /buscar_mascotas/?q=Ang HTTP/1.1" 200 67
+2025-06-30 15:22:07,682 [INFO] django.server - "GET /buscar_mascotas/?q=Ange HTTP/1.1" 200 67
+2025-06-30 15:22:11,341 [INFO] django.server - "POST /consultas/nueva/ HTTP/1.1" 302 0
+2025-06-30 15:22:11,396 [INFO] django.server - "GET /consultas/detalle/34/ HTTP/1.1" 200 3427
+2025-06-30 15:22:55,242 [INFO] django.server - "GET /consulta/34/asignar_medicamentos/ HTTP/1.1" 200 8195
+2025-06-30 15:22:55,375 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-30 15:23:19,727 [INFO] django.server - "POST /consulta/34/asignar_medicamentos/ HTTP/1.1" 302 0
+2025-06-30 15:23:19,754 [INFO] django.server - "GET /consultas/detalle/34/ HTTP/1.1" 200 3416
+2025-06-30 15:23:28,577 [INFO] principal - [VISITA] Vista de fórmula médica accedida para la consulta ID=34
+2025-06-30 15:23:28,602 [INFO] django.server - "GET /consulta/34/ver_formula/ HTTP/1.1" 200 2377
+2025-06-30 15:23:28,685 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-30 15:23:28,702 [INFO] django.server - "GET /static/principal/css/ver_detalles.css HTTP/1.1" 304 0
+2025-06-30 15:23:55,832 [INFO] principal - [VISITA] Vista de fórmula médica accedida para la consulta ID=34
+2025-06-30 15:23:55,843 [INFO] principal - [ENTREGA] Medicamentos entregados para consulta ID=34
+2025-06-30 15:23:55,846 [INFO] django.server - "POST /consulta/34/ver_formula/ HTTP/1.1" 302 0
+2025-06-30 15:23:55,861 [INFO] principal - [VISITA] Vista de fórmula médica accedida para la consulta ID=34
+2025-06-30 15:23:55,867 [INFO] django.server - "GET /consulta/34/ver_formula/ HTTP/1.1" 200 1967
+2025-06-30 15:23:56,029 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-30 15:24:17,594 [INFO] django.server - "GET /consultas/detalle/34/ HTTP/1.1" 200 3417
+2025-06-30 15:24:21,622 [INFO] principal - [ACCESO] Vista de asignación de cirugía para consulta ID 34
+2025-06-30 15:24:21,703 [INFO] django.server - "GET /consulta/34/asignar_cirugia/ HTTP/1.1" 200 9220
+2025-06-30 15:24:21,819 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-30 15:24:50,140 [INFO] principal - [ACCESO] Vista de asignación de cirugía para consulta ID 34
+2025-06-30 15:24:50,156 [INFO] principal - [CREACIÓN] Cirugía programada para consulta ID 34 (cirugía ID 11)
+2025-06-30 15:24:50,159 [INFO] django.server - "POST /consulta/34/asignar_cirugia/ HTTP/1.1" 302 0
+2025-06-30 15:24:50,187 [INFO] django.server - "GET /consultas/detalle/34/ HTTP/1.1" 200 3418
+2025-06-30 15:24:54,932 [INFO] principal - [ACCESO] Vista de ver cirugía para consulta ID 34
+2025-06-30 15:24:54,935 [INFO] principal - [DETALLE] Mostrando cirugía ID 11 para consulta ID 34
+2025-06-30 15:24:54,958 [INFO] django.server - "GET /consulta/34/ver_cirugia/ HTTP/1.1" 200 1782
+2025-06-30 15:24:55,058 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
+2025-06-30 15:25:17,387 [INFO] django.server - "GET /consultas/lista/ HTTP/1.1" 200 15386
+2025-06-30 15:25:23,564 [INFO] django.server - "GET /mascotas/17/historia/ HTTP/1.1" 200 8943
+2025-06-30 15:25:49,298 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-30 15:25:58,625 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 50
+2025-06-30 15:25:58,633 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-30 15:26:03,466 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 50
+2025-06-30 15:26:03,471 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-30 15:26:04,125 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 50
+2025-06-30 15:26:04,130 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-30 15:26:04,713 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 50
+2025-06-30 15:26:04,720 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-30 15:26:05,114 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 50
+2025-06-30 15:26:05,121 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 5943
+2025-06-30 15:26:07,279 [INFO] django.server - "GET /medicamentos/crear/ HTTP/1.1" 200 1536
+2025-06-30 15:26:17,760 [INFO] principal - [CREACIÓN] Medicamento creado: Testing medicine (ID: 53)
+2025-06-30 15:26:17,763 [INFO] django.server - "POST /medicamentos/crear/ HTTP/1.1" 302 0
+2025-06-30 15:26:17,782 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-30 15:26:17,788 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-30 15:26:19,398 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 51
+2025-06-30 15:26:19,404 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-30 15:26:20,193 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 51
+2025-06-30 15:26:20,199 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-30 15:26:20,856 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 51
+2025-06-30 15:26:20,864 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-30 15:26:21,462 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 51
+2025-06-30 15:26:21,469 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 6004
+2025-06-30 15:26:22,126 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 6, Total: 51
+2025-06-30 15:26:22,129 [INFO] django.server - "GET /medicamentos/?page=6 HTTP/1.1" 200 2225
+2025-06-30 15:26:25,555 [INFO] django.server - "GET /medicamentos/editar/53/ HTTP/1.1" 200 1611
+2025-06-30 15:26:28,819 [INFO] principal - [EDICIÓN] Medicamento editado: Testing medicine (ID: 53)
+2025-06-30 15:26:28,838 [INFO] django.server - "POST /medicamentos/editar/53/ HTTP/1.1" 302 0
+2025-06-30 15:26:28,855 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 51
+2025-06-30 15:26:28,864 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-30 15:26:30,009 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 51
+2025-06-30 15:26:30,014 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-30 15:26:30,873 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 51
+2025-06-30 15:26:30,879 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-30 15:26:31,423 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 51
+2025-06-30 15:26:31,430 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-30 15:26:32,038 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 51
+2025-06-30 15:26:32,044 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 6004
+2025-06-30 15:26:32,681 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 6, Total: 51
+2025-06-30 15:26:32,683 [INFO] django.server - "GET /medicamentos/?page=6 HTTP/1.1" 200 2225
+2025-06-30 15:26:35,951 [INFO] principal - [ELIMINACIÓN] Medicamento eliminado: Testing medicine (ID: 53))
+2025-06-30 15:26:35,952 [INFO] django.server - "GET /medicamentos/eliminar/53/ HTTP/1.1" 302 0
+2025-06-30 15:26:35,969 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 50
+2025-06-30 15:26:35,982 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-30 15:26:37,239 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 2, Total: 50
+2025-06-30 15:26:37,244 [INFO] django.server - "GET /medicamentos/?page=2 HTTP/1.1" 200 6011
+2025-06-30 15:26:38,011 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 3, Total: 50
+2025-06-30 15:26:38,016 [INFO] django.server - "GET /medicamentos/?page=3 HTTP/1.1" 200 6005
+2025-06-30 15:26:38,682 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 4, Total: 50
+2025-06-30 15:26:38,687 [INFO] django.server - "GET /medicamentos/?page=4 HTTP/1.1" 200 6008
+2025-06-30 15:26:39,039 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 5, Total: 50
+2025-06-30 15:26:39,044 [INFO] django.server - "GET /medicamentos/?page=5 HTTP/1.1" 200 5943
+2025-06-30 15:26:39,864 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-30 15:26:42,803 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10871
+2025-06-30 15:26:48,457 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-30 15:26:49,728 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 7178
+2025-06-30 15:26:57,059 [INFO] django.server - "GET /clientes/eliminar/1478523690/ HTTP/1.1" 302 0
+2025-06-30 15:26:57,105 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-30 15:27:00,536 [INFO] django.server - "GET /clientes/lista/ HTTP/1.1" 200 6703
+2025-06-30 15:27:02,968 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-30 15:27:03,886 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10871
+2025-06-30 15:27:07,285 [INFO] django.server - "GET /mascotas/lista/ HTTP/1.1" 200 10871
+2025-06-30 15:28:01,809 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-30 15:28:04,672 [INFO] principal - [VISITA] Lista de medicamentos cargada. Página solicitada: 1, Total: 50
+2025-06-30 15:28:04,680 [INFO] django.server - "GET /medicamentos/ HTTP/1.1" 200 5957
+2025-06-30 15:28:08,338 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-30 15:28:09,680 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 1, Total: 20
+2025-06-30 15:28:09,685 [INFO] django.server - "GET /profesionales/ HTTP/1.1" 200 6799
+2025-06-30 15:28:12,041 [INFO] principal - [VISITA] Lista de profesionales cargada. Página solicitada: 2, Total: 20
+2025-06-30 15:28:12,045 [INFO] django.server - "GET /profesionales/?page=2 HTTP/1.1" 200 6817
+2025-06-30 15:28:15,823 [INFO] django.server - "GET / HTTP/1.1" 200 3589
+2025-06-30 15:28:17,478 [INFO] principal - [ACCESO] Vista de lista de cirugías accedida por AnonymousUser. Total: 7
+2025-06-30 15:28:17,525 [INFO] django.server - "GET /cirugias/ HTTP/1.1" 200 6045
+2025-06-30 15:28:34,179 [INFO] principal - [CONSULTA] Vista de cirugías pendientes accedida por AnonymousUser. Incompletas: 0, Sin asignar: 5
+2025-06-30 15:28:34,222 [INFO] django.server - "GET /cirugias/pendientes/ HTTP/1.1" 200 3888
+2025-06-30 15:28:34,312 [WARNING] django.server - "GET /static/principal/css/estilos.css HTTP/1.1" 404 1889
